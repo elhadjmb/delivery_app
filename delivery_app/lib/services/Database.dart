@@ -1,0 +1,1 @@
+//TODO: Database class aka Server class contains identifications from the remote erver/db of firebase
