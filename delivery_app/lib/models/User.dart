@@ -1,1 +1,10 @@
-//TODO: Add a user model class with all standard attributes (User is the same as Account)
+enum UserType { SADMIN, CLIENT, SERVER, DELIVERER, GUEST }
+
+
+class User {
+  String firstName;
+  String lastName;
+
+  User(this.firstName,
+      this.lastName);
+}
