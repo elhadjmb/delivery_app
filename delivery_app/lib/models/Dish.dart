@@ -7,3 +7,15 @@ class Ingredient {
       this.name
       );
 }
+
+class Dish {
+  int id;
+  String name;
+  String category;
+
+  Dish(
+      this.id,
+      this.name,
+      this.category
+      );
+}
