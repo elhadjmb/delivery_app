@@ -1,5 +1,9 @@
 import 'package:delivery_app/constants/types.dart';
+import 'package:json_annotation/json_annotation.dart';
 
+part 'JsonParsing/Dish.g.dart';
+
+@JsonSerializable()
 class Ingredient {
   //TODO: add more attributes to ingredient objects
   int id;
@@ -13,8 +17,14 @@ class Ingredient {
     required this.quantity,
     required this.isRequired,
   });
+
+  factory Ingredient.fromJson(Map<String, dynamic> json) =>
+      _$IngredientFromJson(json);
+
+  Map<String, dynamic> toJson() => _$IngredientToJson(this);
 }
 
+@JsonSerializable(explicitToJson: true)
 class Dish {
   int id;
   String name;
@@ -41,4 +51,8 @@ class Dish {
     required this.score,
     required this.image,
   });
+
+  factory Dish.fromJson(Map<String, dynamic> json) => _$DishFromJson(json);
+
+  Map<String, dynamic> toJson() => _$DishToJson(this);
 }

@@ -1,6 +1,10 @@
 import 'package:delivery_app/constants/types.dart';
 import 'package:delivery_app/models/User.dart';
+import 'package:json_annotation/json_annotation.dart';
 
+part 'JsonParsing/DeliveryCompany.g.dart';
+
+@JsonSerializable()
 class DeliveryCompany {
   int id;
   String name;
@@ -18,4 +22,9 @@ class DeliveryCompany {
     required this.isOpen,
     required this.openedHours,
   });
+
+  factory DeliveryCompany.fromJson(Map<String, dynamic> json) =>
+      _$DeliveryCompanyFromJson(json);
+
+  Map<String, dynamic> toJson() => _$DeliveryCompanyToJson(this);
 }

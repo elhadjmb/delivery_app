@@ -3,7 +3,11 @@
 import 'package:delivery_app/constants/types.dart';
 import 'package:delivery_app/models/Menu.dart';
 import 'package:delivery_app/models/User.dart';
+import 'package:json_annotation/json_annotation.dart';
 
+part 'JsonParsing/Restaurant.g.dart';
+
+@JsonSerializable(explicitToJson: true)
 class Restaurant {
   int id;
   String name;
@@ -23,4 +27,6 @@ class Restaurant {
     required this.openedHours,
     required this.employees,
   });
+  factory Restaurant.fromJson(Map<String, dynamic> json) => _$RestaurantFromJson(json);
+  Map<String, dynamic> toJson() => _$RestaurantToJson(this);
 }
