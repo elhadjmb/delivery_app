@@ -1,0 +1,4 @@
+enum DishCategory { STARTER, DRINK }
+enum Position { OWNER, WORKER }
+enum UserType { SADMIN, CLIENT, SERVER, DELIVERER, GUEST }
+enum OrderStatus { PENDING, PREPARING, DELIVERING, COMPLETE }
