@@ -1,16 +1,24 @@
-enum OrderStatus { PENDING, PREPARING, DELIVERING, COMPLETE }
+import 'package:delivery_app/constants/types.dart';
+import 'package:delivery_app/models/Dish.dart';
+import 'package:delivery_app/models/User.dart';
 
 class Order {
   //TODO: add more attributes to order objects
   int id;
-  DateTime timeStamp;
+  DateTime orderTime;
   String description;
   OrderStatus status;
+  User client;
+  String deliveryAddress;
+  List<Dish> dishes;
 
-  Order(
-    this.id,
-    this.timeStamp,
-    this.description,
-    this.status,
-      );
+  Order({
+    required this.id,
+    required this.orderTime,
+    required this.description,
+    required this.status,
+    required this.client,
+    required this.deliveryAddress,
+    required this.dishes,
+  });
 }
