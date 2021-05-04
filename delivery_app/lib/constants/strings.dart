@@ -1,4 +1,4 @@
-class inner {
+class Inner {
   static const sAdmin = "sAdmin";
   static const client = "client";
   static const server = "server";
