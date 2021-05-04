@@ -1,4 +1,5 @@
 class Ingredient {
+  //TODO: add more attributes to ingredient objects
   int id;
   String name;
 
@@ -9,6 +10,7 @@ class Ingredient {
 }
 
 class Dish {
+  //TODO: add more attributes to dish objects
   int id;
   String name;
   String category;

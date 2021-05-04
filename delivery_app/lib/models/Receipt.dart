@@ -1,0 +1,1 @@
+//TODO: add receipt class, it must contain a list of orders

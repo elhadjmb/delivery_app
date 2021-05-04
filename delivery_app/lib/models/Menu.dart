@@ -1,0 +1,1 @@
+//TODO: add menu class, it must contain a list of dishes
