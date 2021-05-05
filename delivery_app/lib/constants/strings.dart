@@ -2,7 +2,7 @@
 // which will give you "stringValue"
 // example: Inner.userType["sAdmin"]
 
-class Inner {
+class StringInner {
   /*For strings inside the code, not necessarily to be shown to the user*/
 
   static const Map<String, String> userType = {
@@ -20,23 +20,27 @@ class Inner {
   };
 }
 
-class Outer {
+class StringOuter {
   /*For strings shown to the user in views*/
 
   //TODO: Gets appended on progress of views
   static const Map<String, String> button = {
-
-    "okButton": "Ok",
-    "cancelButton": "Cancel",
+    "ok": "Ok",
+    "cancel": "Cancel",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
   };
 
   static const Map<String, String> title = {
+    "mainTitle": "Foody",
     "home": "Home",
     "profile": "Profile",
   };
-
+  static const Map<String, String> textField = {
+    "email": "Email",
+    "password": "Password",
+  };
 }
-
 
 /*
 

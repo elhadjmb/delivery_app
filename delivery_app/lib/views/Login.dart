@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/images.dart';
+import 'package:delivery_app/constants/strings.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -25,7 +26,7 @@ class LoginScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      "Foody",
+                      StringOuter.title["mainTitle"] as String,
                       style: TextStyle(
                         fontFamily: 'DancingScript',
                         fontWeight: FontWeight.bold,
@@ -60,7 +61,7 @@ class LoginScreen extends StatelessWidget {
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(18.0),
                                 ),
-                                labelText: "Email",
+                                labelText: StringOuter.textField["email"],
                               ),
                               style: TextStyle(
                                 fontSize: 20,
@@ -92,7 +93,7 @@ class LoginScreen extends StatelessWidget {
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(18.0),
                                 ),
-                                labelText: "Password",
+                                labelText: StringOuter.textField["password"],
                               ),
                               style: TextStyle(
                                 fontSize: 20,
@@ -124,7 +125,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                         child: Center(
                           child: Text(
-                            "LogIn",
+                            StringOuter.button["signIn"] as String,
                             style: TextStyle(
                               color: Colour.white,
                               fontSize: 21,
@@ -155,7 +156,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                         child: Center(
                           child: Text(
-                            "SignUp",
+                            StringOuter.button["signUp"] as String,
                             style: TextStyle(
                               color: Colour.white,
                               fontSize: 21,
