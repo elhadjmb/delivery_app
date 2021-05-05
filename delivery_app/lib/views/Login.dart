@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/images.dart';
 import 'package:flutter/material.dart';
 
@@ -7,7 +8,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colour.white,
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -29,7 +30,7 @@ class LoginScreen extends StatelessWidget {
                         fontFamily: 'DancingScript',
                         fontWeight: FontWeight.bold,
                         fontSize: 78.0,
-                        color: Colors.black,
+                        color: Colour.black,
                         fontStyle: FontStyle.italic,
                       ),
                     ),
@@ -45,14 +46,14 @@ class LoginScreen extends StatelessWidget {
                                 focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(18.0),
                                   borderSide: BorderSide(
-                                    color: Colors.white,
+                                    color: Colour.white,
                                     width: 2,
                                   ),
                                 ),
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(18.0),
                                   borderSide: BorderSide(
-                                    color: Colors.white,
+                                    color: Colour.white,
                                     width: 2,
                                   ),
                                 ),
@@ -63,7 +64,7 @@ class LoginScreen extends StatelessWidget {
                               ),
                               style: TextStyle(
                                 fontSize: 20,
-                                color: Colors.white,
+                                color: Colour.white,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
@@ -77,14 +78,14 @@ class LoginScreen extends StatelessWidget {
                                 focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(18.0),
                                   borderSide: BorderSide(
-                                    color: Colors.white,
+                                    color: Colour.white,
                                     width: 2,
                                   ),
                                 ),
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(18.0),
                                   borderSide: BorderSide(
-                                    color: Colors.white,
+                                    color: Colour.white,
                                     width: 2,
                                   ),
                                 ),
@@ -95,7 +96,7 @@ class LoginScreen extends StatelessWidget {
                               ),
                               style: TextStyle(
                                 fontSize: 20,
-                                color: Colors.white,
+                                color: Colour.white,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
@@ -111,13 +112,12 @@ class LoginScreen extends StatelessWidget {
                         width: MediaQuery.of(context).size.width / 1.4,
                         height: 52.0,
                         decoration: BoxDecoration(
-                          //color: Colors.black,
                           gradient: LinearGradient(
                             begin: Alignment.topLeft,
                             end: Alignment(0.8, 0.0),
                             colors: <Color>[
-                              Color(0xffee0000),
-                              Color(0xffeeee00),
+                              Colour.red,
+                              Colour.yellow,
                             ],
                           ),
                           borderRadius: BorderRadius.circular(14.2),
@@ -126,7 +126,7 @@ class LoginScreen extends StatelessWidget {
                           child: Text(
                             "LogIn",
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Colour.white,
                               fontSize: 21,
                               fontWeight: FontWeight.bold,
                             ),
@@ -143,13 +143,12 @@ class LoginScreen extends StatelessWidget {
                         width: MediaQuery.of(context).size.width / 1.4,
                         height: 52.0,
                         decoration: BoxDecoration(
-                          //color: Colors.black,
                           gradient: LinearGradient(
                             begin: Alignment.topLeft,
                             end: Alignment(0.8, 0.0),
                             colors: <Color>[
-                              Color(0xffeeee00),
-                              Color(0xffee0000),
+                              Colour.yellow,
+                              Colour.red,
                             ],
                           ),
                           borderRadius: BorderRadius.circular(14.2),
@@ -158,7 +157,7 @@ class LoginScreen extends StatelessWidget {
                           child: Text(
                             "SignUp",
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Colour.white,
                               fontSize: 21,
                               fontWeight: FontWeight.bold,
                             ),
