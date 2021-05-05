@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:delivery_app/constants/images.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -10,7 +11,7 @@ class LoginScreen extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("images/LoginBackground.jpg"),
+            image: AssetImage(Images.LoginBackground),
             fit: BoxFit.cover,
           ),
         ),
