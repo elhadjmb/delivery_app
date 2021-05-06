@@ -8,7 +8,7 @@ part of '../Receipt.dart';
 
 Receipt _$ReceiptFromJson(Map<String, dynamic> json) {
   return Receipt(
-    id: json['id'] as int,
+    id: json['id'] as String,
     delivery: Delivery.fromJson(json['delivery'] as Map<String, dynamic>),
     comment: json['comment'] as String,
     price: (json['price'] as num).toDouble(),

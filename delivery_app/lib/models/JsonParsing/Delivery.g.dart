@@ -8,7 +8,7 @@ part of '../Delivery.dart';
 
 Delivery _$DeliveryFromJson(Map<String, dynamic> json) {
   return Delivery(
-    id: json['id'] as int,
+    id: json['id'] as String,
     orders: (json['orders'] as List<dynamic>)
         .map((e) => Order.fromJson(e as Map<String, dynamic>))
         .toList(),

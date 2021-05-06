@@ -8,7 +8,7 @@ part of '../Restaurant.dart';
 
 Restaurant _$RestaurantFromJson(Map<String, dynamic> json) {
   return Restaurant(
-    id: json['id'] as int,
+    id: json['id'] as String,
     menu: Menu.fromJson(json['menu'] as Map<String, dynamic>),
     name: json['name'] as String,
     address: json['address'] as String,

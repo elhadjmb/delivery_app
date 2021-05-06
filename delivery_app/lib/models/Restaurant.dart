@@ -1,5 +1,3 @@
-//TODO: add restaurant class, it must contain a list of employees (servers)
-
 import 'package:delivery_app/constants/types.dart';
 import 'package:delivery_app/models/Menu.dart';
 import 'package:delivery_app/models/User.dart';
@@ -9,13 +7,13 @@ part 'JsonParsing/Restaurant.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class Restaurant {
-  int id;
+  String id;
   String name;
   String address;
   Menu menu;
   DateTime openedHours, closedHours;
   bool isOpen;
-  Map<Position, User> employees;
+  Map<Position, User> employees; //employees are users of type SERVER
 
   Restaurant({
     required this.id,
@@ -27,6 +25,9 @@ class Restaurant {
     required this.openedHours,
     required this.employees,
   });
-  factory Restaurant.fromJson(Map<String, dynamic> json) => _$RestaurantFromJson(json);
+
+  factory Restaurant.fromJson(Map<String, dynamic> json) =>
+      _$RestaurantFromJson(json);
+
   Map<String, dynamic> toJson() => _$RestaurantToJson(this);
 }

@@ -5,7 +5,6 @@ part 'JsonParsing/Dish.g.dart';
 
 @JsonSerializable()
 class Ingredient {
-  //TODO: add more attributes to ingredient objects
   int id;
   String name;
   int quantity;
@@ -26,7 +25,7 @@ class Ingredient {
 
 @JsonSerializable(explicitToJson: true)
 class Dish {
-  int id;
+  String id;
   String name;
   DishCategory category;
   double price;

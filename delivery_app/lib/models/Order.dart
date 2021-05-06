@@ -8,7 +8,7 @@ part 'JsonParsing/Order.g.dart';
 @JsonSerializable(explicitToJson: true)
 class Order {
   //TODO: add more attributes to order objects
-  int id;
+  String id;
   DateTime orderTime;
   String description;
   OrderStatus status;

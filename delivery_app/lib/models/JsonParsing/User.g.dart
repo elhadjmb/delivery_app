@@ -8,24 +8,20 @@ part of '../User.dart';
 
 User _$UserFromJson(Map<String, dynamic> json) {
   return User(
+    id: json['id'] as String,
     isActive: json['isActive'] as bool,
     name: json['name'] as String,
     address: json['address'] as String,
-    phone: json['phone'] as String,
-    email: json['email'] as String,
-    password: json['password'] as String,
     timeJoined: DateTime.parse(json['timeJoined'] as String),
     type: _$enumDecode(_$UserTypeEnumMap, json['type']),
   );
 }
 
 Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
+      'id': instance.id,
       'isActive': instance.isActive,
       'name': instance.name,
       'address': instance.address,
-      'phone': instance.phone,
-      'email': instance.email,
-      'password': instance.password,
       'timeJoined': instance.timeJoined.toIso8601String(),
       'type': _$UserTypeEnumMap[instance.type],
     };

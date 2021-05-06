@@ -8,7 +8,7 @@ part of '../DeliveryCompany.dart';
 
 DeliveryCompany _$DeliveryCompanyFromJson(Map<String, dynamic> json) {
   return DeliveryCompany(
-    id: json['id'] as int,
+    id: json['id'] as String,
     employees: (json['employees'] as Map<String, dynamic>).map(
       (k, e) => MapEntry(_$enumDecode(_$PositionEnumMap, k),
           User.fromJson(e as Map<String, dynamic>)),

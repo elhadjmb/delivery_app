@@ -8,7 +8,7 @@ part of '../Order.dart';
 
 Order _$OrderFromJson(Map<String, dynamic> json) {
   return Order(
-    id: json['id'] as int,
+    id: json['id'] as String,
     orderTime: DateTime.parse(json['orderTime'] as String),
     description: json['description'] as String,
     status: _$enumDecode(_$OrderStatusEnumMap, json['status']),

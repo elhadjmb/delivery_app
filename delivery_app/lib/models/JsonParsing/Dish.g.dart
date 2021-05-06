@@ -25,7 +25,7 @@ Map<String, dynamic> _$IngredientToJson(Ingredient instance) =>
 
 Dish _$DishFromJson(Map<String, dynamic> json) {
   return Dish(
-    id: json['id'] as int,
+    id: json['id'] as String,
     name: json['name'] as String,
     category: _$enumDecode(_$DishCategoryEnumMap, json['category']),
     price: (json['price'] as num).toDouble(),

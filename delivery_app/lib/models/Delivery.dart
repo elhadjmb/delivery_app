@@ -7,8 +7,7 @@ part 'JsonParsing/Delivery.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class Delivery {
-  //TODO: add more attributes to delivery objects
-  int id;
+  String id;
   List<Order> orders;
 
   Delivery({

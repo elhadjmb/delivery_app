@@ -6,7 +6,7 @@ part 'JsonParsing/DeliveryCompany.g.dart';
 
 @JsonSerializable()
 class DeliveryCompany {
-  int id;
+  String id;
   String name;
   String address;
   Map<Position, User> employees;
