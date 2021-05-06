@@ -28,7 +28,7 @@ class LoginScreen extends StatelessWidget {
                     Text(
                       StringOuter.title["mainTitle"] as String,
                       style: TextStyle(
-                        fontFamily: 'DancingScript',
+                        fontFamily: StringInner.fonts["main"],
                         fontWeight: FontWeight.bold,
                         fontSize: 78.0,
                         color: Colour.black,
@@ -76,7 +76,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                         child: Center(
                           child: Text(
-                            StringOuter.button["signIn"] as String,
+                            StringOuter.button["logIn"] as String,
                             style: TextStyle(
                               color: Colour.white,
                               fontSize: 21,
@@ -107,7 +107,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                         child: Center(
                           child: Text(
-                            StringOuter.button["signUp"] as String,
+                            StringOuter.button["register"] as String,
                             style: TextStyle(
                               color: Colour.white,
                               fontSize: 21,

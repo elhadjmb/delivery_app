@@ -5,6 +5,10 @@
 class StringInner {
   /*For strings inside the code, not necessarily to be shown to the user*/
 
+  static const Map<String, String> fonts = {
+    "main": "DancingScript",
+  };
+
   static const Map<String, String> userType = {
     "sAdmin": "sAdmin",
     "client": "client",
@@ -27,8 +31,8 @@ class StringOuter {
   static const Map<String, String> button = {
     "ok": "Ok",
     "cancel": "Cancel",
-    "signIn": "Sign In",
-    "signUp": "Sign Up",
+    "logIn": "Sign In",
+    "register": "Sign Up",
   };
 
   static const Map<String, String> title = {
