@@ -62,6 +62,7 @@ class LoginScreen extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(18.0),
                                 ),
                                 labelText: StringOuter.textField["email"],
+                                labelStyle: TextStyle(color: Colors.white),
                               ),
                               style: TextStyle(
                                 fontSize: 20,
@@ -94,6 +95,7 @@ class LoginScreen extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(18.0),
                                 ),
                                 labelText: StringOuter.textField["password"],
+                                labelStyle: TextStyle(color: Colors.white),
                               ),
                               style: TextStyle(
                                 fontSize: 20,
