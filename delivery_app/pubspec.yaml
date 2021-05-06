@@ -1,5 +1,5 @@
 name: delivery_app
-description: Delivery app, made with sweat, tears, and blood (not really, it's made with flutter).  
+description: Delivery app, made with sweat, tears, and blood (not really, it's made with flutter).
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
@@ -21,6 +21,7 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
+  crypto: ^3.0.1 #for hash functions
   json_annotation:
   flutter:
     sdk: flutter
@@ -33,7 +34,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  build_runner:
+  build_runner: #CLI command: flutter pub run build_runner build
   json_serializable:
 
 # For information on the generic Dart part of this file, see the
@@ -42,7 +43,7 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
   fonts:
-    - family: DancingScript     
+    - family: DancingScript
       fonts:
         - asset: assets/fonts/dancing_script.ttf
 
