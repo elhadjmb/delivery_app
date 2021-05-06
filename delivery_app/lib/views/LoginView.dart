@@ -1,5 +1,5 @@
 import 'dart:ui';
-
+import 'package:delivery_app/views/FrequentWidgets.dart';
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/images.dart';
 import 'package:delivery_app/constants/strings.dart';
@@ -41,67 +41,16 @@ class LoginScreen extends StatelessWidget {
                         children: <Widget>[
                           Padding(
                             padding: const EdgeInsets.only(top: 12.0),
-                            child: TextField(
-                              showCursor: false,
-                              decoration: InputDecoration(
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(18.0),
-                                  borderSide: BorderSide(
-                                    color: Colour.white,
-                                    width: 2,
-                                  ),
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(18.0),
-                                  borderSide: BorderSide(
-                                    color: Colour.white,
-                                    width: 2,
-                                  ),
-                                ),
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(18.0),
-                                ),
-                                labelText: StringOuter.textField["email"],
-                                labelStyle: TextStyle(color: Colour.white),
-                              ),
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: Colour.white,
-                                fontWeight: FontWeight.w600,
-                              ),
+                            child: LogAndSignUpTextField(
+                              placeHolder:
+                                  StringOuter.textField["email"] as String,
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(top: 12.0),
-                            child: TextField(
-                              showCursor: false,
-                              obscureText: true,
-                              decoration: InputDecoration(
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(18.0),
-                                  borderSide: BorderSide(
-                                    color: Colour.white,
-                                    width: 2,
-                                  ),
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(18.0),
-                                  borderSide: BorderSide(
-                                    color: Colour.white,
-                                    width: 2,
-                                  ),
-                                ),
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(18.0),
-                                ),
-                                labelText: StringOuter.textField["password"],
-                                labelStyle: TextStyle(color: Colour.white),
-                              ),
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: Colour.white,
-                                fontWeight: FontWeight.w600,
-                              ),
+                            child: LogAndSignUpTextField(
+                              placeHolder:
+                                  StringOuter.textField["password"] as String,
                             ),
                           ),
                         ],
