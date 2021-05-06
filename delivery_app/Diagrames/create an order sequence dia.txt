@@ -1,0 +1,36 @@
+title This is a title
+title seq dia for the menu setup
+
+participant client
+participant System
+participant Google api
+
+
+
+
+
+
+client->System:Log in()\n
+System->System:verification
+client<--System:Display the main page
+loop
+client->System:search for an item or chooses one from the suggestions
+client<--System:Display the selected item with  its  ingredients 
+client->System:selects the wanted ingredients
+client<--System:Display the restaurants 
+client->System:chooses a restaurant
+client<--System:Display the cart
+opt
+client->System:remove item from cart
+end
+end
+client->System:proceeds to marking the address by confirming the order
+System->Google api:demanding the marked address location
+System<--Google api:gives the location
+client<--System:display a list of the available delivery guys
+client->System:chooses a delivery guy by rating
+client<--System:request a payment methode
+client->System:selects a payment method(cash only at the beginning
+
+
+client<--System:display the status

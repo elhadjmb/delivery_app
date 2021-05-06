@@ -1,0 +1,8 @@
+-restaurant worker ui prototype
+-adding a cart option after the restau selection
+-unify the ingredients for all the items
+-the system send the order to the restaurant just after the client confimrs the cart 
+not after delivery address....
+(well thats not correct because it may be no workers available at the time which may cause some trouble )
+-dates in the databse to mark verydays order from every restaurant 
+-the closest delivery guy will take the order

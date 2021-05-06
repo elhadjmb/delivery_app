@@ -1,0 +1,26 @@
+
+title seq dia for receiving an order
+
+participant Restaurant worker
+
+
+
+
+
+
+
+
+Restaurant worker->System:Log in()\n
+System->System:verification
+Restaurant worker<--System:Display the main page(charts)
+
+
+Restaurant worker<--System:sends a notification about an order
+Restaurant worker->System:verifies and launches the order 
+
+note right of System:the order is accepted 
+Restaurant worker->System:changes his status (preparing the order)
+Restaurant worker->System:changes the status again to finished(waiting for the order to be picked up
+
+
+

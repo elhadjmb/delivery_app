@@ -1,0 +1,39 @@
+
+title seq dia for setting up 
+
+participant Restaurant worker
+
+
+
+Restaurant worker->System:Log in()\n
+System->System:verification
+Restaurant worker<--System:Display the main page(charts)
+
+Restaurant worker->System:selects the menu button
+Restaurant worker<--System:Display the menu management page
+
+
+
+
+note right of System:-add a dish-modify a dish-add ingrediens-delete a dish
+
+loop 
+Restaurant worker->System:selects a menu from the list
+Restaurant worker<--System:display the list of dishes
+alt if the dish already exists
+Restaurant worker->System:selects a dish
+Restaurant worker<--System:display the dish details and the option to delete it
+alt modify a dish
+Restaurant worker->System:selects modify dish
+Restaurant worker<--System:display the dish details and its components
+Restaurant worker->System:validate the mdofications
+else delete a dish
+Restaurant worker->System:selects modify dish
+Restaurant worker<--System:display the dish details and its components
+Restaurant worker->System:validate the mdofications
+end 
+else if the dish doesnt exist
+Restaurant worker<--System:display fields to add a dish with its ingredients
+Restaurant worker->System:fill in the fields
+end 
+end
