@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:delivery_app/models/User.dart';
 import 'package:delivery_app/views/LoginView.dart';
-//import 'package:provider/provider.dart';
+import 'package:provider/provider.dart';
 
 class LaunchController extends StatelessWidget{
   @override
