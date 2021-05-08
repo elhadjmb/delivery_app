@@ -46,6 +46,10 @@ class StringOuter {
   };
   static const Map<String, String> textField = {
     "email": "Email",
+    "phone": "phone",
+    "first name": "First name",
+    "last name": "last name",
+    "adress": "Adress",
     "password": "Password",
   };
 }
