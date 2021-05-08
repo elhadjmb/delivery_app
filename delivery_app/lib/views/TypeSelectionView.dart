@@ -1,6 +1,7 @@
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/images.dart';
 import 'package:delivery_app/constants/strings.dart';
+import 'package:delivery_app/views/SignupView.dart';
 import 'package:flutter/material.dart';
 
 class SignupOptionsScreen extends StatelessWidget {
@@ -48,7 +49,14 @@ class SignupOptionsScreen extends StatelessWidget {
                       padding: const EdgeInsets.only(top: 50.0),
                       child: InkWell(
                         //TODO: here goes deliveryguy singup Page
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SignupScreen(),
+                            ),
+                          );
+                        },
                         child: Container(
                           width: MediaQuery.of(context).size.width / 1.4,
                           height: 52.0,
@@ -80,7 +88,14 @@ class SignupOptionsScreen extends StatelessWidget {
                       padding: const EdgeInsets.only(top: 30.0),
                       child: InkWell(
                         //TODO: here goes Restaurant signup Page
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SignupScreen(),
+                            ),
+                          );
+                        },
                         child: Container(
                           width: MediaQuery.of(context).size.width / 1.4,
                           height: 52.0,
@@ -112,7 +127,14 @@ class SignupOptionsScreen extends StatelessWidget {
                       padding: const EdgeInsets.only(top: 30.0),
                       child: InkWell(
                         //TODO: here goes client registration Page
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SignupScreen(),
+                            ),
+                          );
+                        },
                         child: Container(
                           width: MediaQuery.of(context).size.width / 1.4,
                           height: 52.0,
