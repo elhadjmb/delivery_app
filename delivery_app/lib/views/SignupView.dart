@@ -9,6 +9,11 @@ class SignupScreen extends StatefulWidget {
 }
 
 class _SignupScreenState extends State<SignupScreen> {
+  TextEditingController email_Controler = TextEditingController();
+  TextEditingController password_Controler = TextEditingController();
+  TextEditingController firstName_Controler = TextEditingController();
+  TextEditingController lastName_Controler = TextEditingController();
+  TextEditingController adress_Controler = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,6 +47,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     Padding(
                       padding: const EdgeInsets.all(12.0),
                       child: TextField(
+                        controller: email_Controler,
                         showCursor: false,
                         decoration: InputDecoration(
                           focusedBorder: OutlineInputBorder(
@@ -75,6 +81,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     Padding(
                       padding: const EdgeInsets.all(12.0),
                       child: TextField(
+                        controller: password_Controler,
                         obscureText: true,
                         showCursor: false,
                         decoration: InputDecoration(
@@ -110,6 +117,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     Padding(
                       padding: const EdgeInsets.all(12.0),
                       child: TextField(
+                        controller: firstName_Controler,
                         showCursor: false,
                         decoration: InputDecoration(
                           focusedBorder: OutlineInputBorder(
@@ -144,6 +152,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     Padding(
                       padding: const EdgeInsets.all(12.0),
                       child: TextField(
+                        controller: lastName_Controler,
                         showCursor: false,
                         decoration: InputDecoration(
                           focusedBorder: OutlineInputBorder(
@@ -178,6 +187,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     Padding(
                       padding: const EdgeInsets.all(12.0),
                       child: TextField(
+                        controller: adress_Controler,
                         showCursor: false,
                         decoration: InputDecoration(
                           focusedBorder: OutlineInputBorder(
@@ -210,6 +220,8 @@ class _SignupScreenState extends State<SignupScreen> {
                     //bellow is the signUP button
                     InkWell(
                       //TODO: Bellow goes SignUp FUNCTION :
+                      //when using textfields data use name_controler.text
+                      //they are declare above
                       onTap: () {},
                       child: Container(
                         width: MediaQuery.of(context).size.width / 1.4,
