@@ -1,11 +1,17 @@
 import 'dart:ui';
-import 'package:delivery_app/views/FrequentWidgets.dart';
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/images.dart';
 import 'package:delivery_app/constants/strings.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
+  @override
+  _LoginScreenState createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  TextEditingController email_TEC = TextEditingController();
+  TextEditingController password_TEC = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,16 +47,71 @@ class LoginScreen extends StatelessWidget {
                         children: <Widget>[
                           Padding(
                             padding: const EdgeInsets.only(top: 12.0),
-                            child: LogAndSignUpTextField(
-                              placeHolder:
-                                  StringOuter.textField["email"] as String,
+                            child: TextField(
+                              controller: email_TEC,
+                              showCursor: false,
+                              decoration: InputDecoration(
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(18.0),
+                                  borderSide: BorderSide(
+                                    color: Colors.white,
+                                    width: 2,
+                                  ),
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(18.0),
+                                  borderSide: BorderSide(
+                                    color: Colors.white,
+                                    width: 2,
+                                  ),
+                                ),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(18.0),
+                                ),
+                                labelText:
+                                    StringOuter.textField["email"] as String,
+                                labelStyle: TextStyle(color: Colors.white),
+                              ),
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                              ),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(top: 12.0),
-                            child: LogAndSignUpTextField(
-                              placeHolder:
-                                  StringOuter.textField["password"] as String,
+                            child: TextField(
+                              controller: password_TEC,
+                              showCursor: false,
+                              obscureText: true,
+                              decoration: InputDecoration(
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(18.0),
+                                  borderSide: BorderSide(
+                                    color: Colors.white,
+                                    width: 2,
+                                  ),
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(18.0),
+                                  borderSide: BorderSide(
+                                    color: Colors.white,
+                                    width: 2,
+                                  ),
+                                ),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(18.0),
+                                ),
+                                labelText:
+                                    StringOuter.textField["password"] as String,
+                                labelStyle: TextStyle(color: Colors.white),
+                              ),
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                              ),
                             ),
                           ),
                         ],
@@ -59,7 +120,14 @@ class LoginScreen extends StatelessWidget {
                     //Bellow is the login button :
                     InkWell(
                       //TODO : Bellow goes Login function :
-                      onTap: () => {},
+                      onTap: () {
+                        //this is just a test :
+
+                        var email = email_TEC.text;
+                        var password = password_TEC.text;
+                        debugPrint("$email");
+                        debugPrint("$password");
+                      },
                       child: Container(
                         width: MediaQuery.of(context).size.width / 1.4,
                         height: 52.0,
@@ -89,8 +157,8 @@ class LoginScreen extends StatelessWidget {
                     SizedBox(height: 8.0),
                     //Bellow is the SignUp button :
                     InkWell(
-                      //TODO: Bellow goes SignUp function :
-                      onTap: () => {},
+                      //TODO: Bellow goes SignUp page :
+                      onTap: () {},
                       child: Container(
                         width: MediaQuery.of(context).size.width / 1.4,
                         height: 52.0,
