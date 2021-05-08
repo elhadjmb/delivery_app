@@ -4,8 +4,7 @@ import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/images.dart';
 import 'package:delivery_app/constants/strings.dart';
 import 'package:flutter/material.dart';
-
-import 'SignupView.dart';
+import 'TypeSelectionView.dart';
 
 class LoginScreen extends StatefulWidget {
   @override

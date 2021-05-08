@@ -47,6 +47,7 @@ class SignupOptionsScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(top: 50.0),
                       child: InkWell(
+                        //TODO: here goes deliveryguy singup Page
                         onTap: () {},
                         child: Container(
                           width: MediaQuery.of(context).size.width / 1.4,
@@ -78,6 +79,7 @@ class SignupOptionsScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(top: 30.0),
                       child: InkWell(
+                        //TODO: here goes Restaurant signup Page
                         onTap: () {},
                         child: Container(
                           width: MediaQuery.of(context).size.width / 1.4,
@@ -109,6 +111,7 @@ class SignupOptionsScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(top: 30.0),
                       child: InkWell(
+                        //TODO: here goes client registration Page
                         onTap: () {},
                         child: Container(
                           width: MediaQuery.of(context).size.width / 1.4,
