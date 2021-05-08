@@ -29,6 +29,7 @@ class StringOuter {
 
   //TODO: Gets appended on progress of views
   static const Map<String, String> button = {
+    "signUp": "Create Account",
     "delivery": "Delivery Worker",
     "restaurant": "Restaurant",
     "client": "Client",
