@@ -1,8 +1,11 @@
 import 'dart:ui';
+
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/images.dart';
 import 'package:delivery_app/constants/strings.dart';
 import 'package:flutter/material.dart';
+
+import 'SignupView.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -158,7 +161,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     //Bellow is the SignUp button :
                     InkWell(
                       //TODO: Bellow goes SignUp page :
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SignupOptionsScreen(),
+                          ),
+                        );
+                      },
                       child: Container(
                         width: MediaQuery.of(context).size.width / 1.4,
                         height: 52.0,
