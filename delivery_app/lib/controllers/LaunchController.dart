@@ -10,11 +10,11 @@ class LaunchController extends StatelessWidget{
   Widget build(BuildContext context) {
   /*You can test ani screen here ,i put loginscreen momentarily */
     return LoginScreen();
-    //TODO:i ll add  a provider from which i can determine whether to direct the user to the welcomeview or homeview
+   
      /*
      final user = Provider.of<UserSignInData>(context);
      // return either the Welcomeview or Homeview
-    if (user == null){
+    if (user.id =='' ){
       return welcomeview();
     } else {
       return homeview();

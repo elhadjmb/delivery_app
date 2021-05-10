@@ -14,6 +14,8 @@ User _$UserFromJson(Map<String, dynamic> json) {
     address: json['address'] as String,
     timeJoined: DateTime.parse(json['timeJoined'] as String),
     type: _$enumDecode(_$UserTypeEnumMap, json['type']),
+    phone: json['phone'] as String,
+    email: json['email'] as String?,
   );
 }
 

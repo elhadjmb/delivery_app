@@ -11,6 +11,8 @@ class User {
   String address;
   DateTime timeJoined;
   UserType type;
+  String phone;
+  String? email;
 
   User({
     required this.id,
@@ -19,6 +21,8 @@ class User {
     required this.address,
     required this.timeJoined,
     required this.type,
+    required this.phone,
+    this.email,
   });
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
