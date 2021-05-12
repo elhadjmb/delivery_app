@@ -3,3 +3,7 @@ class Images {
   static const burger = "assets/images/burger.png";
   static const pizza = "assets/images/pizza.png";
 }
+
+class Icons {
+  static const deliveryBike = "assets/icons/dual_flat/png/040-food delivery.png";
+}
