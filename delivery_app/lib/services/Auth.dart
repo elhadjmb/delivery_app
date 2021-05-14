@@ -1,18 +1,22 @@
 //import 'package:firebase_auth/firebase_auth.dart';
-import 'package:delivery_app/models/UserSignInData.dart';
+import 'package:delivery_app/constants/types.dart';
+import 'package:delivery_app/models/User.dart';
 import 'package:delivery_app/services/Database.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-class authService{
+//import 'package:firebase_auth/firebase_auth.dart';
+class AuthService{
+  /*
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
 //create usersign obj based on firebaseuser
-UserSignInData _userFromFirebaseUser(FirebaseUser user){
- return user != null ? UserSignInData(id: user.uid, phone: '') : UserSignInData(id: '', phone:'' );
+User _userFromFirebaseUser(FirebaseUser user){
+
+   return user != null ?  User(id: user.uid, phone: '', address: '', name: '', isActive: true, timeJoined: null, type: null):User(id: '', phone: '', address: '', name: '', isActive: true, timeJoined: null, type:null );
+ 
 
 }
 
 // auth change user stream
-Stream<UserSignInData> get user {
+Stream<User> get user {
     return _auth.onAuthStateChanged
       //.map((FirebaseUser user) => _userFromFirebaseUser(user));
       .map(_userFromFirebaseUser);
@@ -46,12 +50,12 @@ Stream<UserSignInData> get user {
 
   //register with email and password
    
-   Future registerWithEmailAndPassword(String email, String password) async {
+   Future registerWithEmailAndPassword(String email, String password,String name, String address, String phone,UserType type ) async {
     try {
       AuthResult result = await _auth.createUserWithEmailAndPassword(email: email, password: password);
       FirebaseUser user = result.user;
       // create a new document for the user with the uid
-     // await DatabaseService(uid: user.uid).updateUserData('0','new crew member', 100);
+     await DatabaseService(id: user.uid).updateUserData(name,password,address,type,phone);
       return _userFromFirebaseUser(user);
     } catch (error) {
       print(error.toString());
@@ -68,11 +72,11 @@ Stream<UserSignInData> get user {
   //sign out
 Future signOut() async {
     try {
-     // return await _auth.signOut();
+      return await _auth.signOut();
     } catch (error) {
       print(error.toString());
       return null;
     }
   }
-
+*/
 }
