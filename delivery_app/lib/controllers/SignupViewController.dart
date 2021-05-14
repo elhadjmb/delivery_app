@@ -10,27 +10,16 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 
 class SignupViewController{
-   final authService _auth= authService();
+  /*
+   final AuthService _auth= AuthService();
 // if it doesnt work witch it up to a simple void and put ontap on async
 //also if theres an error concering the empty type change string parameter into TextEditingController
 
-    Future signUpClient(String email,String pass,String name,String addr,String phone,BuildContext cont) async{
-        dynamic result = await _auth.registerWithEmailAndPassword(email, pass);/*.then((result) => 
-        the result that we get here should be the id from our main model which is User.dart
-        dbRef(the databse name on the service ).child(result.user.uid).set({
-        "email": name,
-        "age": phone,
-        "address":addr,
-        "usertype":  CLIENT    //depends on which type of usertype is selected
-        https://medium.com/firebase-tips-tricks/how-to-use-firebase-authentication-in-flutter-50e8b81cb29f
-      })
-
-      .catchError((err) {
-       showDialogNotfilled(cont);
-    });  
-        */
-
-        if (email.isEmpty ||pass.isEmpty ||phone.isEmpty  ){
+//Client register class
+    Future signUpClient(String email,String pass,String name,String addr,String phone,BuildContext cont) async{ 
+        dynamic result = await _auth.registerWithEmailAndPassword(email, pass,name,addr,phone,UserType.CLIENT).then((result) {
+        
+         if (email.isEmpty ||pass.isEmpty ||phone.isEmpty  ){
            showDialogNotfilled(cont);
         }
         else{
@@ -44,25 +33,14 @@ class SignupViewController{
          
         } 
         }
-      }
 
-       Future signUpServer(String email,String pass,String name,String addr,String phone,BuildContext cont) async{
-        dynamic result = await _auth.registerWithEmailAndPassword(email, pass);/*.then((result) => 
-        the result that we get here should be the id from our main model which is User.dart
-        dbRef(the databse name on the service ).child(result.user.uid).set({
-        "email": name,
-        "age": phone,
-        "address":addr,
-        "usertype":  SERVER  //depends on which type of usertype is selected
-        https://medium.com/firebase-tips-tricks/how-to-use-firebase-authentication-in-flutter-50e8b81cb29f
-      })
+    });}
 
-      .catchError((err) {
-       showDialogNotfilled(cont);
-    });  
-        */
-
-        if (email.isEmpty ||pass.isEmpty ||phone.isEmpty  ){
+    //Server register class
+    Future signUpServer(String email,String pass,String name,String addr,String phone,BuildContext cont) async{ 
+        dynamic result = await _auth.registerWithEmailAndPassword(email, pass,name,addr,phone,UserType.SERVER).then((result) {
+        
+         if (email.isEmpty ||pass.isEmpty ||phone.isEmpty  ){
            showDialogNotfilled(cont);
         }
         else{
@@ -76,25 +54,14 @@ class SignupViewController{
          
         } 
         }
-      }
 
-      Future signUpDeliverer(String email,String pass,String name,String addr,String phone,BuildContext cont) async{
-        dynamic result = await _auth.registerWithEmailAndPassword(email, pass);/*.then((result) => 
-        the result that we get here should be the id from our main model which is User.dart
-        dbRef(the databse name on the service ).child(result.user.uid).set({
-        "email": name,
-        "age": phone,
-        "address":addr,
-        "usertype":  DELIVERER  //depends on which type of usertype is selected
-        https://medium.com/firebase-tips-tricks/how-to-use-firebase-authentication-in-flutter-50e8b81cb29f
-      })
-
-      .catchError((err) {
-       showDialogNotfilled(cont);
-    });  
-        */
-
-        if (email.isEmpty ||pass.isEmpty ||phone.isEmpty  ){
+    });}
+       
+   //Deliverer register class
+    Future signUpDeliverer(String email,String pass,String name,String addr,String phone,BuildContext cont) async{ 
+        dynamic result = await _auth.registerWithEmailAndPassword(email, pass,name,addr,phone,UserType.DELIVERER).then((result) {
+        
+         if (email.isEmpty ||pass.isEmpty ||phone.isEmpty  ){
            showDialogNotfilled(cont);
         }
         else{
@@ -108,8 +75,9 @@ class SignupViewController{
          
         } 
         }
-      }
 
+    });}    
+      
   void showDialogNotfilled(BuildContext context) {
     // flutter defined function
     showDialog(
@@ -155,9 +123,5 @@ class SignupViewController{
       },
     );
   }
-
-  
-
-
-
+*/
 }
