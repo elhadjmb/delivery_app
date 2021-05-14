@@ -9,8 +9,8 @@ class User {
   bool isActive;
   String name;
   String address;
-  DateTime timeJoined;
-  UserType type;
+  DateTime? timeJoined;
+  UserType? type;
   String phone;
   String? email;
 
@@ -19,8 +19,8 @@ class User {
     required this.isActive,
     required this.name,
     required this.address,
-    required this.timeJoined,
-    required this.type,
+     this.timeJoined,
+    this.type,
     required this.phone,
     this.email,
   });

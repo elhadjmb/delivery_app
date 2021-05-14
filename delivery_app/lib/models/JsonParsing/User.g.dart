@@ -24,7 +24,7 @@ Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
       'isActive': instance.isActive,
       'name': instance.name,
       'address': instance.address,
-      'timeJoined': instance.timeJoined.toIso8601String(),
+      'timeJoined': instance.timeJoined!.toIso8601String(),
       'type': _$UserTypeEnumMap[instance.type],
     };
 
