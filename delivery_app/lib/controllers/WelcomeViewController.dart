@@ -1,7 +1,7 @@
 import 'package:delivery_app/services/Auth.dart';
 class WelcomeViewController{
-
-  final authService _auth= authService();
+/*
+ final AuthService _auth= AuthService();
   
   //singin anony methode
   Future signInAno() async {
@@ -18,6 +18,6 @@ class WelcomeViewController{
 
 
 
-
+*/
 
 }
