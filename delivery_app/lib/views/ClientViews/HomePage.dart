@@ -1,5 +1,5 @@
 import 'package:delivery_app/constants/colours.dart';
-import 'package:delivery_app/views/ClientViews/Widgets/SuggestedOrders.dart';
+import 'package:delivery_app/views/ClientViews/Widgets/SuggestedDishes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 class HomePage extends StatefulWidget {
@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          SuggestedOrders(),
+          SuggestedDishes(),
         
       ],)
 
