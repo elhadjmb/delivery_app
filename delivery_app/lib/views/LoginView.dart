@@ -3,8 +3,8 @@ import 'dart:ui';
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/images.dart';
 import 'package:delivery_app/constants/strings.dart';
+import 'package:delivery_app/views/SignupView.dart';
 import 'package:flutter/material.dart';
-import 'TypeSelectionView.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -164,7 +164,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => SignupOptionsScreen(),
+                            builder: (context) => SignupScreen(),
                           ),
                         );
                       },

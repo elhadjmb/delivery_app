@@ -43,6 +43,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         fontStyle: FontStyle.italic,
                       ),
                     ),
+
                     // Below is the email text field
                     Padding(
                       padding: const EdgeInsets.all(12.0),
@@ -77,6 +78,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         ),
                       ),
                     ),
+
                     // Below is the password text field
                     Padding(
                       padding: const EdgeInsets.all(12.0),
@@ -220,8 +222,8 @@ class _SignupScreenState extends State<SignupScreen> {
                     //bellow is the signUP button
                     InkWell(
                       //TODO: Bellow goes SignUp FUNCTION :
-                      //when using textfields data use name_controler.text
-                      //they are declare above
+                      //when using textfields data use TFname_controler.text
+                      //they are declared above
                       onTap: () {},
                       child: Container(
                         width: MediaQuery.of(context).size.width / 1.4,
