@@ -9,6 +9,7 @@ class SignupScreen extends StatefulWidget {
 }
 
 class _SignupScreenState extends State<SignupScreen> {
+  List<bool> _selections = List.generate(3, (_) => false);
   TextEditingController email_Controler = TextEditingController();
   TextEditingController password_Controler = TextEditingController();
   TextEditingController firstName_Controler = TextEditingController();
@@ -41,6 +42,42 @@ class _SignupScreenState extends State<SignupScreen> {
                         fontSize: 78.0,
                         color: Colour.black,
                         fontStyle: FontStyle.italic,
+                      ),
+                    ),
+
+                    Padding(
+                      padding: const EdgeInsets.only(top: 12.0),
+                      child: ToggleButtons(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Text("delivery"),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Text("restaurant"),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Text("client"),
+                          ),
+                        ],
+                        isSelected: _selections,
+                        onPressed: (int index) {
+                          setState(() {
+                            for (var i = 0; i < 3; i++) {
+                              _selections[i] = false;
+                            }
+                            _selections[index] = !_selections[index];
+                          });
+                        },
+                        textStyle: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        color: Colour.black,
+                        selectedColor: Colour.white,
+                        borderColor: Colour.white,
                       ),
                     ),
                     // Below is the email text field
@@ -77,6 +114,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         ),
                       ),
                     ),
+
                     // Below is the password text field
                     Padding(
                       padding: const EdgeInsets.all(12.0),
@@ -220,9 +258,19 @@ class _SignupScreenState extends State<SignupScreen> {
                     //bellow is the signUP button
                     InkWell(
                       //TODO: Bellow goes SignUp FUNCTION :
-                      //when using textfields data use name_controler.text
-                      //they are declare above
-                      onTap: () {},
+                      //when using textfields data use TFname_controler.text
+                      //they are declared above
+                      onTap: () {
+                        if (_selections[0]) {
+                          //TODO: delivery worker SignUp function
+                        }
+                        if (_selections[1]) {
+                          //TODO: restaurant SignUp function
+                        }
+                        if (_selections[2]) {
+                          //TODO: client SignUp function
+                        }
+                      },
                       child: Container(
                         width: MediaQuery.of(context).size.width / 1.4,
                         height: 52.0,

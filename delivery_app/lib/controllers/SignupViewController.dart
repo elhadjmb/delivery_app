@@ -4,12 +4,11 @@ import 'package:delivery_app/constants/types.dart';
 import 'package:delivery_app/services/Auth.dart';
 import 'package:delivery_app/views/LoginView.dart';
 import 'package:delivery_app/views/SignupView.dart';
-import 'package:delivery_app/views/TypeSelectionView.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
-class SignupViewController{
+class SignupViewController {
   /*
    final AuthService _auth= AuthService();
 // if it doesnt work witch it up to a simple void and put ontap on async
