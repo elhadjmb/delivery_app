@@ -12,8 +12,8 @@ class _SignupScreenState extends State<SignupScreen> {
   List<bool> _selections = List.generate(3, (_) => false);
   TextEditingController email_Controler = TextEditingController();
   TextEditingController password_Controler = TextEditingController();
-  TextEditingController firstName_Controler = TextEditingController();
-  TextEditingController lastName_Controler = TextEditingController();
+  TextEditingController phone_Controler = TextEditingController();
+  TextEditingController name_Controler = TextEditingController();
   TextEditingController adress_Controler = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -151,11 +151,11 @@ class _SignupScreenState extends State<SignupScreen> {
                         ),
                       ),
                     ),
-                    // Below is the first name text field
+                    // Below is the phone text field
                     Padding(
                       padding: const EdgeInsets.all(12.0),
                       child: TextField(
-                        controller: firstName_Controler,
+                        controller: phone_Controler,
                         showCursor: false,
                         decoration: InputDecoration(
                           focusedBorder: OutlineInputBorder(
@@ -176,7 +176,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             borderRadius: BorderRadius.circular(18.0),
                           ),
                           labelText:
-                              StringOuter.textField["first name"] as String,
+                              StringOuter.textField["phone number"] as String,
                           labelStyle: TextStyle(color: Colors.white),
                         ),
                         style: TextStyle(
@@ -186,11 +186,11 @@ class _SignupScreenState extends State<SignupScreen> {
                         ),
                       ),
                     ),
-                    // Below is the last name text field
+                    // Below is the  name text field
                     Padding(
                       padding: const EdgeInsets.all(12.0),
                       child: TextField(
-                        controller: lastName_Controler,
+                        controller: name_Controler,
                         showCursor: false,
                         decoration: InputDecoration(
                           focusedBorder: OutlineInputBorder(
@@ -210,8 +210,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(18.0),
                           ),
-                          labelText:
-                              StringOuter.textField["last name"] as String,
+                          labelText: StringOuter.textField["name"] as String,
                           labelStyle: TextStyle(color: Colors.white),
                         ),
                         style: TextStyle(
