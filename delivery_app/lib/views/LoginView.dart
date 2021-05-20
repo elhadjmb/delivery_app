@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/images.dart';
 import 'package:delivery_app/constants/strings.dart';
+import 'package:delivery_app/views/ClientViews/HomePage.dart';
 import 'package:delivery_app/views/SignupView.dart';
 import 'package:flutter/material.dart';
 
@@ -123,6 +124,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     InkWell(
                       //TODO : Bellow goes Login function :
                       onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HomePage(),
+                          ),
+                        );
                         //this is just a test :
 
                         var email = email_TEC.text;
