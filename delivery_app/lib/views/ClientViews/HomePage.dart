@@ -1,4 +1,5 @@
 import 'package:delivery_app/constants/colours.dart';
+import 'package:delivery_app/views/ClientViews/Widgets/OurRestaurants.dart';
 import 'package:delivery_app/views/ClientViews/Widgets/SuggestedDishes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -53,6 +54,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SuggestedDishes(),
+            RestaurantsList(),
           ],
         ),
       ),
