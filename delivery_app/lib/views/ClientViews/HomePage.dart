@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
         appBar: AppBar(
           title: Text("Foody"),
-          backgroundColor: Colour.red,
+          backgroundColor: Colour.orange,
         ),
         body: ListView(
           children: <Widget>[
