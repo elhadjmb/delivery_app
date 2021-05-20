@@ -1,5 +1,6 @@
+import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/views/ClientViews/HomePage.dart';
-import 'package:delivery_app/views/SignupView.dart';
+import 'package:delivery_app/views/SettingsViews/ProfileView.dart';
 import 'package:flutter/material.dart';
 
 class View extends StatefulWidget {
@@ -11,7 +12,7 @@ class _View extends State<View> {
   int _currentIndex = 0;
   final List<Widget> _pages = [
     HomePage(),
-    SignupScreen(),
+    ProfilePage(),
   ];
 
   @override
@@ -20,6 +21,7 @@ class _View extends State<View> {
       child: Scaffold(
         body: _pages[_currentIndex],
         bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: Colour.orange,
           currentIndex: _currentIndex,
           onTap: (index) {
             setState(() {
@@ -33,7 +35,7 @@ class _View extends State<View> {
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person),
-              label: "Settings",
+              label: "Profile",
             ),
           ],
         ),
