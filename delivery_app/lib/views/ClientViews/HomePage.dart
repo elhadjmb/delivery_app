@@ -2,60 +2,60 @@ import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/views/ClientViews/Widgets/SuggestedDishes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-    final searchBarController = TextEditingController();
+  final searchBarController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-      title: Text("Foody"),
-      backgroundColor :Colour.red,
-      ),
-      body:ListView(
-        children:<Widget>[
-        Padding(
-            padding: EdgeInsets.all(20.0),
-            child: TextField(
-              controller: searchBarController,
-              decoration: InputDecoration(
-                contentPadding: EdgeInsets.symmetric(vertical: 15.0),
-                fillColor: Colors.white,
-                filled: true,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30.0),
-                  borderSide: BorderSide(width: 0.8),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30.0),
-                  borderSide: BorderSide(
-                    width: 0.8,
-                    color: Theme.of(context).primaryColor,
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("Foody"),
+          backgroundColor: Colour.red,
+        ),
+        body: ListView(
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.all(20.0),
+              child: TextField(
+                controller: searchBarController,
+                decoration: InputDecoration(
+                  contentPadding: EdgeInsets.symmetric(vertical: 15.0),
+                  fillColor: Colors.white,
+                  filled: true,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                    borderSide: BorderSide(width: 0.8),
                   ),
-                ),
-                hintText: 'Search Food or Restaurants',
-                prefixIcon: Icon(
-                  Icons.search,
-                  size: 30.0,
-                ),
-                suffixIcon: IconButton(
-                  icon: Icon(Icons.clear),
-                  onPressed: () {},
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                    borderSide: BorderSide(
+                      width: 0.8,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                  ),
+                  hintText: 'Search Food or Restaurants',
+                  prefixIcon: Icon(
+                    Icons.search,
+                    size: 30.0,
+                  ),
+                  suffixIcon: IconButton(
+                    icon: Icon(Icons.clear),
+                    onPressed: () {},
+                  ),
                 ),
               ),
             ),
-          ),
-          SuggestedDishes(),
-        
-      ],)
-
-
-     // bottomNavigationBar: ,
+            SuggestedDishes(),
+          ],
+        ),
+      ),
     );
   }
 }

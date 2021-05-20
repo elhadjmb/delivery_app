@@ -2,7 +2,6 @@
 
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/models/Dish.dart';
-import 'package:delivery_app/models/Order.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -39,37 +38,38 @@ class SuggestedDishes extends StatelessWidget {
                   child: Container(
                     margin: EdgeInsets.all(12.0),
                     child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text(
-                            dish.name,
-                            style: TextStyle(
-                              fontSize: 18.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            overflow: TextOverflow.ellipsis,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          dish.name,
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.bold,
                           ),
-                          SizedBox(height: 4.0),
-                          Text(
-                            dish.description,
-                            style: TextStyle(
-                              fontSize: 16.0,
-                              fontWeight: FontWeight.w600,
-                            ),
-                            overflow: TextOverflow.ellipsis,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        SizedBox(height: 4.0),
+                        Text(
+                          dish.description,
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.w600,
                           ),
-                          SizedBox(height: 4.0),
-                          Text(
-                            dish.price.toString(),
-                            style: TextStyle(
-                              fontSize: 16.0,
-                              fontWeight: FontWeight.w600,
-                            ),
-                            overflow: TextOverflow.ellipsis,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        SizedBox(height: 4.0),
+                        Text(
+                          dish.price.toString(),
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.w600,
                           ),
-                          //quick note: we can add the rating text downhere
-                        ]),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        //quick note: we can add the rating text downhere
+                      ],
+                    ),
                   ),
                 ),
               ],
