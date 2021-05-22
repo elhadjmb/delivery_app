@@ -17,7 +17,8 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Foody"),
+          title: Text("Foudi"),
+          centerTitle: true,
           backgroundColor: Colour.orange,
         ),
         body: ListView(
@@ -54,7 +55,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SuggestedDishes(),
-            RestaurantsList(),
+            RestaurantsList(),          
           ],
         ),
       ),

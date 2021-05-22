@@ -2,12 +2,14 @@
 
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/models/Dish.dart';
+import 'package:delivery_app/testdata/data.dart';
+import 'package:delivery_app/testmodels/order.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class SuggestedDishes extends StatelessWidget {
-  _buildSuggestedOrder(BuildContext context, Dish dish) {
+  _buildSuggestedOrder(BuildContext context, Order order /*Dish dish*/) {
     return Container(
       margin: EdgeInsets.all(10.0),
       width: 320.0,
@@ -30,7 +32,7 @@ class SuggestedDishes extends StatelessWidget {
                   child: Image(
                     height: 100.0,
                     width: 100.0,
-                    image: AssetImage(dish.image),
+                    image: AssetImage(order.food.imageUrl/*dish.image*/),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -42,7 +44,7 @@ class SuggestedDishes extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          dish.name,
+                         order.food.name,// dish.name,
                           style: TextStyle(
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
@@ -51,7 +53,7 @@ class SuggestedDishes extends StatelessWidget {
                         ),
                         SizedBox(height: 4.0),
                         Text(
-                          dish.description,
+                         order.restaurant.name, //dish.description,
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.w600,
@@ -60,7 +62,7 @@ class SuggestedDishes extends StatelessWidget {
                         ),
                         SizedBox(height: 4.0),
                         Text(
-                          dish.price.toString(),
+                         order.date,// dish.price.toString(),
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.w600,
@@ -79,7 +81,7 @@ class SuggestedDishes extends StatelessWidget {
             margin: EdgeInsets.only(right: 20.0),
             width: 48.0,
             decoration: BoxDecoration(
-              color: Theme.of(context).primaryColor,
+              color: Colour.orange,
               borderRadius: BorderRadius.circular(30.0),
             ),
             //the button
@@ -98,7 +100,7 @@ class SuggestedDishes extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dish = Provider.of<List<Dish>>(context);
+    //final dish = Provider.of<List<Dish>>(context);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -121,9 +123,11 @@ class SuggestedDishes extends StatelessWidget {
             physics: BouncingScrollPhysics(),
             padding: EdgeInsets.only(left: 10.0),
             scrollDirection: Axis.horizontal,
-            itemCount: dish.length,
+            itemCount:currentUser.orders.length, //dish.length,
             itemBuilder: (context, index) {
-              return _buildSuggestedOrder(context, dish[index]);
+              Order order = currentUser.orders[index];
+              return _buildSuggestedOrder(context, order);
+             // return _buildSuggestedOrder(context, dish[index]);
             },
           ),
         ),

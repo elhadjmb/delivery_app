@@ -1,5 +1,7 @@
 import 'package:delivery_app/constants/colours.dart';
-import 'package:delivery_app/models/Restaurant.dart';
+import 'package:delivery_app/testdata/data.dart';
+import 'package:delivery_app/testmodels/restaurant.dart';
+//import 'package:delivery_app/models/Restaurant.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -17,44 +19,47 @@ class RestaurantsList extends StatelessWidget {
               ),
             ),
            child: Row(
+             mainAxisAlignment: MainAxisAlignment.spaceBetween,
              children:<Widget> [
                ClipRRect(
                   borderRadius: BorderRadius.circular(15.0),
                   child: Image(
-                    height: 100.0,
-                    width: 100.0,
-                   image: AssetImage(restaurant.id),
+                    height: 150.0,
+                    width: 150.0,
+                   image: AssetImage(restaurant.imageUrl),
                     fit: BoxFit.cover,
                   ),
                 ),
-                Container(
-                  margin: EdgeInsets.all(12.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          restaurant.name,
-                          style: TextStyle(
-                            fontSize: 20.0,
-                            fontWeight: FontWeight.bold,
+                Expanded(
+                   child: Container(
+                    margin: EdgeInsets.all(12.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            restaurant.name,
+                            style: TextStyle(
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            overflow: TextOverflow.ellipsis,
                           ),
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                        //add the rating class below
-                        //RatingStars(restaurant.rating),
-                        SizedBox(height: 4.0),
-                        Text(
-                          restaurant.address,
-                          style: TextStyle(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.w600,
+                          //add the rating class below
+                          //RatingStars(restaurant.rating),
+                          SizedBox(height: 4.0),
+                          Text(
+                            restaurant.address,
+                            style: TextStyle(
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.w600,
+                            ),
+                            overflow: TextOverflow.ellipsis,
                           ),
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                        SizedBox(height: 4.0),
-                      ]
-                  )
+                          SizedBox(height: 4.0),
+                        ]
+                    )
+                  ),
                 )
              ],
            ), 
@@ -63,7 +68,7 @@ class RestaurantsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final restaurant = Provider.of<List<Restaurant>>(context);
+    //final restaurant = Provider.of<List<Restaurant>>(context);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -81,14 +86,16 @@ class RestaurantsList extends StatelessWidget {
           ),
         ),
         Container(
-          //define the height of the container here
+          height: 400.0,
           child: ListView.builder(
             physics: BouncingScrollPhysics(),
-            padding: EdgeInsets.only(left: 10.0),
+            padding: EdgeInsets.only(left: 2.0),
             scrollDirection: Axis.vertical,
-            itemCount: restaurant.length,
+            itemCount: restaurants.length,
             itemBuilder: (context, index) {
-              return _buildRestaurantList(context, restaurant[index]);
+              Restaurant restaurant = restaurants[index];
+              return  _buildRestaurantList(context, restaurant);
+             // return _buildRestaurantList(context, restaurant[index]);
             },
           ),
         ),

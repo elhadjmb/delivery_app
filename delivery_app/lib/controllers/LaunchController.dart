@@ -2,6 +2,7 @@
 // WelcomeView or HomeView
 //import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:delivery_app/constants/types.dart';
+import 'package:delivery_app/views/widgets/View.dart';
 import 'package:flutter/material.dart';
 import 'package:delivery_app/models/User.dart';
 import 'package:delivery_app/views/LoginView.dart';
@@ -12,7 +13,7 @@ class LaunchController extends StatelessWidget{
   Widget build(BuildContext context)  {
   /*You can test ani screen here ,i put loginscreen momentarily */
     
-   return LoginScreen();
+   return View();
   // /*  
    /*  final user = Provider.of<User>(context);
 
