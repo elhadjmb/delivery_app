@@ -1,6 +1,7 @@
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/testdata/data.dart';
 import 'package:delivery_app/testmodels/restaurant.dart';
+import 'package:delivery_app/views/ClientViews/Widgets/RestaurantScreen.dart';
 //import 'package:delivery_app/models/Restaurant.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -8,62 +9,71 @@ import 'package:provider/provider.dart';
 
 class RestaurantsList extends StatelessWidget {
   _buildRestaurantList(BuildContext context, Restaurant restaurant){
-        return Container(
-            margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-            decoration: BoxDecoration(
-               color: Colour.white,
-               borderRadius: BorderRadius.circular(15.0),
-               border: Border.all(
-                width: 1.0,
-                color: Colour.gray,
-              ),
-            ),
-           child: Row(
-             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-             children:<Widget> [
-               ClipRRect(
-                  borderRadius: BorderRadius.circular(15.0),
-                  child: Image(
-                    height: 150.0,
-                    width: 150.0,
-                   image: AssetImage(restaurant.imageUrl),
-                    fit: BoxFit.cover,
-                  ),
+        return GestureDetector(
+              onTap: ()=>Navigator.push(
+                context,MaterialPageRoute(
+                builder: (_) => RestaurantScreen(restaurant: restaurant))
                 ),
-                Expanded(
-                   child: Container(
-                    margin: EdgeInsets.all(12.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text(
-                            restaurant.name,
-                            style: TextStyle(
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                          //add the rating class below
-                          //RatingStars(restaurant.rating),
-                          SizedBox(height: 4.0),
-                          Text(
-                            restaurant.address,
-                            style: TextStyle(
-                              fontSize: 16.0,
-                              fontWeight: FontWeight.w600,
-                            ),
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                          SizedBox(height: 4.0),
-                        ]
-                    )
+              child: Container(
+              margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+              decoration: BoxDecoration(
+              color: Colour.white,
+              borderRadius: BorderRadius.circular(15.0),
+              border: Border.all(
+                  width: 1.0,
+                  color: Colour.gray,
+                ),
+              ),
+             child: Row(
+               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+               children:<Widget> [
+                 ClipRRect(
+                    borderRadius: BorderRadius.circular(15.0),
+                    child: Hero(
+                        tag: restaurant.imageUrl,
+                        child: Image(
+                        height: 150.0,
+                        width: 150.0,
+                       image: AssetImage(restaurant.imageUrl),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
-                )
-             ],
-           ), 
-          );
+                  Expanded(
+                     child: Container(
+                      margin: EdgeInsets.all(12.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              restaurant.name,
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            //add the rating class below
+                            //RatingStars(restaurant.rating),
+                            SizedBox(height: 4.0),
+                            Text(
+                              restaurant.address,
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.w600,
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            SizedBox(height: 4.0),
+                          ]
+                      )
+                    ),
+                  )
+               ],
+             ), 
+            ),
+        );
         }
 
   @override
