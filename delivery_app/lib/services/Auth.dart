@@ -1,23 +1,23 @@
-//import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:delivery_app/constants/types.dart';
 import 'package:delivery_app/models/User.dart';
 import 'package:delivery_app/services/Database.dart';
 //import 'package:firebase_auth/firebase_auth.dart';
 class AuthService{
-  /*
+  
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
 //create usersign obj based on firebaseuser
-User _userFromFirebaseUser(FirebaseUser user){
+TUser _userFromFirebaseUser(User user){
 
-   return user != null ?  User(id: user.uid, phone: '', address: '', name: '', isActive: true, timeJoined: null, type: null):User(id: '', phone: '', address: '', name: '', isActive: true, timeJoined: null, type:null );
+   return user != null ?  TUser(id: user.uid, phone: '', address: '', name: '', isActive: true, timeJoined: null, type: null):TUser(id: '', phone: '', address: '', name: '', isActive: true, timeJoined: null, type:null );
  
 
 }
 
 // auth change user stream
-Stream<User> get user {
-    return _auth.onAuthStateChanged
+Stream<TUser> get user {
+    return _auth.authStateChanges() 
       //.map((FirebaseUser user) => _userFromFirebaseUser(user));
       .map(_userFromFirebaseUser);
      }
@@ -25,8 +25,8 @@ Stream<User> get user {
   //sign in anon
   Future singInAnon() async{
     try {
-      AuthResult result = await _auth.signInAnonymously();
-      FirebaseUser user = result.user;
+     UserCredential result = await _auth.signInAnonymously();
+      User user = result.user;
       return user;
     }
     catch(e){
@@ -38,8 +38,8 @@ Stream<User> get user {
   //sign in with email password
   Future signInWithEmailAndPassword(String email, String password) async {
     try {
-      AuthResult result = await _auth.signInWithEmailAndPassword(email: email, password: password);
-      FirebaseUser user = result.user;
+     UserCredential result = await _auth.signInWithEmailAndPassword(email: email, password: password);
+      User user = result.user;
      return _userFromFirebaseUser(user);
     } catch (error) {
       print(error.toString());
@@ -52,8 +52,8 @@ Stream<User> get user {
    
    Future registerWithEmailAndPassword(String email, String password,String name, String address, String phone,UserType type ) async {
     try {
-      AuthResult result = await _auth.createUserWithEmailAndPassword(email: email, password: password);
-      FirebaseUser user = result.user;
+     UserCredential result = await _auth.createUserWithEmailAndPassword(email: email, password: password);
+      User user = result.user;
       // create a new document for the user with the uid
      await DatabaseService(id: user.uid).updateUserData(name,password,address,type,phone);
       return _userFromFirebaseUser(user);
@@ -78,5 +78,5 @@ Future signOut() async {
       return null;
     }
   }
-*/
+
 }
