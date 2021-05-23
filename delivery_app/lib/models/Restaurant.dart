@@ -13,7 +13,7 @@ class Restaurant {
   Menu menu;
   DateTime openedHours, closedHours;
   bool isOpen;
-  Map<Position, User> employees; //employees are users of type SERVER
+  Map<Position, TUser> employees; //employees are users of type SERVER
 
   Restaurant({
     required this.id,

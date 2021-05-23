@@ -9,7 +9,7 @@ class DeliveryCompany {
   String id;
   String name;
   String address;
-  Map<Position, User> employees;
+  Map<Position, TUser> employees;
   DateTime openedHours, closedHours;
   bool isOpen;
 

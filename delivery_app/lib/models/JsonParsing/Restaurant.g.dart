@@ -17,7 +17,7 @@ Restaurant _$RestaurantFromJson(Map<String, dynamic> json) {
     openedHours: DateTime.parse(json['openedHours'] as String),
     employees: (json['employees'] as Map<String, dynamic>).map(
       (k, e) => MapEntry(_$enumDecode(_$PositionEnumMap, k),
-          User.fromJson(e as Map<String, dynamic>)),
+          TUser.fromJson(e as Map<String, dynamic>)),
     ),
   );
 }

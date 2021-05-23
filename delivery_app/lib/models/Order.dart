@@ -12,7 +12,7 @@ class Order {
   DateTime orderTime;
   String description;
   OrderStatus status;
-  User client;
+  TUser client;
   String deliveryAddress;
   List<Dish> dishes;
 

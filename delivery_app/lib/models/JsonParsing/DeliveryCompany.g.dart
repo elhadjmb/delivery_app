@@ -11,7 +11,7 @@ DeliveryCompany _$DeliveryCompanyFromJson(Map<String, dynamic> json) {
     id: json['id'] as String,
     employees: (json['employees'] as Map<String, dynamic>).map(
       (k, e) => MapEntry(_$enumDecode(_$PositionEnumMap, k),
-          User.fromJson(e as Map<String, dynamic>)),
+          TUser.fromJson(e as Map<String, dynamic>)),
     ),
     name: json['name'] as String,
     address: json['address'] as String,

@@ -12,7 +12,7 @@ Order _$OrderFromJson(Map<String, dynamic> json) {
     orderTime: DateTime.parse(json['orderTime'] as String),
     description: json['description'] as String,
     status: _$enumDecode(_$OrderStatusEnumMap, json['status']),
-    client: User.fromJson(json['client'] as Map<String, dynamic>),
+    client: TUser.fromJson(json['client'] as Map<String, dynamic>),
     deliveryAddress: json['deliveryAddress'] as String,
     dishes: (json['dishes'] as List<dynamic>)
         .map((e) => Dish.fromJson(e as Map<String, dynamic>))
