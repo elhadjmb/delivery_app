@@ -1,6 +1,7 @@
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/images.dart';
 import 'package:delivery_app/constants/strings.dart';
+import 'package:delivery_app/controllers/SignupViewController.dart';
 import 'package:flutter/material.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -15,6 +16,8 @@ class _SignupScreenState extends State<SignupScreen> {
   TextEditingController phone_Controler = TextEditingController();
   TextEditingController name_Controler = TextEditingController();
   TextEditingController adress_Controler = TextEditingController();
+  
+  SignupViewController svcont= SignupViewController();
 
   @override
   Widget build(BuildContext context) {
@@ -265,12 +268,15 @@ class _SignupScreenState extends State<SignupScreen> {
                         onTap: () {
                           if (_selections[0]) {
                             //TODO: delivery worker SignUp function
+                            svcont.signUpDeliverer(email_Controler.text, password_Controler.text, name_Controler.text ,adress_Controler.text, phone_Controler.text, context);
                           }
                           if (_selections[1]) {
                             //TODO: restaurant SignUp function
+                            svcont.signUpClient(email_Controler.text, password_Controler.text, name_Controler.text ,adress_Controler.text, phone_Controler.text, context);
                           }
                           if (_selections[2]) {
                             //TODO: client SignUp function
+                            svcont.signUpClient(email_Controler.text, password_Controler.text, name_Controler.text ,adress_Controler.text, phone_Controler.text, context);
                           }
                         },
                         child: Container(

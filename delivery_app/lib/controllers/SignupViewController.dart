@@ -6,10 +6,9 @@ import 'package:delivery_app/views/LoginView.dart';
 import 'package:delivery_app/views/SignupView.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'dart:ui';
 
 class SignupViewController {
-  /*
+ 
    final AuthService _auth= AuthService();
 // if it doesnt work witch it up to a simple void and put ontap on async
 //also if theres an error concering the empty type change string parameter into TextEditingController
@@ -17,21 +16,16 @@ class SignupViewController {
 //Client register class
     Future signUpClient(String email,String pass,String name,String addr,String phone,BuildContext cont) async{ 
         dynamic result = await _auth.registerWithEmailAndPassword(email, pass,name,addr,phone,UserType.CLIENT).then((result) {
-        
-         if (email.isEmpty ||pass.isEmpty ||phone.isEmpty  ){
-           showDialogNotfilled(cont);
-        }
-        else{
            if (result==null){
-       //show the alert widget
-      showDialogError(cont);
+           //show the alert widget
+         showDialogError(cont);
        //return AlertWidget();
         } else{
          //successful
-         LoginScreen();
-         
+        return LoginScreen();
+ 
         } 
-        }
+        
 
     });}
 
@@ -50,9 +44,8 @@ class SignupViewController {
         } else{
          //successful
          LoginScreen();
-         
         } 
-        }
+        } 
 
     });}
        
@@ -122,5 +115,5 @@ class SignupViewController {
       },
     );
   }
-*/
+
 }
