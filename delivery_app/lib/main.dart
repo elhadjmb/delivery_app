@@ -1,9 +1,13 @@
+// @dart=2.9
 import 'package:delivery_app/models/User.dart';
 import 'package:delivery_app/services/Auth.dart';
 import 'package:flutter/material.dart';
 import 'controllers/LaunchController.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+   WidgetsFlutterBinding.ensureInitialized();
+   await Firebase.initializeApp();
   runApp(new MaterialApp(
     home: LaunchController(),
     /*
