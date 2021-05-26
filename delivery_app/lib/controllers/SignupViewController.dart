@@ -4,6 +4,7 @@ import 'package:delivery_app/constants/types.dart';
 import 'package:delivery_app/services/Auth.dart';
 import 'package:delivery_app/views/LoginView.dart';
 import 'package:delivery_app/views/SignupView.dart';
+import 'package:delivery_app/views/widgets/View.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,60 +16,62 @@ class SignupViewController {
 
 //Client register class
     Future signUpClient(String email,String pass,String name,String addr,String phone,BuildContext cont) async{ 
-        dynamic result = await _auth.registerWithEmailAndPassword(email, pass,name,addr,phone,UserType.CLIENT).then((result) {
-           if (result==null){
+        dynamic result = await _auth.registerWithEmailAndPassword(email, pass,name,addr,phone,UserType.CLIENT);
+           if (result == null){
            //show the alert widget
          showDialogError(cont);
-       //return AlertWidget();
+        
         } else{
          //successful
-        return LoginScreen();
- 
+         print("success");
+        Navigator.push(
+            cont,
+             MaterialPageRoute(
+              builder: (context) => View(),
+            ),
+          );
         } 
-        
-
-    });}
+    }
 
     //Server register class
     Future signUpServer(String email,String pass,String name,String addr,String phone,BuildContext cont) async{ 
-        dynamic result = await _auth.registerWithEmailAndPassword(email, pass,name,addr,phone,UserType.SERVER).then((result) {
+        dynamic result = await _auth.registerWithEmailAndPassword(email, pass,name,addr,phone,UserType.SERVER);
+        if (result == null){
+           //show the alert widget
+         showDialogError(cont);
         
-         if (email.isEmpty ||pass.isEmpty ||phone.isEmpty  ){
-           showDialogNotfilled(cont);
-        }
-        else{
-           if (result==null){
-       //show the alert widget
-      showDialogError(cont);
-       //return AlertWidget();
         } else{
          //successful
-         LoginScreen();
+         print("success");
+        Navigator.push(
+            cont,
+             MaterialPageRoute(
+              builder: (context) => View(),
+            ),
+          );
         } 
-        } 
-
-    });}
+    }
+        
        
    //Deliverer register class
     Future signUpDeliverer(String email,String pass,String name,String addr,String phone,BuildContext cont) async{ 
-        dynamic result = await _auth.registerWithEmailAndPassword(email, pass,name,addr,phone,UserType.DELIVERER).then((result) {
+        dynamic result = await _auth.registerWithEmailAndPassword(email, pass,name,addr,phone,UserType.DELIVERER);
+        if (result == null){
+           //show the alert widget
+         showDialogError(cont);
         
-         if (email.isEmpty ||pass.isEmpty ||phone.isEmpty  ){
-           showDialogNotfilled(cont);
-        }
-        else{
-           if (result==null){
-       //show the alert widget
-      showDialogError(cont);
-       //return AlertWidget();
         } else{
          //successful
-         LoginScreen();
-         
+         print("success");
+        Navigator.push(
+            cont,
+             MaterialPageRoute(
+              builder: (context) => View(),
+            ),
+          );
         } 
-        }
-
-    });}    
+    }
+        
       
   void showDialogNotfilled(BuildContext context) {
     // flutter defined function

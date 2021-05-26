@@ -9,7 +9,7 @@ class TUser {
   bool isActive;
   String name;
   String address;
-  DateTime? timeJoined;
+ // DateTime? timeJoined;
   UserType? type;
   String phone;
   String? email;
@@ -19,7 +19,7 @@ class TUser {
     required this.isActive,
     required this.name,
     required this.address,
-     this.timeJoined,
+    // this.timeJoined,
     this.type,
     required this.phone,
     this.email,

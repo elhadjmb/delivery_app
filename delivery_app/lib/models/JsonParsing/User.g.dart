@@ -12,7 +12,7 @@ TUser _$UserFromJson(Map<String, dynamic> json) {
     isActive: json['isActive'] as bool,
     name: json['name'] as String,
     address: json['address'] as String,
-    timeJoined: DateTime.parse(json['timeJoined'] as String),
+   // timeJoined: DateTime.parse(json['timeJoined'] as String),
     type: _$enumDecode(_$UserTypeEnumMap, json['type']),
     phone: json['phone'] as String,
     email: json['email'] as String?,
@@ -24,7 +24,9 @@ Map<String, dynamic> _$UserToJson(TUser instance) => <String, dynamic>{
       'isActive': instance.isActive,
       'name': instance.name,
       'address': instance.address,
-      'timeJoined': instance.timeJoined!.toIso8601String(),
+      'email':instance.email,
+      'phone':instance.phone,
+     // 'timeJoined': instance.timeJoined!.toIso8601String(),
       'type': _$UserTypeEnumMap[instance.type],
     };
 

@@ -13,7 +13,7 @@ class LaunchController extends StatelessWidget{
   Widget build(BuildContext context)  {
   /*You can test ani screen here ,i put loginscreen momentarily */
     
-   return View();
+   return LoginScreen();
   // /*  
    /*  final user = Provider.of<User>(context);
 

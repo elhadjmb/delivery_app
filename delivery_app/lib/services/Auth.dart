@@ -10,7 +10,7 @@ final FirebaseAuth _auth = FirebaseAuth.instance;
 //create usersign obj based on firebaseuser
 TUser _userFromFirebaseUser(User user){
 
-   return user != null ?  TUser(id: user.uid, phone: '', address: '', name: '', isActive: true, timeJoined: null, type: null):TUser(id: '', phone: '', address: '', name: '', isActive: true, timeJoined: null, type:null );
+   return user != null ?  TUser(id: user.uid, phone: '', address: '', name: '', isActive: true,  type: null):TUser(id: '', phone: '', address: '', name: '', isActive: true,  type:null );
  
 
 }
@@ -54,9 +54,9 @@ Stream<TUser> get user {
     try {
      UserCredential result = await _auth.createUserWithEmailAndPassword(email: email, password: password);
       User user = result.user;
-      // create a new document for the user with the uid
-     await DatabaseService(id: user.uid).updateUserData(name,password,address,type,phone);
-      return _userFromFirebaseUser(user);
+      TUser sr= TUser(id: user.uid, isActive: true,email: user.email, name: name, address: address, phone: phone,type: type );
+      await DatabaseService(id: user.uid).updateUserData(sr);
+      return user;
     } catch (error) {
       print(error.toString());
       return null;
