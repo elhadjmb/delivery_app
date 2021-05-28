@@ -37,6 +37,10 @@ class _View extends State<View> {
               icon: Icon(Icons.person),
               label: "Profile",
             ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_cart),
+              label: "orders",
+            ),
           ],
         ),
       ),
