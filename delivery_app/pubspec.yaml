@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   firebase_auth: ^0.20.1
   cloud_firestore: ^0.16.0+1
+  email_validator: '^1.0.6'
   provider:
 dev_dependencies:
   flutter_test:
