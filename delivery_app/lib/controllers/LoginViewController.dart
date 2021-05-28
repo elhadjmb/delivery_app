@@ -1,46 +1,96 @@
-import 'dart:html';
 
-//import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:delivery_app/constants/types.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:delivery_app/services/Auth.dart';
+import 'package:delivery_app/views/widgets/View.dart';
 import 'package:flutter/material.dart';
-import 'package:delivery_app/models/User.dart';
-import 'package:delivery_app/views/LoginView.dart';
-import 'package:flutter/semantics.dart';
-import 'package:provider/provider.dart';
+import 'package:email_validator/email_validator.dart';
 class LoginViewController{
   final AuthService _auth= AuthService();
 
-//sign in methode 
- 
-/*
- 
  Future signIn(String email,String pass,BuildContext context) async{
-       dynamic result = await  _auth.signInWithEmailAndPassword(email,pass).then((result) async {
-         if(result ==null){
-          var error = 'Could not sign in with those credentials';
-          
+       if (email.isEmpty || pass.isEmpty){
+         showDialogNotfilled(context);
+       }
+       //TODO: CHECK ALL THE EXCEPTIONS CONCERNING THE FIREBASE EMAIL AND PASSWORD RULES AND CREATE A WIDGET FOREM
+       else{
+       dynamic result = await  _auth.signInWithEmailAndPassword(email,pass); 
+       DocumentSnapshot ds = await 
+        FirebaseFirestore.instance.collection('users').doc(result.uid).get();
+        var name = ds.data()['type'];
+        
+         if(result == null){
+          showDialogerr(context);
          }
          else{
-      
-       // call here the user object from firestore 
-       //need some testing on this ,try printing the result variable
-       DocumentSnapshot ds = await 
-       Firestore.instance.collection('users').document(result.id).get();
-       var name = ds.data['UserType'];
-        if (name == UserType.CLIENT) {
-          Navigator.pushReplacementNamed(context, '/StudentsPage');
-        } else if (name== UserType.SERVER) {
-          Navigator.pushReplacementNamed(context, '/TeacherPage');
-        } else if (name == UserType.DELIVERER) {
-          Navigator.pushReplacementNamed(context, '/AdminPage');
-        }
-         }
-        });
-
+           print("success");
+          if (name == "CLIENT") {
+            print("client");
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder:(context) => View(),
+            ),
+          );
+        } else if (name== "SERVER") {
+          print("server");
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder:(context) => View(),
+            ),
+          );
+        } else if (name == "DELIVERER") {
+          print("delivery");
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder:(context) => View(),
+            ),
+          );
+      }
+    }
+  }         
  }
-
-
-
-*/
 }
+ void showDialogNotfilled(BuildContext context) {
+    // flutter defined function
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return AlertDialog(
+          title: new Text("Error"),
+          content: new Text("Make sur to fill all the required fields"),
+          actions: <Widget>[
+            // usually buttons at the bottom of the dialog
+            new FlatButton(
+              child: new Text("Ok"),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+  void showDialogerr(BuildContext context) {
+    // flutter defined function
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return AlertDialog(
+          title: new Text("Error"),
+          content: new Text("Error happend during the signin try again!"),
+          actions: <Widget>[
+            // usually buttons at the bottom of the dialog
+            new FlatButton(
+              child: new Text("Ok"),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }

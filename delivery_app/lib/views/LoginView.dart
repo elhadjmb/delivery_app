@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/images.dart';
 import 'package:delivery_app/constants/strings.dart';
+import 'package:delivery_app/controllers/LoginViewController.dart';
 import 'package:delivery_app/views/SignupView.dart';
 import 'package:delivery_app/views/widgets/View.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   TextEditingController email_TEC = TextEditingController();
   TextEditingController password_TEC = TextEditingController();
+  LoginViewController sven=LoginViewController();
 
   @override
   Widget build(BuildContext context) {
@@ -124,20 +126,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       //Bellow is the login button :
                       InkWell(
-                        //TODO : Bellow goes Login function :
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => View(),
-                            ),
-                          );
-                          //this is just a test :
-
-                          var email = email_TEC.text;
-                          var password = password_TEC.text;
-                          debugPrint("$email");
-                          debugPrint("$password");
+                          sven.signIn(email_TEC.text.trim(), password_TEC.text, context);
                         },
                         child: Container(
                           width: MediaQuery.of(context).size.width / 1.4,
