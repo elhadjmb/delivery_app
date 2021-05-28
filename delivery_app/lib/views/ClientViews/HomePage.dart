@@ -1,4 +1,5 @@
 import 'package:delivery_app/constants/colours.dart';
+import 'package:delivery_app/constants/strings.dart';
 import 'package:delivery_app/views/ClientViews/Widgets/OurRestaurants.dart';
 import 'package:delivery_app/views/ClientViews/Widgets/SuggestedDishes.dart';
 import 'package:flutter/cupertino.dart';
@@ -17,7 +18,16 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Foudi"),
+          title: Text(
+            StringOuter.title["mainTitle"] as String,
+            style: TextStyle(
+              fontFamily: StringInner.fonts["main"],
+              fontWeight: FontWeight.bold,
+              fontSize: 35.0,
+              color: Colour.black,
+              fontStyle: FontStyle.italic,
+            ),
+          ),
           centerTitle: true,
           backgroundColor: Colour.orange,
         ),
@@ -55,7 +65,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SuggestedDishes(),
-            RestaurantsList(),          
+            RestaurantsList(),
           ],
         ),
       ),
