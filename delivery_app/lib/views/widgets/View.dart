@@ -1,5 +1,6 @@
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/views/ClientViews/HomePage.dart';
+import 'package:delivery_app/views/ClientViews/ShoppingCartPage.dart';
 import 'package:delivery_app/views/SettingsViews/ProfileView.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,7 @@ class _View extends State<View> {
   final List<Widget> _pages = [
     HomePage(),
     ProfilePage(),
+    ShoppingCartPage(),
   ];
 
   @override
