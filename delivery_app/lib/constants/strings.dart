@@ -40,7 +40,7 @@ class StringOuter {
   };
 
   static const Map<String, String> title = {
-    "mainTitle": "Foody",
+    "mainTitle": "Foudi",
     "home": "Home",
     "profile": "Profile",
     "account choice": "Select your account type :"
