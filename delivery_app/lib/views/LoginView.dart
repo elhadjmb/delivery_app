@@ -127,7 +127,12 @@ class _LoginScreenState extends State<LoginScreen> {
                       //Bellow is the login button :
                       InkWell(
                         onTap: () {
-                          sven.signIn(email_TEC.text.trim(), password_TEC.text, context);
+                         // sven.signIn(email_TEC.text.trim(), password_TEC.text, context);
+                           Navigator.push(
+            context,
+            MaterialPageRoute(builder:(context) => View(),
+            ),
+          );
                         },
                         child: Container(
                           width: MediaQuery.of(context).size.width / 1.4,

@@ -1,15 +1,15 @@
 import 'package:delivery_app/services/Auth.dart';
+import 'package:delivery_app/views/widgets/View.dart';
 import 'package:flutter/material.dart';
-import 'package:delivery_app/models/User.dart';
-import 'package:delivery_app/views/LoginView.dart';
-import 'package:provider/provider.dart';
-
-/*
-class HomeViewController{
+class HomePageCon{
   //sign out button 
   final AuthService _auth= AuthService();
-Future signOutbutton() async {
+Future signOutbutton(BuildContext context) async {
    await _auth.signOut();
+     Navigator.push(
+            context,
+            MaterialPageRoute(builder:(context) => View(),
+            ),
+          );
   }
-  //documentation https://medium.com/firebase-tips-tricks/how-to-use-cloud-firestore-in-flutter-9ea80593ca40
-}*/
+}
