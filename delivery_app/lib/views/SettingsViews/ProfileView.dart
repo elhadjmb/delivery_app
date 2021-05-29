@@ -21,7 +21,7 @@ class _ProfilePageState extends State<ProfilePage> {
             fontFamily: StringInner.fonts["main"],
             fontWeight: FontWeight.bold,
             fontSize: 35.0,
-            color: Colour.black,
+            color: Colour.white,
             fontStyle: FontStyle.italic,
           ),
         ),

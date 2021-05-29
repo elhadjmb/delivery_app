@@ -1,7 +1,9 @@
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/strings.dart';
+import 'package:delivery_app/testdata/data.dart';
 import 'package:delivery_app/views/ClientViews/Widgets/OurRestaurants.dart';
 import 'package:delivery_app/views/ClientViews/Widgets/SuggestedDishes.dart';
+import 'package:delivery_app/views/LoginView.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -18,13 +20,24 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+          icon: Icon(Icons.logout),
+          iconSize: 30.0,
+          onPressed: () {
+            Navigator.push(
+            context,
+            MaterialPageRoute(builder:(context) =>LoginScreen(),
+            ),
+          );
+          },
+        ),
           title: Text(
             StringOuter.title["mainTitle"] as String,
             style: TextStyle(
               fontFamily: StringInner.fonts["main"],
               fontWeight: FontWeight.bold,
               fontSize: 35.0,
-              color: Colour.black,
+              color: Colour.white,
               fontStyle: FontStyle.italic,
             ),
           ),

@@ -13,8 +13,8 @@ class _View extends State<View> {
   int _currentIndex = 0;
   final List<Widget> _pages = [
     HomePage(),
-    ProfilePage(),
     ShoppingCartPage(),
+    ProfilePage(),
   ];
 
   @override
@@ -36,12 +36,12 @@ class _View extends State<View> {
               label: "Home",
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: "Profile",
+              icon: Icon(Icons.shopping_cart),
+              label: "Cart",
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart),
-              label: "orders",
+              icon: Icon(Icons.person),
+              label: "Profile",
             ),
           ],
         ),
