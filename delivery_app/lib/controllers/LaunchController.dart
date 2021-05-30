@@ -1,12 +1,7 @@
-//TODO: Create a controller that directs the user to either
-// WelcomeView or HomeView
+
 //import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:delivery_app/constants/types.dart';
-import 'package:delivery_app/views/widgets/View.dart';
+import 'package:delivery_app/views/AuthentificationViews/LoginView.dart';
 import 'package:flutter/material.dart';
-import 'package:delivery_app/models/User.dart';
-import 'package:delivery_app/views/LoginView.dart';
-import 'package:provider/provider.dart';
 
 class LaunchController extends StatelessWidget{
   @override

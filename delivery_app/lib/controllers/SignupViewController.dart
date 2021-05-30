@@ -2,8 +2,6 @@
 
 import 'package:delivery_app/constants/types.dart';
 import 'package:delivery_app/services/Auth.dart';
-import 'package:delivery_app/views/LoginView.dart';
-import 'package:delivery_app/views/SignupView.dart';
 import 'package:delivery_app/views/widgets/View.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

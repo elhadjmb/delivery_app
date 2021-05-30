@@ -1,9 +1,8 @@
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/strings.dart';
-import 'package:delivery_app/testdata/data.dart';
+import 'package:delivery_app/views/AuthentificationViews/LoginView.dart';
 import 'package:delivery_app/views/ClientViews/Widgets/OurRestaurants.dart';
 import 'package:delivery_app/views/ClientViews/Widgets/SuggestedDishes.dart';
-import 'package:delivery_app/views/LoginView.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
