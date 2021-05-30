@@ -42,10 +42,19 @@ dependencies:
   provider:
   flutter_spinkit: "^4.1.2"
 dev_dependencies:
+  flutter_native_splash: ^1.1.8+4 
   flutter_test:
     sdk: flutter
+
+  
   build_runner: #CLI command: flutter pub run build_runner build
   json_serializable:
+
+flutter_native_splash:
+  color: "#F77F00"
+  image: assets/images/foodlogo.png
+  android: true
+  ios: true
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
