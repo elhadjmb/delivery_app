@@ -51,8 +51,8 @@ dev_dependencies:
   json_serializable:
 
 flutter_native_splash:
-  color: "#F77F00"
-  image: assets/images/foodlogo.png
+  color: "#f09803"
+  image: assets/images/foodlogo1.png
   android: true
   ios: true
 
