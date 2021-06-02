@@ -4,6 +4,7 @@ import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/models/Dish.dart';
 import 'package:delivery_app/testdata/data.dart';
 import 'package:delivery_app/testmodels/order.dart';
+import 'package:delivery_app/views/ClientViews/Widgets/DishScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -90,7 +91,12 @@ class SuggestedDishes extends StatelessWidget {
               iconSize: 30.0,
               color: Colors.white,
               //here we tap in the function that takes us into the ordering process of the selected dish
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                context,MaterialPageRoute(
+                builder: (_) => DishIng(food: order.food,))
+                );
+              },
             ),
           ),
         ],

@@ -1,6 +1,7 @@
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/testmodels/food.dart';
 import 'package:delivery_app/testmodels/restaurant.dart';
+import 'package:delivery_app/views/ClientViews/Widgets/DishScreen.dart';
 //import 'package:delivery_app/models/Restaurant.dart';
 import 'package:flutter/material.dart';
 
@@ -85,7 +86,12 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                 icon: Icon(Icons.add),
                 iconSize: 30.0,
                 color: Colors.white,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                context,MaterialPageRoute(
+                builder: (_) => DishIng(food: menuItem,))
+                );
+                },
               ),
             ),
           ),

@@ -151,6 +151,7 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
     );
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colour.white,
         appBar: AppBar(
           title: Text(
             'Cart (${currentUser.cart.length})',
