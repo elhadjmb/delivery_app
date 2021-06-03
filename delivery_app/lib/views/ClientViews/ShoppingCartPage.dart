@@ -2,6 +2,7 @@ import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/strings.dart';
 import 'package:delivery_app/testdata/data.dart';
 import 'package:delivery_app/testmodels/order.dart';
+import 'package:delivery_app/views/ClientViews/Widgets/DeliveryMap.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -253,7 +254,12 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                 letterSpacing: 2.0,
               ),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,MaterialPageRoute(
+                builder: (_) => FireMap())
+                );
+            },
           ),
         ),
       ),
