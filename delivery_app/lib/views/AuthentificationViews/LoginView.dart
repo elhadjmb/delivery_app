@@ -16,7 +16,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   TextEditingController email_TEC = TextEditingController();
   TextEditingController password_TEC = TextEditingController();
-  LoginViewController sven=LoginViewController();
+  LoginViewController sven = LoginViewController();
 
   @override
   Widget build(BuildContext context) {
@@ -127,12 +127,23 @@ class _LoginScreenState extends State<LoginScreen> {
                       //Bellow is the login button :
                       InkWell(
                         onTap: () {
-                         // sven.signIn(email_TEC.text.trim(), password_TEC.text, context);
-                           Navigator.push(
-            context,
-            MaterialPageRoute(builder:(context) => View(),
-            ),
-          );
+                          // sven.signIn(email_TEC.text.trim(), password_TEC.text, context);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => View(),
+                            ),
+                          );
+                          /*
+                          if () {
+                            //TODO: here goes goes the client view                      
+                          }
+                          if () {
+                            //TODO: here goes goes the restqurqnt view view 
+                          }
+                          if () {
+                            //TODO: here goes goes the delivery view 
+                          }*/
                         },
                         child: Container(
                           width: MediaQuery.of(context).size.width / 1.4,
