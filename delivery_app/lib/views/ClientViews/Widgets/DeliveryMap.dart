@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 //import 'package:location/location.dart';
 
@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 //import 'package:cloud_firestore/cloud_firestore.dart';
 //import 'package:rxdart/rxdart.dart';
 //import 'dart:async';
-/*
+
 
 class FireMap extends StatefulWidget {
   @override
@@ -17,7 +17,7 @@ class FireMap extends StatefulWidget {
 class _FireMapState extends State<FireMap> {
   @override
 
-  GoogleMapController mapController;
+ /* GoogleMapController mapController;
    Location location = new Location();
 
    Firestore firestore = Firestore.instance;
@@ -28,17 +28,16 @@ class _FireMapState extends State<FireMap> {
   Stream<dynamic> query;
 
   //subscription to prevent memory leak
-  StreamSubscription subscription;
+  StreamSubscription subscription;*/
 
   Widget build(BuildContext context) {
     return Stack(
       children: [
         GoogleMap(
           initialCameraPosition: CameraPosition(target: LatLng(24.150, -110.32), zoom: 10),
-          onMapCreated: _onMapCreated,
+         // onMapCreated: _onMapCreated,
           myLocationEnabled: true, // Add little blue dot for device location, requires permission from user
-          mapType: MapType.hybrid, 
-          trackCameraPosition: true
+          mapType: MapType.normal, 
         ),
         Positioned(
           bottom: 50,
@@ -46,47 +45,47 @@ class _FireMapState extends State<FireMap> {
           child: 
           FlatButton(
             child: Icon(Icons.pin_drop),
-            color: Colors.green,
-            onPressed: () => _addGeoPoint
+            color: Colors.green, onPressed: () {  },
+           // onPressed: () => _addGeoPoint
           )
         ),
-        Positioned(
+       /* Positioned(
           bottom: 50,
           left: 10,
-          child: Slider(
+         child: Slider(
           min: 100.0,
           max: 500.0, 
           divisions: 4,
-          value: radius.value,
-          label: 'Radius ${radius.value}km',
+          //value: radius.value,
+         // label: 'Radius ${radius.value}km',
           activeColor: Colors.green,
           inactiveColor: Colors.green.withOpacity(0.2),
-          onChanged: _updateQuery,
+        //  onChanged: _updateQuery,
         )
-      )
+      )*/
       ],
     );
   }
 
-    void _onMapCreated(GoogleMapController controller) {
+  /*  void _onMapCreated(GoogleMapController controller) {
     _startQuery();
     setState(() {
       mapController = controller;
         });
-    }
+    }*/
     
     //function to add a marker on the map
-    _addMarker() {
+    /*_addMarker() {
       var marker = Marker(
       position: mapController.cameraPosition.target,
       icon: BitmapDescriptor.defaultMarker,
       infoWindowText: InfoWindowText('Magic Marker', '🍄🍄🍄')
       );
          mapController.addMarker(marker);
-     }
+     }*/
      
      //function to animate the map to the user current location
-     _animateToUser() async {
+   /*  _animateToUser() async {
     var pos = await location.getLocation();
 
     mapController.animateCamera(CameraUpdate.newCameraPosition(
@@ -96,20 +95,20 @@ class _FireMapState extends State<FireMap> {
           )
         )
       );
-     }
+     }*/
 
      //function to save users location in the databae
-     Future<DocumentReference> _addGeoPoint() async {
+    /* Future<DocumentReference> _addGeoPoint() async {
          var pos = await location.getLocation();
          GeoFirePoint point = geo.point(latitude: pos.latitude, longitude: pos.longitude);
          return firestore.collection('locations').add({ 
          'position': point.data,
         'name': 'Yay I can be queried!' 
           });
-      }
+      }*/
 
       //updating the markers
-      void _updateMarkers(List<DocumentSnapshot> documentList) {
+     /* void _updateMarkers(List<DocumentSnapshot> documentList) {
     print(documentList);
     mapController.clearMarkers();
     documentList.forEach((DocumentSnapshot document) {
@@ -124,11 +123,11 @@ class _FireMapState extends State<FireMap> {
 
         mapController.addMarker(marker);
     });
-  }
+  }*/
 
 
      //the query to the firestore
-     _startQuery() async {
+   /*  _startQuery() async {
     // Get users location
     var pos = await location.getLocation();
     double lat = pos.latitude;
@@ -149,8 +148,8 @@ class _FireMapState extends State<FireMap> {
       );
     }).listen(_updateMarkers);
   }
-
-  _updateQuery(value) {
+*/
+ /* _updateQuery(value) {
       setState(() {
         radius.add(value);
       });
@@ -162,7 +161,6 @@ class _FireMapState extends State<FireMap> {
     subscription.cancel();
     super.dispose();
   }   
-
+*/
 
 }
-*/
