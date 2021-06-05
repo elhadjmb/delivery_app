@@ -32,16 +32,16 @@ class _Footer extends State<Footer> {
           },
           items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.food_bank_outlined),
-              label: "Food_menu",
+              icon: Icon(Icons.playlist_add_check_outlined),
+              label: "Orders",
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.playlist_add_check_outlined),
-              label: "Orders_List",
+              icon: Icon(Icons.food_bank_outlined),
+              label: "Menu",
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person),
-              label: "profile",
+              label: "Profile",
             ),
           ],
         ),
