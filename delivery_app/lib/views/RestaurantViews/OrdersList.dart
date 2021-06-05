@@ -53,7 +53,14 @@ class _OrdersListState extends State<OrdersList> {
       width: MediaQuery.of(context).size.width,
       height: 120,
       child: Card(
-        color: Colour.purple,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(22.0),
+          side: BorderSide(
+            width: 2.0,
+            color: Colour.purple,
+          ),
+        ),
+        color: Colour.white,
         child: Padding(
           padding: const EdgeInsets.only(
             top: 8.0,
@@ -75,7 +82,7 @@ class _OrdersListState extends State<OrdersList> {
                         style: TextStyle(
                           fontSize: 17.0,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                          color: Colour.black,
                         ),
                       ),
                     ),
@@ -84,7 +91,7 @@ class _OrdersListState extends State<OrdersList> {
                       style: TextStyle(
                         fontSize: 14.0,
                         fontWeight: FontWeight.normal,
-                        color: Colors.grey,
+                        color: Colour.black,
                       ),
                     ),
                   ],
@@ -99,7 +106,7 @@ class _OrdersListState extends State<OrdersList> {
                         style: TextStyle(
                           fontSize: 14.0,
                           fontWeight: FontWeight.normal,
-                          color: Colors.grey,
+                          color: Colour.black,
                         ),
                       ),
                     ),
@@ -113,7 +120,7 @@ class _OrdersListState extends State<OrdersList> {
                       style: TextStyle(
                         fontSize: 14.0,
                         fontWeight: FontWeight.normal,
-                        color: Colors.grey,
+                        color: Colour.black,
                       ),
                     ),
                   ],
