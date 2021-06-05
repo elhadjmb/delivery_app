@@ -154,6 +154,17 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
       child: Scaffold(
         backgroundColor: Colour.white,
         appBar: AppBar(
+          leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          iconSize: 30.0,
+          onPressed: () {
+            Navigator.push(
+            context,
+            MaterialPageRoute(builder:(context) =>ShoppingCartPage(),
+            ),
+          );
+        },
+       ),
           title: Text(
             'Cart (${currentUser.cart.length})',
             style: TextStyle(
