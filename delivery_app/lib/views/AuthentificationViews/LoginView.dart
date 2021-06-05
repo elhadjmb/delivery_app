@@ -5,6 +5,7 @@ import 'package:delivery_app/constants/images.dart';
 import 'package:delivery_app/constants/strings.dart';
 import 'package:delivery_app/controllers/LoginViewController.dart';
 import 'package:delivery_app/views/AuthentificationViews/SignupView.dart';
+import 'package:delivery_app/views/RestaurantViews/widgets/RestaurantBottomNavBar.dart';
 import 'package:delivery_app/views/widgets/View.dart';
 import 'package:flutter/material.dart';
 
@@ -131,7 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => View(),
+                              builder: (context) => Footer(),
                             ),
                           );
                           /*
