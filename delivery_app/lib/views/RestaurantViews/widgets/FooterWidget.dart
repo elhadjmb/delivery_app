@@ -1,6 +1,7 @@
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/views/ClientViews/HomePage.dart';
 import 'package:delivery_app/views/ClientViews/ShoppingCartPage.dart';
+import 'package:delivery_app/views/RestaurantViews/OrdersList.dart';
 import 'package:delivery_app/views/SettingsViews/ProfileView.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,7 @@ class _Footer extends State<Footer> {
   int _currentIndex = 0;
   final List<Widget> _pages = [
     //TODO: here goes all restaurants views
+    OrdersList(),
   ];
 
   @override
