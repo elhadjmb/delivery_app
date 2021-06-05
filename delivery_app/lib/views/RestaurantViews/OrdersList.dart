@@ -1,3 +1,5 @@
+import 'package:delivery_app/constants/colours.dart';
+import 'package:delivery_app/constants/strings.dart';
 import 'package:delivery_app/testmodels/ingredient.dart';
 import 'package:delivery_app/testmodels/order.dart';
 import 'package:flutter/material.dart';
@@ -15,14 +17,19 @@ class _OrdersListState extends State<OrdersList> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "OrdersList",
+          StringOuter.title["mainTitle"] as String,
           style: TextStyle(
-              color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+            fontFamily: StringInner.fonts["main"],
+            fontWeight: FontWeight.bold,
+            fontSize: 35.0,
+            color: Colour.white,
+            fontStyle: FontStyle.italic,
+          ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.pink.shade300,
+        backgroundColor: Colour.purple,
       ),
-      backgroundColor: Colors.orange.shade100,
+      backgroundColor: Colour.white,
       body: ListView.builder(
         itemCount: orders.length,
         itemBuilder: (BuildContext context, int index) {
@@ -46,7 +53,7 @@ class _OrdersListState extends State<OrdersList> {
       width: MediaQuery.of(context).size.width,
       height: 120,
       child: Card(
-        color: Colors.brown.shade500,
+        color: Colour.purple,
         child: Padding(
           padding: const EdgeInsets.only(
             top: 8.0,
@@ -73,7 +80,7 @@ class _OrdersListState extends State<OrdersList> {
                       ),
                     ),
                     Text(
-                      "quantity :${order.quantity}",
+                      "quantity : ${order.quantity}",
                       style: TextStyle(
                         fontSize: 14.0,
                         fontWeight: FontWeight.normal,
@@ -87,7 +94,8 @@ class _OrdersListState extends State<OrdersList> {
                   children: <Widget>[
                     Flexible(
                       child: Text(
-                        "ingredients:" + getIngredients(order.food.ingredient),
+                        "ingredients : " +
+                            getIngredients(order.food.ingredient),
                         style: TextStyle(
                           fontSize: 14.0,
                           fontWeight: FontWeight.normal,
@@ -98,17 +106,18 @@ class _OrdersListState extends State<OrdersList> {
                   ],
                 ),
                 Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text(
-                        getTotalPrice(order).toString() + " €",
-                        style: TextStyle(
-                          fontSize: 14.0,
-                          fontWeight: FontWeight.normal,
-                          color: Colors.grey,
-                        ),
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text(
+                      getTotalPrice(order).toString() + " DA",
+                      style: TextStyle(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.grey,
                       ),
-                    ]),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
