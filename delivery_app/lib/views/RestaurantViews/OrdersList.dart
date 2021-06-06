@@ -137,11 +137,11 @@ class _OrdersListState extends State<OrdersList> {
     return Padding(
       padding: const EdgeInsets.only(left: 8.0),
       child: Container(
-        width: 100,
-        height: 100,
+        width: 105,
+        height: 105,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(18.0),
-          shape: BoxShape.rectangle,
+          //borderRadius: BorderRadius.circular(18.0),
+          shape: BoxShape.circle,
           image: DecorationImage(
             image: NetworkImage(ImageUrl),
             fit: BoxFit.cover,
