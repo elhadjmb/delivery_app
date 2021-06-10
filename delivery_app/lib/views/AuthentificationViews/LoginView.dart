@@ -5,6 +5,7 @@ import 'package:delivery_app/constants/images.dart';
 import 'package:delivery_app/constants/strings.dart';
 import 'package:delivery_app/controllers/LoginViewController.dart';
 import 'package:delivery_app/views/AuthentificationViews/SignupView.dart';
+import 'package:delivery_app/views/ClientViews/HomePage.dart';
 import 'package:delivery_app/views/RestaurantViews/widgets/RestaurantBottomNavBar.dart';
 import 'package:delivery_app/views/widgets/View.dart';
 import 'package:flutter/material.dart';
@@ -132,19 +133,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Footer(),
+                              builder: (context) => View(),
                             ),
                           );
-                          /*
-                          if () {
-                            //TODO: here goes goes the client view                      
-                          }
-                          if () {
-                            //TODO: here goes goes the restqurqnt view view 
-                          }
-                          if () {
-                            //TODO: here goes goes the delivery view 
-                          }*/
                         },
                         child: Container(
                           width: MediaQuery.of(context).size.width / 1.4,
