@@ -3,6 +3,7 @@
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/strings.dart';
 import 'package:delivery_app/views/ClientViews/HomePage.dart';
+import 'package:delivery_app/views/widgets/View.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -185,7 +186,7 @@ class FireMapState extends State<FireMap> {
           onPressed: () {
             Navigator.push(
             context,
-            MaterialPageRoute(builder:(context) =>HomePage(),
+            MaterialPageRoute(builder:(context) =>View(),
             ),
           );
         },

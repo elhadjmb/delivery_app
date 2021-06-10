@@ -1,6 +1,7 @@
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/testmodels/food.dart';
 import 'package:delivery_app/testmodels/ingredient.dart';
+import 'package:delivery_app/views/ClientViews/ShoppingCartPage.dart';
 import 'package:flutter/material.dart';
 
 class DishIng extends StatefulWidget {
@@ -161,7 +162,7 @@ List<CheckBoxListTileModel> checkBoxListTileModel =
           ),
          // SizedBox(height: 10.0),
           Container(
-            height: 350,
+            height: 340,
             child: ListView.builder(
             physics: BouncingScrollPhysics(),
             padding: EdgeInsets.only(left: 2.0),
@@ -177,7 +178,7 @@ List<CheckBoxListTileModel> checkBoxListTileModel =
         ],
       ),
       bottomSheet: Container(
-        height: 50.0,
+        height: 56.0,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           color: Colour.orange,
@@ -190,17 +191,37 @@ List<CheckBoxListTileModel> checkBoxListTileModel =
           ],
         ),
         child: Center(
-          child: FlatButton(
-            child: Text(
-              'ADD TO CART',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 22.0,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 2.0,
-              ),
+          child: TextButton(
+          /*  style: TextButton.styleFrom(
+              shape: StadiumBorder(),
+            ),*/
+            child: 
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(        
+                  Icons.shopping_cart,
+                  color: Colour.white,
+                  ),
+                 SizedBox(width: 15),       
+                Text(
+                  'ADD TO CART',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 2.0,
+                  ),
+                ),
+              ],
             ),
-            onPressed: () {},
+            //adding a dish with its ingredients to the cart
+            onPressed: () {
+              Navigator.push(
+                context,MaterialPageRoute(
+                builder: (_) =>ShoppingCartPage())
+                );
+            },
           ),
         ),
       ),

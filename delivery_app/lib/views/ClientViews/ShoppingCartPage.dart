@@ -3,8 +3,11 @@ import 'package:delivery_app/constants/strings.dart';
 import 'package:delivery_app/testdata/data.dart';
 import 'package:delivery_app/testmodels/order.dart';
 import 'package:delivery_app/views/ClientViews/Widgets/DeliveryMap.dart';
+import 'package:delivery_app/views/widgets/View.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'StatusScreen.dart';
 
 class ShoppingCartPage extends StatefulWidget {
   @override
@@ -160,7 +163,7 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
           onPressed: () {
             Navigator.push(
             context,
-            MaterialPageRoute(builder:(context) =>ShoppingCartPage(),
+            MaterialPageRoute(builder:(context) =>View(),
             ),
           );
         },
@@ -242,9 +245,10 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
         },
       ),
       bottomSheet: Container(
-        height: 70.0,
+        height: 56.0,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
           color: Colour.orange,
           boxShadow: [
             BoxShadow(
@@ -255,20 +259,31 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
           ],
         ),
         child: Center(
-          child: FlatButton(
-            child: Text(
-              'CHECKOUT',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 22.0,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 2.0,
-              ),
+          child: TextButton(
+            child: 
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [              
+                Icon(        
+                  Icons.payment,
+                  color: Colour.white,
+                  ),
+                SizedBox(width: 15),
+                Text(
+                  'CHECKOUT',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 2.0,
+                  ),
+                ),
+              ],
             ),
             onPressed: () {
               Navigator.push(
                 context,MaterialPageRoute(
-                builder: (_) => FireMap())
+                builder: (_) => StatusWidg())
                 );
             },
           ),
