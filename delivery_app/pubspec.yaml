@@ -77,6 +77,10 @@ flutter:
     - assets/images/pizza.png
     - assets/images/LoginBackground.jpg
     - assets/testimages/
+    - assets/images/Ober.png
+    - assets/images/Pan.png
+    - assets/images/FoodPackage.png
+    - assets/images/icon_direction.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
