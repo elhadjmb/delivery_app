@@ -7,5 +7,6 @@ class Colour {
   static const yellow = Color(0xffFCBF49);
   static const red = Color(0xffD62828);
   static const orange = Color(0xFFF77F00);
+  static const paleOrange = Color(0xFFf09803);
   static const gray = Color(0xFF8F8F8F);
 }
