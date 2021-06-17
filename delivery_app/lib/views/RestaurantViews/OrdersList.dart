@@ -11,7 +11,7 @@ class OrdersList extends StatefulWidget {
 
 class _OrdersListState extends State<OrdersList> {
   final List<Order> orders = Order.getOrders();
-
+  List<bool> _selections = List.generate(2, (_) => false);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +35,7 @@ class _OrdersListState extends State<OrdersList> {
         itemBuilder: (BuildContext context, int index) {
           return Stack(
             children: <Widget>[
-              Positioned(child: orderCard(orders[index], context)),
+              Positioned(child: orderCard(orders[index], _selections, context)),
               Positioned(
                 top: 10.0,
                 child: orderImage(orders[index].food.imageUrl),
@@ -47,11 +47,11 @@ class _OrdersListState extends State<OrdersList> {
     );
   }
 
-  Widget orderCard(Order order, BuildContext context) {
+  Widget orderCard(Order order, List<bool> selections, BuildContext context) {
     return Container(
       margin: EdgeInsets.only(left: 60.0),
       width: MediaQuery.of(context).size.width,
-      height: 120,
+      height: 150,
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(22.0),
@@ -122,6 +122,36 @@ class _OrdersListState extends State<OrdersList> {
                         fontWeight: FontWeight.normal,
                         color: Colour.black,
                       ),
+                    ),
+                    ToggleButtons(
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: Text("Preparing"),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: Text("Ready to deliver"),
+                        ),
+                      ],
+                      isSelected: selections,
+                      onPressed: (int index) {
+                        setState(() {
+                          for (var i = 0; i < 2; i++) {
+                            selections[i] = false;
+                          }
+                          selections[index] = !selections[index];
+                        });
+                      },
+                      textStyle: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      color: Colour.black,
+                      selectedBorderColor: Colour.purple,
+                      borderRadius: BorderRadius.circular(14.0),
+                      selectedColor: Colour.purple,
+                      borderColor: Colour.gray,
                     ),
                   ],
                 ),
