@@ -1,6 +1,7 @@
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/images.dart';
 import 'package:delivery_app/constants/strings.dart';
+import 'package:delivery_app/models/User.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -10,8 +11,10 @@ class ProfilePage extends StatefulWidget {
 
 class _ProfilePageState extends State<ProfilePage> {
   var counter = 0;
-  var _userName = "";
-  var _userType = "";
+  String _userName = "burger"; //user.name;
+  var _userType = "burger"; //user.type;
+  String _userAddress = "burger"; //user.address;
+  String _userPhone = "burger"; //user.phone;
 
   @override
   Widget build(BuildContext context) {
@@ -43,54 +46,67 @@ class _ProfilePageState extends State<ProfilePage> {
                       colors: [Colour.orange, Colour.yellow],
                     ),
                   ),
-                  child: Center(
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height: 110.0,
-                        ),
-                        Container(
-                          decoration: new BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: new Border.all(
-                              color: Colors.white,
-                              width: 4.0,
+                  child: Flexible(
+                    child: Center(
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 70.0,
+                          ),
+                          Container(
+                            decoration: new BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: new Border.all(
+                                color: Colors.white,
+                                width: 4.0,
+                              ),
+                            ),
+                            child: CircleAvatar(
+                              radius: 65.0,
+                              backgroundImage: AssetImage(Images.burger),
                             ),
                           ),
-                          child: CircleAvatar(
-                            radius: 65.0,
-                            backgroundImage: AssetImage(Images.burger),
+                          SizedBox(
+                            height: 10.0,
                           ),
-                        ),
-                        SizedBox(
-                          height: 10.0,
-                        ),
-                        Text(
-                          _userName,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20.0,
-                            fontWeight: FontWeight.bold,
+                          Text(
+                            _userName,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          height: 10.0,
-                        ),
-                        Text(
-                          _userType,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15.0,
+                          SizedBox(
+                            height: 10.0,
                           ),
-                        ),
-                      ],
+                          Text(
+                            _userType,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 15.0,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
               ),
               Expanded(
                 flex: 6,
-                child: Container(),
+                child: Center(
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [Text("Address " + _userAddress)],
+                      ),
+                      Row(
+                        children: [Text("Phone " + _userPhone)],
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ],
           ),
