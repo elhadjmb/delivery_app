@@ -10,13 +10,15 @@ class ProfilePage extends StatefulWidget {
 
 class _ProfilePageState extends State<ProfilePage> {
   var counter = 0;
+  var _userName = "";
+  var _userType = "";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          StringOuter.title["mainTitle"] as String,
+          StringOuter.title["profile"] as String,
           style: TextStyle(
             fontFamily: StringInner.fonts["main"],
             fontWeight: FontWeight.bold,
@@ -33,7 +35,7 @@ class _ProfilePageState extends State<ProfilePage> {
           Column(
             children: [
               Expanded(
-                flex: 5,
+                flex: 4,
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
@@ -44,8 +46,10 @@ class _ProfilePageState extends State<ProfilePage> {
                   child: Center(
                     child: Column(
                       children: [
+                        SizedBox(
+                          height: 110.0,
+                        ),
                         Container(
-                          margin: EdgeInsets.only(top: 80, bottom: 40),
                           decoration: new BoxDecoration(
                             shape: BoxShape.circle,
                             border: new Border.all(
@@ -58,16 +62,22 @@ class _ProfilePageState extends State<ProfilePage> {
                             backgroundImage: AssetImage(Images.burger),
                           ),
                         ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
                         Text(
-                          'Burger Man',
+                          _userName,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
                         Text(
-                          'Client',
+                          _userType,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 15.0,
@@ -79,7 +89,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ),
               Expanded(
-                flex: 5,
+                flex: 6,
                 child: Container(),
               ),
             ],

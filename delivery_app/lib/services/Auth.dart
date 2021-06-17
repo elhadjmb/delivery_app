@@ -9,7 +9,9 @@ final FirebaseAuth _auth = FirebaseAuth.instance;
 
 //create usersign obj based on firebaseuser
 TUser _userFromFirebaseUser(User user){
+
    return user != null ?  TUser(id: user.uid, phone: '', address: '', name: '', isActive: true,  type: null):TUser(id: '', phone: '', address: '', name: '', isActive: true,  type:null );
+ 
 
 }
 
@@ -28,7 +30,7 @@ Stream<TUser> get user {
       return user;
     }
     catch(e){
-      print(e.toString());
+            print(e.toString());
       return null;
     }
   }
@@ -38,7 +40,7 @@ Stream<TUser> get user {
     try {
      UserCredential result = await _auth.signInWithEmailAndPassword(email: email, password: password);
       User user = result.user;
-     return user;
+     return _userFromFirebaseUser(user);
     } catch (error) {
       print(error.toString());
       return null;
@@ -54,7 +56,6 @@ Stream<TUser> get user {
       User user = result.user;
       TUser sr= TUser(id: user.uid, isActive: true,email: user.email, name: name, address: address, phone: phone,type: type );
       await DatabaseService(id: user.uid).updateUserData(sr);
-      print(user);
       return user;
     } catch (error) {
       print(error.toString());
