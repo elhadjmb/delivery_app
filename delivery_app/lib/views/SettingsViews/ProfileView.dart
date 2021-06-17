@@ -2,6 +2,7 @@ import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/images.dart';
 import 'package:delivery_app/constants/strings.dart';
 import 'package:delivery_app/models/User.dart';
+import 'package:delivery_app/views/widgets/NotificationCardWidget.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -11,8 +12,12 @@ class ProfilePage extends StatefulWidget {
 
 class _ProfilePageState extends State<ProfilePage> {
   var counter = 0;
-  String _userName = "burger"; //user.name;
-  var _userType = "burger"; //user.type;
+  //TODO: find user object and assign its attributes to each _userVariable
+
+  String _userName = "Burger Man"; //user.name;
+  var _userType = "Client"; //user.type;
+
+  //TODO: Find where to cram these information on the page ui
   String _userAddress = "burger"; //user.address;
   String _userPhone = "burger"; //user.phone;
 
@@ -43,7 +48,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Colour.orange, Colour.yellow],
+                      colors: [Colour.orange, Colour.paleOrange],
                     ),
                   ),
                   child: Flexible(
@@ -96,14 +101,12 @@ class _ProfilePageState extends State<ProfilePage> {
               Expanded(
                 flex: 6,
                 child: Center(
-                  child: Column(
+                  //TODO: Make a listview builder with NotificationCardWidgets from user orders
+                  child: ListView(
                     children: [
-                      Row(
-                        children: [Text("Address " + _userAddress)],
-                      ),
-                      Row(
-                        children: [Text("Phone " + _userPhone)],
-                      ),
+                      NotificationCardWidget(text: 'Notification1/Order'),
+                      NotificationCardWidget(text: 'Notification2/Order'),
+                      NotificationCardWidget(text: 'Notification3/Order'),
                     ],
                   ),
                 ),
