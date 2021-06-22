@@ -30,6 +30,17 @@ class _MenuState extends State<Menu> {
       backgroundColor: Colour.white,
       body: ListView(
         children: <Widget>[
+          Center(
+              child: Padding(
+            padding: EdgeInsets.only(top: 13.0),
+            child: Text(
+              "New dish settings",
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          )),
           Container(
             width: MediaQuery.of(context).size.width,
             height: 120,
