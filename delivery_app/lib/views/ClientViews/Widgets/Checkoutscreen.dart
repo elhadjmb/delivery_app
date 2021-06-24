@@ -1,6 +1,7 @@
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/strings.dart';
 import 'package:delivery_app/views/ClientViews/ShoppingCartPage.dart';
+import 'package:delivery_app/views/ClientViews/Widgets/StatusScreen.dart';
 import 'package:flutter/material.dart';
 
 class Checkme extends StatefulWidget {
@@ -132,7 +133,7 @@ class _CheckmeState extends State<Checkme> {
               onPressed: () {
                 Navigator.push(
                   context,MaterialPageRoute(
-                  builder: (_) =>ShoppingCartPage())
+                  builder: (_) =>StatusWidg())
                   );
               },
             ),
