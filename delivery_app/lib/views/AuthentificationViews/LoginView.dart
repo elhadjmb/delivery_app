@@ -6,6 +6,7 @@ import 'package:delivery_app/constants/strings.dart';
 import 'package:delivery_app/controllers/LoginViewController.dart';
 import 'package:delivery_app/views/AuthentificationViews/SignupView.dart';
 import 'package:delivery_app/views/ClientViews/HomePage.dart';
+import 'package:delivery_app/views/ClientViews/Widgets/Checkoutscreen.dart';
 import 'package:delivery_app/views/RestaurantViews/widgets/RestaurantBottomNavBar.dart';
 import 'package:delivery_app/views/widgets/View.dart';
 import 'package:flutter/material.dart';

@@ -1,8 +1,7 @@
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/views/ClientViews/ShoppingCartPage.dart';
+import 'package:delivery_app/views/ClientViews/Widgets/AvatarTextWidget.dart';
 import 'package:flutter/material.dart';
-
-import 'Widgets/AvatarTextWidget.dart';
 
 class StatusWidg extends StatefulWidget {
   const StatusWidg({ Key? key }) : super(key: key);

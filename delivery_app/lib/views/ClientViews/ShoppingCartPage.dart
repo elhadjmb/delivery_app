@@ -2,13 +2,10 @@ import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/strings.dart';
 import 'package:delivery_app/testdata/data.dart';
 import 'package:delivery_app/testmodels/order.dart';
-import 'package:delivery_app/views/ClientViews/Widgets/DeliveryMap.dart';
+import 'package:delivery_app/views/ClientViews/Widgets/StatusScreen.dart';
 import 'package:delivery_app/views/widgets/View.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'StatusScreen.dart';
-
 class ShoppingCartPage extends StatefulWidget {
   @override
   _ShoppingCartPageState createState() => _ShoppingCartPageState();
