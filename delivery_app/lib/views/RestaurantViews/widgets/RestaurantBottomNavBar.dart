@@ -3,7 +3,6 @@ import 'package:delivery_app/views/ClientViews/HomePage.dart';
 import 'package:delivery_app/views/ClientViews/ShoppingCartPage.dart';
 import 'package:delivery_app/views/RestaurantViews/Menu.dart';
 import 'package:delivery_app/views/RestaurantViews/OrdersList.dart';
-import 'package:delivery_app/views/RestaurantViews/Profile.dart';
 import 'package:delivery_app/views/SettingsViews/ProfileView.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +17,7 @@ class _Footer extends State<Footer> {
     //TODO: here goes all restaurants views
     OrdersList(),
     Menu(),
-    RestaurantProfile(),
+   //RestaurantProfile(),
   ];
 
   @override
