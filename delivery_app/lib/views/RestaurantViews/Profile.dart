@@ -12,6 +12,8 @@ class RestaurantProfile extends StatefulWidget {
 
 class _RestaurantProfileState extends State<RestaurantProfile> {
   Restaurant restaurant = restaurants[0];
+  List<String> usersComments = comments;
+  List<String> users = userNames;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,6 +82,121 @@ class _RestaurantProfileState extends State<RestaurantProfile> {
             child: Container(
               height: 1,
               color: Colour.black,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              "Comments :",
+              style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 18,
+              ),
+            ),
+          ),
+          Center(
+            child: Container(
+              width: MediaQuery.of(context).size.width / 1.14,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      width: MediaQuery.of(context).size.width / 1.14,
+                      decoration: BoxDecoration(
+                        color: Colour.gray,
+                        borderRadius: BorderRadius.circular(14.0),
+                      ),
+                      child: Column(
+                        children: <Widget>[
+                          Text(users[0] + " :"),
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Text(usersComments[0]),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      width: MediaQuery.of(context).size.width / 1.14,
+                      decoration: BoxDecoration(
+                        color: Colour.gray,
+                        borderRadius: BorderRadius.circular(14.0),
+                      ),
+                      child: Column(
+                        children: <Widget>[
+                          Text(users[1] + " :"),
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Text(usersComments[1]),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      width: MediaQuery.of(context).size.width / 1.14,
+                      decoration: BoxDecoration(
+                        color: Colour.gray,
+                        borderRadius: BorderRadius.circular(14.0),
+                      ),
+                      child: Column(
+                        children: <Widget>[
+                          Text(users[2] + " :"),
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Text(usersComments[2]),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      width: MediaQuery.of(context).size.width / 1.14,
+                      decoration: BoxDecoration(
+                        color: Colour.gray,
+                        borderRadius: BorderRadius.circular(14.0),
+                      ),
+                      child: Column(
+                        children: <Widget>[
+                          Text(users[3] + " :"),
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Text(usersComments[3]),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      width: MediaQuery.of(context).size.width / 1.14,
+                      decoration: BoxDecoration(
+                        color: Colour.gray,
+                        borderRadius: BorderRadius.circular(14.0),
+                      ),
+                      child: Column(
+                        children: <Widget>[
+                          Text(users[4] + " :"),
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Text(usersComments[4]),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
