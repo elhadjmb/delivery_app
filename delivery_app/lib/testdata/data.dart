@@ -175,3 +175,21 @@ final currentUser = User(
     ),
   ],
 );
+
+List<String> comments = [
+  "very good restaurant",
+  "delicious food ",
+  "good food and fast delivery",
+  "didnt like your tacos",
+  "your pizza sucks",
+  "very very nice burrito",
+];
+
+List<String> userNames = [
+  "Joe Biden",
+  "Donald Trump",
+  "Abdelmajid taboun",
+  "riad mahrez",
+  "zlatan ibrahimovich",
+  "kevin hart",
+];
