@@ -119,31 +119,6 @@ class _IngredientsScreenState extends State<IngredientsScreen> {
             ),
           ],
         ),
-        // child: Center(
-        //   child: TextButton(
-        //     child: Row(
-        //       mainAxisAlignment: MainAxisAlignment.center,
-        //       children: [
-        //         Icon(
-        //           Icons.event_available,
-        //           color: Colour.white,
-        //         ),
-        //         SizedBox(width: 15),
-        //         Text(
-        //           'Activate / desactivate',
-        //           style: TextStyle(
-        //             color: Colors.white,
-        //             fontSize: 18.0,
-        //             fontWeight: FontWeight.bold,
-        //             letterSpacing: 2.0,
-        //           ),
-        //         ),
-        //       ],
-        //     ),
-        //     //TODO: bellow goes the function tha t activate or desactivate dish
-        //     onPressed: () {},
-        //   ),
-        // ),
         child: Center(
           child: ToggleButtons(
             children: <Widget>[
