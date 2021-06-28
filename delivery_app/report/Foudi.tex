@@ -1,5 +1,6 @@
 \documentclass[a4paper]{report}
 
+\usepackage{lipsum}
 
 \usepackage{titling}
 \newcommand{\subtitle}[1]{
@@ -19,19 +20,61 @@
 
 
 \begin{document}
-
 \maketitle
+
+\chapter*{thanks}
+\Large \emph\textit{{Thanks to mr Allaoui, and meme Kerrouche}}
+
+\chapter*{dedication}
+\Large \emph\textit{{Dedicated to our parents, friends, mr Allaoui, and meme Kerrouche}}
+
+\newpage
+\chapter*{Abstract}
+
 
 \tableofcontents
 
+\newpage
+\chapter*{figure list}
 
-%Abstract
-%sommaire
-%introduction générale
-\chapter{problématique}
-\chapter{conception (diagrammes uml)}
-\chapter{réalisation(cap 3la app)}
-\chapter{conclusion}
+\newpage
+\chapter*{abbriviations}
 
+
+\newpage
+\chapter*{Introduction}
+
+\newpage
+\chapter{theory}
+	\section{Developement Android} used programs(Android studio, VS)
+	\section{technologies used} (Flutter, Dart, Firebase)
+	\section{working method} (Git)
+	\section{architecture} (MVC) %include the sequence chart of flutter in mvc
+
+\newpage
+\chapter{conception}
+	\section{Modelisation} UML diagrammes
+	\section{Code structure}
+		\subsection{models} %listing
+			bla bla and then listitems with description if needed
+			\subsubsection{JSON parsing}
+		\subsection{controllers}
+		\subsection{views}
+		small description on what are views and how are they used and implemented
+		\subsection{widgets}
+		
+\newpage
+\chapter{Implementation}
+	\section{Startup} sign in and up
+	\section{Client case} flows
+	\section{Restaurant case} flows
+	\section{Deliverer case} flows
+
+\newpage
+\chapter*{Conclusion}
+
+\newpage
+\begin{thebibliography}{300}
+\end{thebibliography}
 
 \end{document}
