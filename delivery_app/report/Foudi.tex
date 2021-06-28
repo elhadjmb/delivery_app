@@ -1,6 +1,7 @@
-\documentclass[a4paper]{report}
+\documentclass[a4paper, 10p]{report}
 
 \usepackage{lipsum}
+\usepackage{graphicx}
 
 \usepackage{titling}
 \newcommand{\subtitle}[1]{
@@ -43,17 +44,47 @@
 
 \newpage
 \chapter*{Introduction}
+    Au cours de la dernière décennie, nous avons assisté à une révolution dans les commerces en ligne. Les gens se sont habitués aux achats en ligne et aux réservations à distance comme la réservation de billets, l'achat d'articles et même la commande de nourriture, principalement parce que c'est plus rapide, sans effort et moins compliqué.
+
+Lorsque quelqu'un veut acheter de la nourriture en ligne, il doit vérifier un restaurant qui fabrique la nourriture qu'il veut, puis la nourriture doit lui être livrée soit par le livreur du restaurant, soit par un établissement de livraison séparé.
+
+Comme nous l'avons vu dans les pays étrangers en Europe ou aux États-Unis, beaucoup de restaurants et de sociétés de livraison ont leur propre application mobile. Malheureusement, tous les établissements ne peuvent pas se permettre de créer leur propre application en raison des coûts élevés de développement d'une application mobile.
+
+Notre solution est une plateforme conçue comme une application mobile qui regroupe les clients, les restaurants et les sociétés de livraison en un seul endroit. Elle répond à tous les besoins des personnes qui veulent commander leur nourriture à distance, elle permettra également aux propriétaires de restaurants et aux sociétés de livraison d'augmenter leurs ventes et d'accélérer leur flux de travail avec les clients à distance.
 
 \newpage
 \chapter{theory}
-	\section{Developement Android} used programs(Android studio, VS)
-	\section{technologies used} (Flutter, Dart, Firebase)
-	\section{working method} (Git)
-	\section{architecture} (MVC) %include the sequence chart of flutter in mvc
+	\section{Developement Android} Nous avons choisi de réaliser une application mobile dédiée aux utilisateurs d'Android, et nous avons beaucoup de choix quant aux technologies que nous allons utiliser pour le développement.
+		\subsection{technologies used} Nous avons utilisé le framework Flutter pour les interfaces et la logique de l'application, et Firebase pour le stockage et la gestion de la base de données.
+		
+			\subsubsection*{Flutter} Un kit de développement logiciel d'interface utilisateur open-source créé par Google. Il est utilisé pour développer des applications multiplateformes pour Android, iOS, Linux, Mac, Windows, et le Web à partir d'une base de code unique.
+Nous avons utilisé Flutter en raison de sa structure qui favorise la vitesse de développement. Sa structure est simplement une cascade de widgets faciles à personnaliser.
+
+Flutter utilise le langage de programmation Dart, également développé par Google. Il s'agit d'un langage orienté objet, basé sur des classes, avec une syntaxe de type de la language C.
+			\subsubsection*{Firebase}
+	\section{collab working method}
+		Cette application a été développée à partir de zéro par trois développeurs, nous devions travailler en parallèle sur le même projet, nous avons donc utilisé Git et Github.
+
+		\subsection*{Git} C'est un logiciel permettant de suivre les modifications apportées à un ensemble de fichiers. Il est généralement utilisé pour coordonner le travail des programmeurs qui collaborent à l'élaboration du code source lors du développement de logiciels. Ses objectifs sont la rapidité, l'intégrité des données et la prise en charge des flux de travail distribués et non linéaires.
+
+		\subsection*{Github} C'est un service d'hébergement de référentiel Git, mais il ajoute de nombreuses fonctionnalités qui lui sont propres. Il fournit une interface graphique basée sur le Web. Il fournit également un contrôle d'accès et plusieurs fonctions de collaboration.
+	\section{architecture} %include the sequence chart of flutter in mvc
+		Nous avons utilisé l'architecture de projet MVC. Il s'agit d'un modèle de conception de logiciel couramment utilisé pour développer des interfaces utilisateur qui divisent la logique du programme en trois éléments interconnectés.
+
+Cela permet de séparer les représentations internes de l'information de la manière dont l'information est présentée à l'utilisateur et acceptée par celui-ci.
+\begin{figure}[!h]
+  \center
+  \includegraphics[width=10cm]{mvc.png}
+  \caption{Le flux MVC}
+  \label{fig:fluxmvc}
+\end{figure}
 
 \newpage
-\chapter{conception}
+\chapter{Conception}
 	\section{Modelisation} UML diagrammes
+		\subsubsection{Diagramme des classes} image + brief explanation
+		\subsubsection{Diagramme des cas}
+		\subsubsection{Diagramme de sequences}
 	\section{Code structure}
 		\subsection{models} %listing
 			bla bla and then listitems with description if needed
@@ -64,7 +95,7 @@
 		\subsection{widgets}
 		
 \newpage
-\chapter{Implementation}
+\chapter{Realisation}
 	\section{Startup} sign in and up
 	\section{Client case} flows
 	\section{Restaurant case} flows
@@ -72,6 +103,7 @@
 
 \newpage
 \chapter*{Conclusion}
+blblabla
 
 \newpage
 \begin{thebibliography}{300}

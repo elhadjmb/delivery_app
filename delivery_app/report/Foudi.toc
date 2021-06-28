@@ -1,18 +1,21 @@
 \contentsline {chapter}{\numberline {1}theory}{8}%
 \contentsline {section}{\numberline {1.1}Developement Android}{8}%
-\contentsline {section}{\numberline {1.2}technologies used}{8}%
-\contentsline {section}{\numberline {1.3}working method}{8}%
-\contentsline {section}{\numberline {1.4}architecture}{8}%
-\contentsline {chapter}{\numberline {2}conception}{9}%
-\contentsline {section}{\numberline {2.1}Modelisation}{9}%
-\contentsline {section}{\numberline {2.2}Code structure}{9}%
-\contentsline {subsection}{\numberline {2.2.1}models}{9}%
-\contentsline {subsubsection}{JSON parsing}{9}%
-\contentsline {subsection}{\numberline {2.2.2}controllers}{9}%
-\contentsline {subsection}{\numberline {2.2.3}views}{9}%
-\contentsline {subsection}{\numberline {2.2.4}widgets}{9}%
-\contentsline {chapter}{\numberline {3}Implementation}{10}%
-\contentsline {section}{\numberline {3.1}Startup}{10}%
-\contentsline {section}{\numberline {3.2}Client case}{10}%
-\contentsline {section}{\numberline {3.3}Restaurant case}{10}%
-\contentsline {section}{\numberline {3.4}Deliverer case}{10}%
+\contentsline {subsection}{\numberline {1.1.1}technologies used}{8}%
+\contentsline {section}{\numberline {1.2}collab working method}{9}%
+\contentsline {section}{\numberline {1.3}architecture}{9}%
+\contentsline {chapter}{\numberline {2}Conception}{11}%
+\contentsline {section}{\numberline {2.1}Modelisation}{11}%
+\contentsline {subsubsection}{Diagramme des classes}{11}%
+\contentsline {subsubsection}{Diagramme des cas}{11}%
+\contentsline {subsubsection}{Diagramme de sequences}{11}%
+\contentsline {section}{\numberline {2.2}Code structure}{11}%
+\contentsline {subsection}{\numberline {2.2.1}models}{11}%
+\contentsline {subsubsection}{JSON parsing}{11}%
+\contentsline {subsection}{\numberline {2.2.2}controllers}{11}%
+\contentsline {subsection}{\numberline {2.2.3}views}{11}%
+\contentsline {subsection}{\numberline {2.2.4}widgets}{11}%
+\contentsline {chapter}{\numberline {3}Realisation}{12}%
+\contentsline {section}{\numberline {3.1}Startup}{12}%
+\contentsline {section}{\numberline {3.2}Client case}{12}%
+\contentsline {section}{\numberline {3.3}Restaurant case}{12}%
+\contentsline {section}{\numberline {3.4}Deliverer case}{12}%
