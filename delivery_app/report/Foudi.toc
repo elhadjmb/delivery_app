@@ -7,17 +7,17 @@
 \contentsline {section}{\numberline {1.3}Architecture du code}{6}%
 \contentsline {chapter}{\numberline {2}Conception}{7}%
 \contentsline {section}{\numberline {2.1}Modélisation}{7}%
-\contentsline {subsubsection}{Diagramme de classes}{7}%
-\contentsline {subsubsection}{Diagrammes de cas d’utilisation}{8}%
-\contentsline {subsubsection}{Diagrammes de séquences}{11}%
-\contentsline {section}{\numberline {2.2}La structure du code}{11}%
-\contentsline {subsection}{\numberline {2.2.1}Modéles}{11}%
-\contentsline {subsection}{\numberline {2.2.2}Contrôleurs}{11}%
-\contentsline {subsection}{\numberline {2.2.3}Vues}{11}%
-\contentsline {subsection}{\numberline {2.2.4}Widgets}{11}%
-\contentsline {chapter}{\numberline {3}Réalisation}{12}%
-\contentsline {section}{\numberline {3.1}Startup}{12}%
-\contentsline {section}{\numberline {3.2}Client case}{12}%
-\contentsline {section}{\numberline {3.3}Restaurant case}{12}%
-\contentsline {section}{\numberline {3.4}Deliverer case}{12}%
-\contentsline {chapter}{Conclusion}{13}%
+\contentsline {subsubsection}{Diagramme de classes}{8}%
+\contentsline {subsubsection}{Diagrammes de cas d’utilisation}{9}%
+\contentsline {subsubsection}{Diagrammes de séquences}{10}%
+\contentsline {section}{\numberline {2.2}La structure du code}{10}%
+\contentsline {subsection}{\numberline {2.2.1}Modéles}{10}%
+\contentsline {subsection}{\numberline {2.2.2}Contrôleurs}{10}%
+\contentsline {subsection}{\numberline {2.2.3}Vues}{10}%
+\contentsline {subsection}{\numberline {2.2.4}Widgets}{10}%
+\contentsline {chapter}{\numberline {3}Réalisation}{15}%
+\contentsline {section}{\numberline {3.1}Startup}{15}%
+\contentsline {section}{\numberline {3.2}Client case}{15}%
+\contentsline {section}{\numberline {3.3}Restaurant case}{15}%
+\contentsline {section}{\numberline {3.4}Deliverer case}{15}%
+\contentsline {chapter}{Conclusion}{16}%

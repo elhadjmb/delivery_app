@@ -108,19 +108,19 @@ Cela permet de séparer les représentations internes de l'information de la man
 			\item Diagrammes de séquence
 		\end{itemize}
 		
-		
+		\newpage
 		\subsubsection{Diagramme de classes}
 			bbbbbbbbbbbrève explication
-			\newpage
+			
 			\begin{figure}[!h]
   				\center
   				\includegraphics[width=15cm]{classdiag.png}
   				\caption{Diagramme de classes}
   				\label{fig:classdiag}
 			\end{figure}
-		
+		\newpage
 		\subsubsection{Diagrammes de cas d’utilisation}
-			\newpage
+			
 			\begin{figure}[!h]
   				\center
   				\includegraphics[width=10cm]{usecasemenu.png}
@@ -128,7 +128,7 @@ Cela permet de séparer les représentations internes de l'information de la man
   				\label{fig:usecasemenu}
 			\end{figure}
 			
-			\newpage
+			%\newpage
 			\begin{figure}[!h]
   				\center
   				\includegraphics[width=10cm]{usecaseorder.png}
@@ -136,14 +136,46 @@ Cela permet de séparer les représentations internes de l'information de la man
   				\label{fig:usecaseorder}
 			\end{figure}
 			
-			\newpage
+			%\newpage
 			\begin{figure}[!h]
   				\center
   				\includegraphics[width=10cm]{usecasedeliver.png}
   				\caption{Diagramme de cas d'ustilisation du livraison d'une commande}
   				\label{fig:usecasedeliver}
 			\end{figure}
+			\newpage
 		\subsubsection{Diagrammes de séquences}
+			\begin{figure}[!h]
+  				\center
+  				\includegraphics[width=10cm]{seqlogin.png}
+  				\caption{Diagramme de séquences du authentification}
+  				\label{fig:seqlogin}
+			\end{figure}
+			\begin{figure}[!h]
+  				\center
+  				\includegraphics[width=10cm]{seqmenu.png}
+  				\caption{Diagramme de séquences du configuration du menu}
+  				\label{fig:seqmenu}
+			\end{figure}
+			\begin{figure}[!h]
+  				\center
+  				\includegraphics[width=10cm]{seqorder.png}
+  				\caption{Diagramme de séquences du passation d'une commande}
+  				\label{fig:seqorder}
+			\end{figure}
+			\begin{figure}[!h]
+  				\center
+  				\includegraphics[width=10cm]{seqrest.png}
+  				\caption{Diagramme de séquences du reçoi d'une commande}
+  				\label{fig:seqrest}
+			\end{figure}
+			\begin{figure}[!h]
+  				\center
+  				\includegraphics[width=10cm]{seqdeliver.png}
+  				\caption{Diagramme de séquences du livraison d'une commande}
+  				\label{fig:seqdeliver}
+			\end{figure}
+			
 	\section{La structure du code}
 		\subsection{Modéles} Nous avons représenté chaque classe du diagramme de classes (Fig. \ref{fig:classdiag}) comme des classes Dart pour les traiter comme des objets. Chacune de ces classes possède deux méthodes permettant de convertir de et vers des objets JSON  pour faciliter la communication avec la base de données.
 		\subsection{Contrôleurs} Ils représentent la fonctionnalité principale de chaque action dans l'application, de la connexion à la mise à jour des commandes et tout ce qui est similaire.
