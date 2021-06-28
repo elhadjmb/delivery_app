@@ -37,9 +37,11 @@
 
 \newpage
 \chapter*{figure list}
+\addcontentsline{toc}{chapter}{figure list}
 
 \newpage
 \chapter*{abbriviations}
+\addcontentsline{toc}{chapter}{abbriviations}
 
 
 \newpage
@@ -52,16 +54,19 @@ Comme nous l'avons vu dans les pays étrangers en Europe ou aux États-Unis, bea
 
 Notre solution est une plateforme conçue comme une application mobile qui regroupe les clients, les restaurants et les sociétés de livraison en un seul endroit. Elle répond à tous les besoins des personnes qui veulent commander leur nourriture à distance, elle permettra également aux propriétaires de restaurants et aux sociétés de livraison d'augmenter leurs ventes et d'accélérer leur flux de travail avec les clients à distance.
 
+\addcontentsline{toc}{chapter}{Introduction}
+
 \newpage
 \chapter{theory}
 	\section{Developement Android} Nous avons choisi de réaliser une application mobile dédiée aux utilisateurs d'Android, et nous avons beaucoup de choix quant aux technologies que nous allons utiliser pour le développement.
-		\subsection{technologies used} Nous avons utilisé le framework Flutter pour les interfaces et la logique de l'application, et Firebase pour le stockage et la gestion de la base de données.
+		\subsection{technologies used} Nous avons utilisé le framework Flutter pour les interfaces et la logique de l'application, et Cloud Firestore de Firebase pour le stockage et la gestion de la base de données.
 		
 			\subsubsection*{Flutter} Un kit de développement logiciel d'interface utilisateur open-source créé par Google. Il est utilisé pour développer des applications multiplateformes pour Android, iOS, Linux, Mac, Windows, et le Web à partir d'une base de code unique.
 Nous avons utilisé Flutter en raison de sa structure qui favorise la vitesse de développement. Sa structure est simplement une cascade de widgets faciles à personnaliser.
 
 Flutter utilise le langage de programmation Dart, également développé par Google. Il s'agit d'un langage orienté objet, basé sur des classes, avec une syntaxe de type de la language C.
-			\subsubsection*{Firebase}
+			\subsubsection*{Firebase} la plateforme mobile de Google qui aide à développer rapidement des applications de qualité. Elle dispose de nombreuses fonctionnalités, mais nous l'utilisons principalement pour son service de stockage au Cloud (Cloud Firestore).
+				\paragraph*{Cloud Firestore} est une base de données documentaire NoSQL (un ensemble de continuation en cascade collection-document) qui nous permet de stocker, de synchroniser et d'interroger facilement des données pour des applications mobiles et web - à l'échelle mondiale.
 	\section{collab working method}
 		Cette application a été développée à partir de zéro par trois développeurs, nous devions travailler en parallèle sur le même projet, nous avons donc utilisé Git et Github.
 
@@ -104,6 +109,7 @@ Cela permet de séparer les représentations internes de l'information de la man
 \newpage
 \chapter*{Conclusion}
 blblabla
+\addcontentsline{toc}{chapter}{Conclusion}
 
 \newpage
 \begin{thebibliography}{300}
