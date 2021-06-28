@@ -1,6 +1,8 @@
-\documentclass[a4paper]{report}
+\documentclass[french, a4paper, french]{report}
 
-\usepackage{lipsum}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{graphicx}
 
 \usepackage{titling}
@@ -11,17 +13,10 @@
     \vskip0.5em}
 }
 
-\title{\textbf{Foudi}}
-\subtitle{Food order and delivery platform}
-\author{Ali, Kadi, Hadj}
-\date{\today}
-
-
-
 
 
 \begin{document}
-\maketitle
+
 
 \chapter*{Remerciement}
 \begin{center}
@@ -40,25 +35,27 @@ Merci à tous.}}
 \end{center}
 
 \newpage
-\chapter*{Abstract}
+\begin{abstract}
+this is the abstract
+\end{abstract}
 
 
 \tableofcontents
 
 \newpage
-\chapter*{figure list}
-\addcontentsline{toc}{chapter}{figure list}
+\listoffigures
+
 
 \newpage
-\chapter*{abbriviations}
-\addcontentsline{toc}{chapter}{abbriviations}
+\chapter*{Liste des Abréviations}
+\addcontentsline{toc}{chapter}{Liste des Abréviations}
 	\begin{itemize}
-		\item[\textbf{MVC}:] Model View Controller
-		\item[\textbf{UI}:] User Interface
-		\item[\textbf{SDK}:] Software Development Kit
-		\item[\textbf{UML}:] Unified Modeling Language
-		\item[\textbf{NoSQL}:] Not only Structured Query Language
-		\item[\textbf{JSON}:] Java Script Object Notation
+		\item \textbf{MVC}:  Model View Controller
+		\item \textbf{UI}: User Interface
+		\item \textbf{SDK}: Software Development Kit
+		\item \textbf{UML}: Unified Modeling Language
+		\item \textbf{NoSQL}: Not only Structured Query Language
+		\item \textbf{JSON}:  Java Script Object Notation
 	\end{itemize}
 
 
@@ -75,9 +72,9 @@ Notre solution est une plateforme conçue comme une application mobile qui regro
 \addcontentsline{toc}{chapter}{Introduction}
 
 \newpage
-\chapter{theory}
-	\section{Developement Android} Nous avons choisi de réaliser une application mobile dédiée aux utilisateurs d'Android, et nous avons beaucoup de choix quant aux technologies que nous allons utiliser pour le développement.
-		\subsection{technologies used} Nous avons utilisé le framework Flutter pour les interfaces et la logique de l'application, et Cloud Firestore de Firebase pour le stockage et la gestion de la base de données.
+\chapter{Etude Bibliographique}
+	\section{Développement Android} Nous avons choisi de réaliser une application mobile dédiée aux utilisateurs d'Android, et nous avons beaucoup de choix quant aux technologies que nous allons utiliser pour le développement.
+		\subsection{Les technologies utilisées} Nous avons utilisé le framework Flutter pour les interfaces et la logique de l'application, et Cloud Firestore de Firebase pour le stockage et la gestion de la base de données.
 		
 			\subsubsection*{Flutter} Un kit de développement logiciel d'interface utilisateur open-source créé par Google. Il est utilisé pour développer des applications multiplateformes pour Android, iOS, Linux, Mac, Windows, et le Web à partir d'une base de code unique.
 Nous avons utilisé Flutter en raison de sa structure qui favorise la vitesse de développement. Sa structure est simplement une cascade de widgets faciles à personnaliser.
@@ -85,13 +82,13 @@ Nous avons utilisé Flutter en raison de sa structure qui favorise la vitesse de
 Flutter utilise le langage de programmation Dart, également développé par Google. Il s'agit d'un langage orienté objet, basé sur des classes, avec une syntaxe de type de la language C.
 			\subsubsection*{Firebase} la plateforme mobile de Google qui aide à développer rapidement des applications de qualité. Elle dispose de nombreuses fonctionnalités, mais nous l'utilisons principalement pour son service de stockage au Cloud (Cloud Firestore).
 				\paragraph*{Cloud Firestore} est une base de données documentaire NoSQL (un ensemble de continuation en cascade collection-document) qui nous permet de stocker, de synchroniser et d'interroger facilement des données pour des applications mobiles et web - à l'échelle mondiale.
-	\section{collab working method}
+	\section{Méthode de travail collaborative}
 		Cette application a été développée à partir de zéro par trois développeurs, nous devions travailler en parallèle sur le même projet, nous avons donc utilisé Git et Github.
 
 		\subsection*{Git} C'est un logiciel permettant de suivre les modifications apportées à un ensemble de fichiers. Il est généralement utilisé pour coordonner le travail des programmeurs qui collaborent à l'élaboration du code source lors du développement de logiciels. Ses objectifs sont la rapidité, l'intégrité des données et la prise en charge des flux de travail distribués et non linéaires.
 
 		\subsection*{Github} C'est un service d'hébergement de référentiel Git, mais il ajoute de nombreuses fonctionnalités qui lui sont propres. Il fournit une interface graphique basée sur le Web. Il fournit également un contrôle d'accès et plusieurs fonctions de collaboration.
-	\section{architecture} %include the sequence chart of flutter in mvc
+	\section{Architecture du code} %include the sequence chart of flutter in mvc
 		Nous avons utilisé l'architecture de projet MVC. Il s'agit d'un modèle de conception de logiciel couramment utilisé pour développer des interfaces utilisateur qui divisent la logique du programme en trois éléments interconnectés.
 
 Cela permet de séparer les représentations internes de l'information de la manière dont l'information est présentée à l'utilisateur et acceptée par celui-ci.
@@ -104,21 +101,57 @@ Cela permet de séparer les représentations internes de l'information de la man
 
 \newpage
 \chapter{Conception}
-	\section{Modelisation} UML diagrammes
-		\subsubsection{Diagramme des classes} image + brief explanation
-		\subsubsection{Diagramme des cas}
-		\subsubsection{Diagramme de sequences}
-	\section{Code structure}
-		\subsection{models} %listing
-			bla bla and then listitems with description if needed
-			\subsubsection{JSON parsing}
-		\subsection{controllers}
-		\subsection{views}
-		small description on what are views and how are they used and implemented
-		\subsection{widgets}
+	\section{Modélisation} On a choisi trois diagrammes d’UML pour modéliser l'application:
+		\begin{itemize}
+			\item Diagramme de classes
+			\item Diagrammes de cas d’utilisation
+			\item Diagrammes de séquence
+		\end{itemize}
+		
+		
+		\subsubsection{Diagramme de classes}
+			bbbbbbbbbbbrève explication
+			\newpage
+			\begin{figure}[!h]
+  				\center
+  				\includegraphics[width=15cm]{classdiag.png}
+  				\caption{Diagramme de classes}
+  				\label{fig:classdiag}
+			\end{figure}
+		
+		\subsubsection{Diagrammes de cas d’utilisation}
+			\newpage
+			\begin{figure}[!h]
+  				\center
+  				\includegraphics[width=10cm]{usecasemenu.png}
+  				\caption{Diagramme de cas d'ustilisation du configuration du menu}
+  				\label{fig:usecasemenu}
+			\end{figure}
+			
+			\newpage
+			\begin{figure}[!h]
+  				\center
+  				\includegraphics[width=10cm]{usecaseorder.png}
+  				\caption{Diagramme de cas d'ustilisation du passation d'une commande}
+  				\label{fig:usecaseorder}
+			\end{figure}
+			
+			\newpage
+			\begin{figure}[!h]
+  				\center
+  				\includegraphics[width=10cm]{usecasedeliver.png}
+  				\caption{Diagramme de cas d'ustilisation du livraison d'une commande}
+  				\label{fig:usecasedeliver}
+			\end{figure}
+		\subsubsection{Diagrammes de séquences}
+	\section{La structure du code}
+		\subsection{Modéles} Nous avons représenté chaque classe du diagramme de classes (Fig. \ref{fig:classdiag}) comme des classes Dart pour les traiter comme des objets. Chacune de ces classes possède deux méthodes permettant de convertir de et vers des objets JSON  pour faciliter la communication avec la base de données.
+		\subsection{Contrôleurs} Ils représentent la fonctionnalité principale de chaque action dans l'application, de la connexion à la mise à jour des commandes et tout ce qui est similaire.
+		\subsection{Vues} Chaque écran qui apparaît à l'utilisateur est considéré comme une vue. Les vues contiennent plusieurs widgets en cascade.
+		\subsection{Widgets} Nous avons dû créer des widgets personnalisés pour répondre à nos besoins, comme des boutons, des vues de liste, des vues de texte, etc.
 		
 \newpage
-\chapter{Realisation}
+\chapter{Réalisation}
 	\section{Startup} sign in and up
 	\section{Client case} flows
 	\section{Restaurant case} flows

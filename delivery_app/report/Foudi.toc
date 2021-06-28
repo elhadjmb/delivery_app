@@ -1,25 +1,23 @@
-\contentsline {chapter}{figure list}{5}%
-\contentsline {chapter}{abbriviations}{6}%
-\contentsline {chapter}{Introduction}{7}%
-\contentsline {chapter}{\numberline {1}theory}{8}%
-\contentsline {section}{\numberline {1.1}Developement Android}{8}%
-\contentsline {subsection}{\numberline {1.1.1}technologies used}{8}%
-\contentsline {section}{\numberline {1.2}collab working method}{9}%
-\contentsline {section}{\numberline {1.3}architecture}{9}%
-\contentsline {chapter}{\numberline {2}Conception}{10}%
-\contentsline {section}{\numberline {2.1}Modelisation}{10}%
-\contentsline {subsubsection}{Diagramme des classes}{10}%
-\contentsline {subsubsection}{Diagramme des cas}{10}%
-\contentsline {subsubsection}{Diagramme de sequences}{10}%
-\contentsline {section}{\numberline {2.2}Code structure}{10}%
-\contentsline {subsection}{\numberline {2.2.1}models}{10}%
-\contentsline {subsubsection}{JSON parsing}{10}%
-\contentsline {subsection}{\numberline {2.2.2}controllers}{10}%
-\contentsline {subsection}{\numberline {2.2.3}views}{10}%
-\contentsline {subsection}{\numberline {2.2.4}widgets}{10}%
-\contentsline {chapter}{\numberline {3}Realisation}{11}%
-\contentsline {section}{\numberline {3.1}Startup}{11}%
-\contentsline {section}{\numberline {3.2}Client case}{11}%
-\contentsline {section}{\numberline {3.3}Restaurant case}{11}%
-\contentsline {section}{\numberline {3.4}Deliverer case}{11}%
-\contentsline {chapter}{Conclusion}{12}%
+\contentsline {chapter}{Liste des Abréviations}{3}%
+\contentsline {chapter}{Introduction}{4}%
+\contentsline {chapter}{\numberline {1}Etude Bibliographique}{5}%
+\contentsline {section}{\numberline {1.1}Développement Android}{5}%
+\contentsline {subsection}{\numberline {1.1.1}Les technologies utilisées}{5}%
+\contentsline {section}{\numberline {1.2}Méthode de travail collaborative}{6}%
+\contentsline {section}{\numberline {1.3}Architecture du code}{6}%
+\contentsline {chapter}{\numberline {2}Conception}{7}%
+\contentsline {section}{\numberline {2.1}Modélisation}{7}%
+\contentsline {subsubsection}{Diagramme de classes}{7}%
+\contentsline {subsubsection}{Diagrammes de cas d’utilisation}{8}%
+\contentsline {subsubsection}{Diagrammes de séquences}{11}%
+\contentsline {section}{\numberline {2.2}La structure du code}{11}%
+\contentsline {subsection}{\numberline {2.2.1}Modéles}{11}%
+\contentsline {subsection}{\numberline {2.2.2}Contrôleurs}{11}%
+\contentsline {subsection}{\numberline {2.2.3}Vues}{11}%
+\contentsline {subsection}{\numberline {2.2.4}Widgets}{11}%
+\contentsline {chapter}{\numberline {3}Réalisation}{12}%
+\contentsline {section}{\numberline {3.1}Startup}{12}%
+\contentsline {section}{\numberline {3.2}Client case}{12}%
+\contentsline {section}{\numberline {3.3}Restaurant case}{12}%
+\contentsline {section}{\numberline {3.4}Deliverer case}{12}%
+\contentsline {chapter}{Conclusion}{13}%
