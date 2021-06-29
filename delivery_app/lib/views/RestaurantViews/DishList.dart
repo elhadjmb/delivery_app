@@ -4,12 +4,12 @@ import 'package:delivery_app/testmodels/ingredient.dart';
 import 'package:delivery_app/testmodels/order.dart';
 import 'package:flutter/material.dart';
 
-class OrdersList extends StatefulWidget {
+class DishList extends StatefulWidget {
   @override
-  _OrdersListState createState() => _OrdersListState();
+  _DishListState createState() => _DishListState();
 }
 
-class _OrdersListState extends State<OrdersList> {
+class _DishListState extends State<DishList> {
   final List<Order> orders = Order.getOrders();
   List<bool> _selections = List.generate(2, (_) => false);
   @override
