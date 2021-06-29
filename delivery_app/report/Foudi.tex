@@ -1,4 +1,4 @@
-\documentclass[french, a4paper, francais, frenchb, fr, 12pt]{report}
+\documentclass[french, a4paper, 12pt]{report}
 
 
 \usepackage[utf8]{inputenc}
@@ -121,13 +121,48 @@ Cela permet de séparer les représentations internes de l'information de la man
 			La figure ci-dessus décrit les classes principales d'objets sur lesquelles repose la logique de l'application, ainsi que les relations qui existent entre eux.\\Le tableau suivant explique le schéma en figure \ref{fig:classdiag}, dans lequel les classes sont définies comme suit:
 			
 			\begin{table}[!h!]
-  				\begin{tabular}{llll}
+  				\begin{tabular}{lllp{6cm}}
     					Classes & Attributs & Méthodes & Relations \\ 
+
+					\hline
+    					Delivery company & & & Elle a un ou plusieurs livreurs \\  
+    					
     					\hline
-    					Restaurant & 7 & &  \\
-    					Words in the title & 2 \\
+    					Restaurant & & & Il a un ou plusieurs serveurs et un menu \\   					
+    					
+    					\hline
+    					User & & & Le Client et le Serveur et le Livreur héritent de ses attributs et de ses méthodes \\
+    					
+					\hline
+    					Client & & & Il peut avoir des commandes et des recettes multiples\\  
+    					  					
+    					\hline
+    					Server & & & Il appartient à un restaurant et peut avoir plusieurs commandes \\
+    					
+    					\hline
+    					Deliverer & & & Il appartient à une société de livraison et peut avoir plusieurs livraisons \\
+    					    					
+    					\hline
+    					Menu & & & Il peut appartenir à plusieurs restaurants et avoir plus d'un plat\\
+    					
+    					\hline
+					Dish & & & Il appartient à un ou plusieurs menus et comporte plusieurs ingrédients \\
+
+						
+					\hline
+					Ingredient & & & Il appartient à un ou plusieurs plats \\
+						
+					\hline
+					Order & & & Il appartient à un serveur et à un client, et à un reçu \\
+						
+					\hline
+					Delivery & & & Elle appartient à un livreur et à un reçu \\
+						
+					\hline	
+					Receipt & & & Il appartient à un client \\
+    					
   				\end{tabular}
-  				\caption{Diag}
+  				\caption{Déconstruction du diagramme de classe}
   				\label{tab:classdiag}
 			\end{table}
 
