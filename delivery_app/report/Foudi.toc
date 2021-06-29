@@ -1,4 +1,23 @@
-\contentsline {chapter}{\numberline {1}problématique}{2}%
-\contentsline {chapter}{\numberline {2}conception (diagrammes uml)}{3}%
-\contentsline {chapter}{\numberline {3}réalisation(cap 3la app)}{4}%
-\contentsline {chapter}{\numberline {4}conclusion}{5}%
+\contentsline {chapter}{Liste des Abréviations}{4}%
+\contentsline {chapter}{Introduction}{5}%
+\contentsline {chapter}{\numberline {1}Receuil des besoins}{6}%
+\contentsline {section}{\numberline {1.1}Développement Android}{6}%
+\contentsline {subsection}{\numberline {1.1.1}Les technologies utilisées}{6}%
+\contentsline {section}{\numberline {1.2}Méthode de travail collaborative}{7}%
+\contentsline {section}{\numberline {1.3}Architecture du code}{7}%
+\contentsline {chapter}{\numberline {2}Conception de l'application}{9}%
+\contentsline {section}{\numberline {2.1}Modélisation}{9}%
+\contentsline {subsubsection}{Diagramme de classes}{10}%
+\contentsline {subsubsection}{Diagrammes de cas d’utilisation}{11}%
+\contentsline {subsubsection}{Diagrammes de séquences}{12}%
+\contentsline {section}{\numberline {2.2}La structure du code}{12}%
+\contentsline {subsection}{\numberline {2.2.1}Modéles}{12}%
+\contentsline {subsection}{\numberline {2.2.2}Contrôleurs}{12}%
+\contentsline {subsection}{\numberline {2.2.3}Vues}{12}%
+\contentsline {subsection}{\numberline {2.2.4}Widgets}{13}%
+\contentsline {chapter}{\numberline {3}Réalisation de l'application}{18}%
+\contentsline {section}{\numberline {3.1}Startup}{18}%
+\contentsline {section}{\numberline {3.2}Client case}{18}%
+\contentsline {section}{\numberline {3.3}Restaurant case}{18}%
+\contentsline {section}{\numberline {3.4}Deliverer case}{18}%
+\contentsline {chapter}{Conclusion}{19}%
