@@ -45,6 +45,9 @@ this is the abstract
 \newpage
 \listoffigures
 
+\newpage
+\listoftables
+
 
 \newpage
 \chapter*{Liste des Abréviations}
@@ -108,20 +111,32 @@ Cela permet de séparer les représentations internes de l'information de la man
 		
 		\newpage
 		\subsubsection{Diagramme de classes}
-			bbbbbbbbbbbrève explication
-			
 			\begin{figure}[!h]
   				\center
-  				\includegraphics[width=15cm]{classdiag.png}
+  				\includegraphics[width=10cm]{classdiag.png}
   				\caption{Diagramme de classes}
   				\label{fig:classdiag}
 			\end{figure}
+			
+			La figure ci-dessus décrit les classes principales d'objets sur lesquelles repose la logique de l'application, ainsi que les relations qui existent entre eux.\\Le tableau suivant explique le schéma en figure \ref{fig:classdiag}, dans lequel les classes sont définies comme suit:
+			
+			\begin{table}[!h!]
+  				\begin{tabular}{llll}
+    					Classes & Attributs & Méthodes & Relations \\ 
+    					\hline
+    					Restaurant & 7 & &  \\
+    					Words in the title & 2 \\
+  				\end{tabular}
+  				\caption{Diag}
+  				\label{tab:classdiag}
+			\end{table}
+
 		\newpage
 		\subsubsection{Diagrammes de cas d’utilisation}
 			
 			\begin{figure}[!h]
   				\center
-  				\includegraphics[width=10cm]{usecasemenu.png}
+  				\includegraphics[width=15cm]{usecasemenu.png}
   				\caption{Diagramme de cas d'ustilisation du configuration du menu}
   				\label{fig:usecasemenu}
 			\end{figure}
@@ -129,7 +144,7 @@ Cela permet de séparer les représentations internes de l'information de la man
 			%\newpage
 			\begin{figure}[!h]
   				\center
-  				\includegraphics[width=10cm]{usecaseorder.png}
+  				\includegraphics[width=15cm]{usecaseorder.png}
   				\caption{Diagramme de cas d'ustilisation du passation d'une commande}
   				\label{fig:usecaseorder}
 			\end{figure}
@@ -137,7 +152,7 @@ Cela permet de séparer les représentations internes de l'information de la man
 			%\newpage
 			\begin{figure}[!h]
   				\center
-  				\includegraphics[width=10cm]{usecasedeliver.png}
+  				\includegraphics[width=15cm]{usecasedeliver.png}
   				\caption{Diagramme de cas d'ustilisation du livraison d'une commande}
   				\label{fig:usecasedeliver}
 			\end{figure}
