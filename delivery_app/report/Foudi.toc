@@ -1,23 +1,23 @@
 \contentsline {chapter}{Liste des Abréviations}{3}%
 \contentsline {chapter}{Introduction}{4}%
-\contentsline {chapter}{\numberline {1}Etude Bibliographique}{5}%
+\contentsline {chapter}{\numberline {1}Receuil des besoins}{5}%
 \contentsline {section}{\numberline {1.1}Développement Android}{5}%
 \contentsline {subsection}{\numberline {1.1.1}Les technologies utilisées}{5}%
 \contentsline {section}{\numberline {1.2}Méthode de travail collaborative}{6}%
 \contentsline {section}{\numberline {1.3}Architecture du code}{6}%
-\contentsline {chapter}{\numberline {2}Conception}{7}%
-\contentsline {section}{\numberline {2.1}Modélisation}{7}%
-\contentsline {subsubsection}{Diagramme de classes}{8}%
-\contentsline {subsubsection}{Diagrammes de cas d’utilisation}{9}%
-\contentsline {subsubsection}{Diagrammes de séquences}{10}%
-\contentsline {section}{\numberline {2.2}La structure du code}{10}%
-\contentsline {subsection}{\numberline {2.2.1}Modéles}{10}%
-\contentsline {subsection}{\numberline {2.2.2}Contrôleurs}{10}%
-\contentsline {subsection}{\numberline {2.2.3}Vues}{10}%
-\contentsline {subsection}{\numberline {2.2.4}Widgets}{10}%
-\contentsline {chapter}{\numberline {3}Réalisation}{15}%
-\contentsline {section}{\numberline {3.1}Startup}{15}%
-\contentsline {section}{\numberline {3.2}Client case}{15}%
-\contentsline {section}{\numberline {3.3}Restaurant case}{15}%
-\contentsline {section}{\numberline {3.4}Deliverer case}{15}%
-\contentsline {chapter}{Conclusion}{16}%
+\contentsline {chapter}{\numberline {2}Conception de l'application}{8}%
+\contentsline {section}{\numberline {2.1}Modélisation}{8}%
+\contentsline {subsubsection}{Diagramme de classes}{9}%
+\contentsline {subsubsection}{Diagrammes de cas d’utilisation}{10}%
+\contentsline {subsubsection}{Diagrammes de séquences}{11}%
+\contentsline {section}{\numberline {2.2}La structure du code}{11}%
+\contentsline {subsection}{\numberline {2.2.1}Modéles}{11}%
+\contentsline {subsection}{\numberline {2.2.2}Contrôleurs}{11}%
+\contentsline {subsection}{\numberline {2.2.3}Vues}{11}%
+\contentsline {subsection}{\numberline {2.2.4}Widgets}{12}%
+\contentsline {chapter}{\numberline {3}Réalisation de l'application}{16}%
+\contentsline {section}{\numberline {3.1}Startup}{16}%
+\contentsline {section}{\numberline {3.2}Client case}{16}%
+\contentsline {section}{\numberline {3.3}Restaurant case}{16}%
+\contentsline {section}{\numberline {3.4}Deliverer case}{16}%
+\contentsline {chapter}{Conclusion}{17}%

@@ -1,4 +1,4 @@
-\documentclass[french, a4paper, french]{report}
+\documentclass[french, a4paper, francais, frenchb, fr, 12pt]{report}
 
 
 \usepackage[utf8]{inputenc}
@@ -20,14 +20,14 @@
 
 \chapter*{Remerciement}
 \begin{center}
-\Large \textbf{\textit{Tout d'abord, nous remercions Dieu, notre créateur, pour nous avoir donné la force, la volonté et le courage d'accomplir ce modeste travail.\\
-Nous remercions notre directeur de thèse Monsieur Allaoui et Madame Kerrouche pour leurs conseils et leur encadrement du début à la fin de ce travail.\\
-Nos remerciements vont à tous ceux qui ont contribué de près ou de loin à la réalisation de ce travail. Enfin, nous tenons à exprimer notre profonde gratitude à nos familles qui nous ont toujours soutenus et à tous ceux qui ont participé à la réalisation de cette thèse. Ainsi qu'à tous les enseignants qui ont contribué à notre formation.}}
+\Large \textbf{\textit{Tout d'abord, nous remercions Allah, notre créateur, pour nous avoir donné la force, la volonté et le courage d'accomplir ce modeste travail.\\
+Nous remercions notre encadreur Monsieur Allaoui ansi que Madame Kerrouche pour leurs conseils et leur encouragement du début jusqu'à la fin de ce travail.\\
+Nos remerciements vont aussi à tous ceux qui ont contribué de près ou de loin à la réalisation de ce travail.\\Enfin, nous tenons à exprimer notre profonde gratitude à nos familles qui nous ont toujours soutenus et à tous ceux qui ont participé à la réalisation de ce mémoire. Ainsi qu'à tous les enseignants qui ont contribué à notre formation.}}
 \end{center}
 
 \chapter*{Dédicaces}
 \begin{center}
-\Large \textbf{\textit{Nous dédions ce modeste ouvrage à nos parents bien-aimés qui nous ont soutenus tout au long de notre vie.\\
+\Large \textbf{\textit{Nous dédions ce modeste travail à nos parents bien-aimés qui nous ont soutenus tout au long de notre cursus universitaire et le sont toujours.\\
 À nos amis qui n'ont jamais hésité à nous aider de quelque manière que ce soit.\\
 Et à tous ceux qui nous ont enseigné tout au long de notre vie scolaire.\\
 A nos camarades de la 3ème année LMD.\\
@@ -63,27 +63,25 @@ this is the abstract
 \chapter*{Introduction}
     Au cours de la dernière décennie, nous avons assisté à une révolution dans les commerces en ligne. Les gens se sont habitués aux achats en ligne et aux réservations à distance comme la réservation de billets, l'achat d'articles et même la commande de nourriture, principalement parce que c'est plus rapide, sans effort et moins compliqué.
 
-Lorsque quelqu'un veut acheter de la nourriture en ligne, il doit vérifier un restaurant qui fabrique la nourriture qu'il veut, puis la nourriture doit lui être livrée soit par le livreur du restaurant, soit par un établissement de livraison séparé.
+Lorsque quelqu'un veut acheter des repas en ligne, il doit chercher un restaurant qui prépare les repas désirés. La commande doit lui être livrée soit par le livreur du restaurant, soit par un établissement de livraison séparé.
 
-Comme nous l'avons vu dans les pays étrangers en Europe ou aux États-Unis, beaucoup de restaurants et de sociétés de livraison ont leur propre application mobile. Malheureusement, tous les établissements ne peuvent pas se permettre de créer leur propre application en raison des coûts élevés de développement d'une application mobile.
+Dans les pays étrangers, en Europe ou aux États-Unis, beaucoup de restaurants et de sociétés de livraison ont leur propre application mobile. Malheureusement, ce n'est pas le cas pour tous les établissements qui peuvent se permettre de créer leur propre application en raison des coûts élevés de développement d'une application mobile.
 
-Notre solution est une plateforme conçue comme une application mobile qui regroupe les clients, les restaurants et les sociétés de livraison en un seul endroit. Elle répond à tous les besoins des personnes qui veulent commander leur nourriture à distance, elle permettra également aux propriétaires de restaurants et aux sociétés de livraison d'augmenter leurs ventes et d'accélérer leur flux de travail avec les clients à distance.
+Delàs, nous avons pensé à contribuer à une solution. C'est une plateforme conçue comme une application mobile qui regroupe les clients, les restaurants et les établissements de livraison en un seul endroit. \\Elle répond à tous les besoins des personnes qui veulent commander leurs plats à distance, elle permettra également aux propriétaires de restaurants et aux établissements de livraison d'augmenter leurs ventes et d'accélérer leur flux de travail avec les clients à distance.
 
 \addcontentsline{toc}{chapter}{Introduction}
 
 \newpage
-\chapter{Etude Bibliographique}
-	\section{Développement Android} Nous avons choisi de réaliser une application mobile dédiée aux utilisateurs d'Android, et nous avons beaucoup de choix quant aux technologies que nous allons utiliser pour le développement.
-		\subsection{Les technologies utilisées} Nous avons utilisé le framework Flutter pour les interfaces et la logique de l'application, et Cloud Firestore de Firebase pour le stockage et la gestion de la base de données.
-		
-			\subsubsection*{Flutter} Un kit de développement logiciel d'interface utilisateur open-source créé par Google. Il est utilisé pour développer des applications multiplateformes pour Android, iOS, Linux, Mac, Windows, et le Web à partir d'une base de code unique.
-Nous avons utilisé Flutter en raison de sa structure qui favorise la vitesse de développement. Sa structure est simplement une cascade de widgets faciles à personnaliser.
+\chapter{Receuil des besoins} Dans cette partie, nous proposons de regrouper les besoins techniques necessaires pour accomplir ce travail.
+	\section{Développement Android} Nous avons choisi de réaliser une application mobile dédiée aux utilisateurs d'Android. Il existe beaucoup de choix quant aux technologies que nous allons utiliser pour ce développement.
+		\subsection{Les technologies utilisées} Dans ce travail nous avons utilisé le framework Flutter pour les interfaces et la logique de l'application et Cloud Firestore de Firebase pour le stockage et la gestion de la base de données.
+			\subsubsection*{Flutter} C'est un SDK d'interface utilisateur open-source créé par Google. Il est utilisé pour développer des applications multiplateformes pour Android, iOS, Linux, Mac, Windows et le Web à partir d'une base de code unique.\\Nous avons utilisé Flutter en raison de sa structure qui favorise la vitesse de développement. Sa structure est simplement une cascade de widgets faciles à personnaliser.
 
-Flutter utilise le langage de programmation Dart, également développé par Google. Il s'agit d'un langage orienté objet, basé sur des classes, avec une syntaxe de type de la language C.
-			\subsubsection*{Firebase} la plateforme mobile de Google qui aide à développer rapidement des applications de qualité. Elle dispose de nombreuses fonctionnalités, mais nous l'utilisons principalement pour son service de stockage au Cloud (Cloud Firestore).
-				\paragraph*{Cloud Firestore} est une base de données documentaire NoSQL (un ensemble de continuation en cascade collection-document) qui nous permet de stocker, de synchroniser et d'interroger facilement des données pour des applications mobiles et web - à l'échelle mondiale.
+Flutter utilise le langage de programmation Dart, également développé par Google. Il s'agit d'un langage orienté objet, basé sur des classes avec une syntaxe de type de la language C.
+			\subsubsection*{Firebase} C'est une plateforme accessible de n'importe quel endroit, qui aide à développer rapidement des applications de qualité. Elle dispose de nombreuses fonctionnalités, mais nous l'utilisons principalement pour son service de stockage au Cloud (Cloud Firestore).\\
+				\paragraph*{Cloud Firestore} est une base de données documentaire NoSQL (un ensemble de continuation en cascade collection-document) qui nous permet de stocker, de synchroniser et d'interroger facilement des données pour des applications mobiles et web à l'échelle mondiale.
 	\section{Méthode de travail collaborative}
-		Cette application a été développée à partir de zéro par trois développeurs, nous devions travailler en parallèle sur le même projet, nous avons donc utilisé Git et Github.
+		L'application conçue dans ce travail, a été développée à partir de zéro par trois développeurs. Nous avons travailler en parallèle sur le même projet, de ce fait nous, les trois développeurs, allons donc utiliser Git et Github.
 
 		\subsection*{Git} C'est un logiciel permettant de suivre les modifications apportées à un ensemble de fichiers. Il est généralement utilisé pour coordonner le travail des programmeurs qui collaborent à l'élaboration du code source lors du développement de logiciels. Ses objectifs sont la rapidité, l'intégrité des données et la prise en charge des flux de travail distribués et non linéaires.
 
@@ -100,7 +98,7 @@ Cela permet de séparer les représentations internes de l'information de la man
 \end{figure}
 
 \newpage
-\chapter{Conception}
+\chapter{Conception de l'application} Dans ce chapitre nous présentons les differentes étapes de la conception de l'application de gestion de commande et livraison de la restauration.
 	\section{Modélisation} On a choisi trois diagrammes d’UML pour modéliser l'application:
 		\begin{itemize}
 			\item Diagramme de classes
@@ -183,7 +181,7 @@ Cela permet de séparer les représentations internes de l'information de la man
 		\subsection{Widgets} Nous avons dû créer des widgets personnalisés pour répondre à nos besoins, comme des boutons, des vues de liste, des vues de texte, etc.
 		
 \newpage
-\chapter{Réalisation}
+\chapter{Réalisation de l'application} Dans ce chapitre nous allons présenter les differentes IHMs de flux de cette application.
 	\section{Startup} sign in and up
 	\section{Client case} flows
 	\section{Restaurant case} flows
@@ -191,7 +189,7 @@ Cela permet de séparer les représentations internes de l'information de la man
 
 \newpage
 \chapter*{Conclusion}
-blblabla
+bla bla
 \addcontentsline{toc}{chapter}{Conclusion}
 
 \newpage
