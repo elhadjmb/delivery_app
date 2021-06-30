@@ -18,6 +18,8 @@
 \contentsline {subsection}{\numberline {2.2.4}Widgets}{23}%
 \contentsline {chapter}{\numberline {3}Réalisation de l'application}{24}%
 \contentsline {section}{\numberline {3.1}Lancement d'application}{24}%
+\contentsline {subsubsection}{\numberline {3.1.0.1}L'inscription}{24}%
+\contentsline {subsubsection}{\numberline {3.1.0.2}La connexion (Login)}{24}%
 \contentsline {section}{\numberline {3.2}Cas d'utilisateur client}{25}%
 \contentsline {section}{\numberline {3.3}Cas d'utilisateur server}{26}%
 \contentsline {section}{\numberline {3.4}Cas d'utilisateur livreur}{27}%
