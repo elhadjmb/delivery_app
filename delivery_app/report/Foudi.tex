@@ -6,7 +6,6 @@
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
-
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4}
 
@@ -117,9 +116,9 @@ Cela permet de séparer les représentations internes de l'information de la man
   				\label{fig:classdiag}
 			\end{figure}
 			
-			La figure ci-dessus décrit les classes principales d'objets sur lesquelles repose la logique de l'application, ainsi que les relations qui existent entre eux.
+			La figure (fig \ref{fig:classdiag}) décrit les classes principales d'objets sur lesquelles repose la logique de l'application, ainsi que les relations qui existent entre elles.
 			\newpage
-			Le tableau suivant explique le schéma en figure \ref{fig:classdiag}, dans lequel les classes sont définies comme suit:
+			Le tableau (tab \ref{tab:classdiag}) explique le schéma de figure \ref{fig:classdiag}, dans lequel les classes sont définies comme suit:
 			
 			\begin{table}[!h!]
   				\begin{tabular}{lllp{6cm}}
@@ -179,18 +178,18 @@ Cela permet de séparer les représentations internes de l'information de la man
   				\label{fig:usecasemenu}
 			\end{figure}
 			
-			La figure ci-dessus illustre le cas de la configuration du menu du restaurant par l'employé du restaurant. L'employé du restaurant (serveur) a la possibilité de contrôler
+			La figure (fig \ref{fig:usecasemenu}) illustre le cas de la configuration du menu du restaurant par l'employé du restaurant. L'employé du restaurant (serveur) a la possibilité de contrôler
 le menu (ajouter, modifier et supprimer des plats), et recevoir les commandes du client que le système lui fournit,
-a le contrôle total de l'état de chaque commande (en préparation, ou prête à être livrée).
+il a aussi le contrôle total de l'état de chaque commande (en préparation, ou prête à être livrée).
 			
 			\newpage
 			\begin{figure}[!h]
   				\center
   				\includegraphics[width=15cm]{usecaseorder.png}
-  				\caption{Diagramme de cas d'ustilisation du passation d'une commande}
+  				\caption{Diagramme de cas d'ustilisation de passation d'une commande}
   				\label{fig:usecaseorder}
 			\end{figure}
-			La figure ci-dessus illustre le cas de la configuration du passation d'une commande par le client de restaurant. Le système met à disposition aux clients des restaurants et leurs menus afin que le client puisse choisir son restaurant,
+			La figure (fig \ref{fig:usecaseorder}) illustre le cas de la configuration de passation d'une commande par le client de restaurant. Le système met à disposition aux clients des restaurants et leurs menus afin que le client puisse choisir son restaurant,
 puis choisir ses plats. Il confirme ensuite la commande en indiquant l'adresse de livraison et les informations nécessaires. La commande est soumise au système pour être traitée.
 			
 			\newpage
@@ -200,18 +199,18 @@ puis choisir ses plats. Il confirme ensuite la commande en indiquant l'adresse d
   				\caption{Diagramme de cas d'ustilisation du livraison d'une commande}
   				\label{fig:usecasedeliver}
 			\end{figure}
-			La figure ci-dessus illustre le cas de la livraison d'une commande par le livreur. Les livreurs ont la possibilité de définir leur statut "occupé" ou "libre". Lorsqu'un livreur proche accepte une livraison de sa liste de livraisons proches (commandes prêtes à être livrées), il a alors accès à toutes les informations nécessaires de l'adresse du restaurant et de l'adresse du client.
+			La figure (fig \ref{fig:usecasedeliver}) illustre le cas de la livraison d'une commande par le livreur. Les livreurs ont la possibilité de définir leur statut "occupé" ou "libre". Lorsqu'un livreur proche accepte une livraison de sa liste de livraisons proches (commandes prêtes à être livrées), il a alors accès à toutes les informations nécessaires de l'adresse du restaurant et de l'adresse du client.
 Chaque livreur a la possibilité d'informer le client de l'état de livraison de la commande.
 			
 			
 			\newpage
 		\subsubsection{Diagrammes de séquences} Dans cette section, nous allons illustrer les séquences d'interactions entre les utilisateurs et le système à l'aide des diagrammes de séquence d'UML.
-			\begin{figure}[!h]
+			\begin{figure}[h!]
   				\center
   				\includegraphics[width=10cm]{seqlogin.png}
   				\caption{Diagramme de séquences du authentification}
   				\label{fig:seqlogin}
-			\end{figure} La figure ci-dessus décrit la séquence de connexion au système par tout utilisateur. L'utilisateur saisit ses informations d'identification, le système vérifie si l'utilisateur existe. S'il existe, le système authentifie sa connexion avec succès, sinon il donne à l'utilisateur la possibilité de s'inscrire ou de saisir à nouveau ses informations d'identification. L'ensemble du processus se répète jusqu'à ce que l'utilisateur se connecte avec succès.
+			\end{figure} \\La figure (fig \ref{fig:seqlogin}) décrit la séquence de connexion au système par tout utilisateur. L'utilisateur saisit ses informations d'identification, le système vérifie si l'utilisateur existe. S'il existe, le système authentifie sa connexion avec succès, sinon il donne à l'utilisateur la possibilité de s'inscrire ou de saisir à nouveau ses informations d'identification. L'ensemble du processus se répète jusqu'à ce que l'utilisateur se connecte avec succès.
 			
 			\newpage	
 			\begin{figure}[!h]
@@ -219,15 +218,15 @@ Chaque livreur a la possibilité d'informer le client de l'état de livraison de
   				\includegraphics[width=12cm]{seqmenu.png}
   				\caption{Diagramme de séquences du configuration du menu}
   				\label{fig:seqmenu}
-			\end{figure} La figure ci-dessus décrit la séquence de configuration de menu du restaurant. Après que l'employé du restaurant se soit connecté avec succès, il peut choisir d'accéder à la page de gestion du menu dans laquelle il peut sélectionner un plat dans une liste de plats s'ils existent déjà dans le menu pour les supprimer ou les modifier. S'il choisit de les modifier, le système lui montrera tous les détails du plat à modifier, puis après la modification, il pourra valider ses changements. Si le menu est vide, le système fournira un formulaire pour remplir toutes les informations sur le plat avec ses ingrédients.
+			\end{figure} La figure (fig \ref{fig:seqmenu}) décrit la séquence de configuration de menu du restaurant. Après que l'employé du restaurant se soit connecté avec succès, il peut choisir d'accéder à la page de gestion du menu dans laquelle il peut sélectionner un plat dans une liste de plats s'ils existent déjà dans le menu pour les supprimer ou les modifier. S'il choisit de les modifier, le système lui montrera tous les détails du plat à modifier, puis après la modification, il pourra valider ses changements. Si le menu est vide, le système fournira un formulaire pour remplir toutes les informations sur le plat avec ses ingrédients.
 			
 			\newpage	
 			\begin{figure}[!h]
   				\center
   				\includegraphics[width=15cm]{seqorder.png}
-  				\caption{Diagramme de séquences du passation d'une commande}
+  				\caption{Diagramme de séquences de passation d'une commande}
   				\label{fig:seqorder}
-			\end{figure} La figure ci-dessus décrit la séquence du passation d'une commande par le client. Une fois que le client a réussi à se connecter, le système lui montre la page principale. Le client peut rechercher un plat spécifique ou sélectionner un restaurant, puis sélectionner le plat, le système affichera le plat dans lequel le client peut sélectionner les ingrédients souhaités, puis ajouter le plat au panier.\\Il peut répéter ce processus jusqu'à ce que tous les plats qu'il souhaite soient ajoutés au panier (il a également la possibilité de retirer un plat du panier).\\\\
+			\end{figure} La figure (fig \ref{fig:seqorder}) décrit la séquence de passation d'une commande par le client. Une fois que le client a réussi à se connecter, le système lui montre la page principale.\\Le client peut rechercher un plat spécifique ou sélectionner un restaurant, puis sélectionner le plat, le système affichera le plat dans lequel le client peut sélectionner les ingrédients souhaités, puis ajouter le plat au panier.\\Il peut répéter ce processus jusqu'à ce que tous les plats qu'il souhaite soient ajoutés au panier (il a également la possibilité de retirer un plat du panier).\\\\
 Le client peut ensuite procéder au marquage de l'adresse de livraison sur la carte, le système obtiendra les détails de l'emplacement à partir de l'API Google Maps.\\
 Le système demandera une option de paiement, et après validation, le système mettra à jour l'état de la commande en la mettant en "attente" jusqu'à ce que l'employé du restaurant commence à la préparer.
 			
@@ -237,7 +236,7 @@ Le système demandera une option de paiement, et après validation, le système 
   				\includegraphics[width=12cm]{seqrest.png}
   				\caption{Diagramme de séquences du recepetion d'une commande}
   				\label{fig:seqrest}
-			\end{figure} La figure ci-dessus décrit la séquence du recepetion d'une commande par l'employé du restaurant (serveur). Lorsqu'une commande est passée, l'employé du restaurant est notifié par le système. Le serveur valide la commande et commence à la préparer. Le système notifie alors au client le changement de statut de la commande, qui passe de "en attente" à "en préparation".
+			\end{figure} La figure (fig \ref{fig:seqrest}) décrit la séquence du recepetion d'une commande par l'employé du restaurant (serveur). Lorsqu'une commande est passée, l'employé du restaurant est notifié par le système. Le serveur valide la commande et commence à la préparer. Le système notifie alors au client le changement de statut de la commande, qui passe de "en attente" à "en préparation".
 Une fois la commande prête, le serveur met à jour le statut de la commande en "prêt à livrer".
 			
 			\newpage	
@@ -246,7 +245,7 @@ Une fois la commande prête, le serveur met à jour le statut de la commande en 
   				\includegraphics[width=10cm]{seqdeliver.png}
   				\caption{Diagramme de séquences du livraison d'une commande}
   				\label{fig:seqdeliver}
-			\end{figure} La figure ci-dessus décrit la séquence du livraison d'une commande. Si le statut d'une commande est défini comme "prêt à être livré", le livreur en est informé par le système.
+			\end{figure} La figure (fig \ref{fig:seqdeliver}) décrit la séquence du livraison d'une commande. Si le statut d'une commande est défini comme "prêt à être livré", le livreur en est informé par le système.
 Lorsqu'il décide d'accepter la livraison, le système lui envoie toutes les informations nécessaires sur les lieux de départ et d'arrivée.
 Le livreur peut changer le statut de la commande en "livraison" une fois qu'il l'a récupérée au restaurant.
 Après la livraison, il peut changer son statut de "occupé" à "libre".
@@ -283,7 +282,7 @@ Lorsqu'un nouvel utilisateur souhaite accéder à l'application, il doit d'abord
 \label{fig:lanc}
 \end{figure}
 		
-		\subsubsection{L'inscription} Comme la figure \ref{fig:signup} montre, le nouvel utilisateur doit choisir le type de compte (Client, Restaurant, ou Delivery). Il remplit ensuite les informations nécessaires et appuie sur "Create Account".
+		\subsubsection{L'inscription} Comme la figure (fig \ref{fig:signup}) le montre, le nouvel utilisateur doit choisir le type de compte (Client, Restaurant, ou Delivery). Il remplit ensuite les informations nécessaires et appuie sur "Create Account".
 Le système vérifiera si l'utilisateur n'existe pas déjà et validera ensuite son compte.	
 		\subsubsection{La connexion (Login)} Si l'utilisateur possède déjà un compte, il peut saisir son e-mail et son mot de passe (comme en fig. \ref{fig:signin}). Le système détectera automatiquement le type d'utilisateur et lui montrera sa page d'accueil qui lui correspond.
 		 
@@ -294,7 +293,7 @@ Le système vérifiera si l'utilisateur n'existe pas déjà et validera ensuite 
 		\begin{itemize}
 			\item \textbf{Page des commandes (page d'accueil)}: Une liste de toutes les commandes passées
 			\item \textbf{Page de configuration du menu}: Pour modifier le menu du restaurant
-			\item \textbf{Page de profile}: Pour voir les avis des client au son restaurant.
+			\item \textbf{Page de profile}: Pour voir les avis des client vis à vis de son restaurant.
 		\end{itemize}
 		
 		\subsection{La page des commandes}
@@ -304,7 +303,7 @@ Le système vérifiera si l'utilisateur n'existe pas déjà et validera ensuite 
 			\includegraphics[width=5cm]{screenshots/Restaurantviews/ListofOrders(received).png}
 			\caption{L'IHM de la page des commandes}
 			\label{fig:restord}	
-		\end{figure} Le système fournit au travailleur du restaurant les commandes des clients (fig \ref{fig:restord}), chaque commande contient (lorsqu'il est pressé) les informations nécessaires (un identifiant et une heure de commande, des plats avec les ingrédients souhaités, des notes si disponibles...etc) comme c'est indiqué dans  la figure \ref{fig:restdish}.
+		\end{figure} Le système fournit au travailleur du restaurant les commandes des clients (fig \ref{fig:restord}), chaque commande contient (lorsqu'il est pressé) les informations nécessaires (un identifiant et une heure de commande, des plats avec les ingrédients souhaités, des notes si disponibles...etc) comme c'est indiqué dans  la figure (fig \ref{fig:restdish}).
 		
 		\newpage
 		\begin{figure}[h!]
