@@ -118,7 +118,9 @@ Cela permet de séparer les représentations internes de l'information de la man
   				\label{fig:classdiag}
 			\end{figure}
 			
-			La figure ci-dessus décrit les classes principales d'objets sur lesquelles repose la logique de l'application, ainsi que les relations qui existent entre eux.\\Le tableau suivant explique le schéma en figure \ref{fig:classdiag}, dans lequel les classes sont définies comme suit:
+			La figure ci-dessus décrit les classes principales d'objets sur lesquelles repose la logique de l'application, ainsi que les relations qui existent entre eux.
+			\newpage
+			Le tableau suivant explique le schéma en figure \ref{fig:classdiag}, dans lequel les classes sont définies comme suit:
 			
 			\begin{table}[!h!]
   				\begin{tabular}{lllp{6cm}}
@@ -167,7 +169,7 @@ Cela permet de séparer les représentations internes de l'information de la man
 			\end{table}
 
 		\newpage
-		\subsubsection{Diagrammes de cas d’utilisation}
+		\subsubsection{Diagrammes de cas d’utilisation} Dans cette section, nous présentons les diagrammes de cas d'utilisation. Nous avons réalisé un diagramme pour les principales utilisations qui se déroulent dans l'application. 
 			
 			\begin{figure}[!h]
   				\center
@@ -176,21 +178,31 @@ Cela permet de séparer les représentations internes de l'information de la man
   				\label{fig:usecasemenu}
 			\end{figure}
 			
-			%\newpage
+			La figure ci-dessus illustre le cas de la configuration du menu du restaurant par l'employé du restaurant. L'employé du restaurant (serveur) a la possibilité de contrôler
+le menu (ajouter, modifier et supprimer des plats), et recevoir les commandes du client que le système lui fournit,
+a le contrôle total de l'état de chaque commande (en préparation, ou prête à être livrée).
+			
+			\newpage
 			\begin{figure}[!h]
   				\center
   				\includegraphics[width=15cm]{usecaseorder.png}
   				\caption{Diagramme de cas d'ustilisation du passation d'une commande}
   				\label{fig:usecaseorder}
 			\end{figure}
+			La figure ci-dessus illustre le cas de la configuration du passation d'une commande par le client de restaurant. Le système met à disposition aux clients des restaurants et leurs menus afin que le client puisse choisir son restaurant,
+puis choisir ses plats. Il confirme ensuite la commande en indiquant l'adresse de livraison et les informations nécessaires. La commande est soumise au système pour être traitée.
 			
-			%\newpage
+			\newpage
 			\begin{figure}[!h]
   				\center
   				\includegraphics[width=15cm]{usecasedeliver.png}
   				\caption{Diagramme de cas d'ustilisation du livraison d'une commande}
   				\label{fig:usecasedeliver}
 			\end{figure}
+			La figure ci-dessus illustre le cas de la livraison d'une commande par le livreur. Les livreurs ont la possibilité de définir leur statut "occupé" ou "libre". Lorsqu'un livreur proche accepte une livraison de sa liste de livraisons proches (commandes prêtes à être livrées), il a alors accès à toutes les informations nécessaires de l'adresse du restaurant et de l'adresse du client.
+Chaque livreur a la possibilité d'informer le client de l'état de livraison de la commande.
+			
+			
 			\newpage
 		\subsubsection{Diagrammes de séquences}
 			\begin{figure}[!h]
