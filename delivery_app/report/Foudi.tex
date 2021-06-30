@@ -270,17 +270,17 @@ Lorsqu'un nouvel utilisateur souhaite accéder à l'application, il doit d'abord
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=.9\linewidth]{screenshots/signin.jpg}
-  \caption{A subfigure}
+  \caption{L'IHM de la page de connexion}
   \label{fig:signin}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=.9\linewidth]{screenshots/signup.jpg}
-  \caption{A subfigure}
+  \caption{L'IHM de la page d'inscription}
   \label{fig:signup}
 \end{subfigure}
 \caption{A figure with two subfigures}
-\label{fig:test}
+\label{fig:lanc}
 \end{figure}
 		
 		\subsubsection{L'inscription} Comme la figure \ref{fig:signup} montre, le nouvel utilisateur doit choisir le type de compte (Client, Restaurant, ou Delivery). Il remplit ensuite les informations nécessaires et appuie sur "Create Account".
@@ -290,7 +290,56 @@ Le système vérifiera si l'utilisateur n'existe pas déjà et validera ensuite 
 	\newpage
 	\section{Cas d'utilisateur client} *flux*
 	\newpage
-	\section{Cas d'utilisateur server} *flux*
+	\section{Cas d'utilisateur server} Le server (employé du restaurant) dispose de trois pages dans le menu de l'application:
+		\begin{itemize}
+			\item \textbf{Page des commandes (page d'accueil)}: Une liste de toutes les commandes passées
+			\item \textbf{Page de configuration du menu}: Pour modifier le menu du restaurant
+			\item \textbf{Page de profile}: Pour voir les avis des client au son restaurant.
+		\end{itemize}
+		
+		\subsection{La page des commandes}
+		
+		\begin{figure}[h!]
+			\center
+			\includegraphics[width=5cm]{screenshots/Restaurantviews/ListofOrders(received).png}
+			\caption{L'IHM de la page des commandes}
+			\label{fig:restord}	
+		\end{figure} Le système fournit au travailleur du restaurant les commandes des clients (fig \ref{fig:restord}), chaque commande contient (lorsqu'il est pressé) les informations nécessaires (un identifiant et une heure de commande, des plats avec les ingrédients souhaités, des notes si disponibles...etc) comme c'est indiqué dans  la figure \ref{fig:restdish}.
+		
+		\newpage
+		\begin{figure}[h!]
+			\center
+			\includegraphics[width=5cm]{screenshots/Restaurantviews/ListofDishes.jpg}
+			\caption{L'IHM de la page plats dans un commande}
+			\label{fig:restdish}	
+		\end{figure}
+		Lorsque la commande commence à être préparée, le serveur met l'état de la commande en préparation pour en informer le client. Après avoir terminé, il met l'état de la commande sur prêt à livrer pour que le livreur soit notifié.
+		
+		\subsection{La page de configuration du menu} L'employé du restaurant a la possibilité d'ajouter et de supprimer des plats du menu du restaurant (fig \ref{fig:restconfig}), ainsi que la possibilité de modifier les ingrédients en les activant ou en les désactivant simplement en cliquant sur un simple bouton à bascule (fig \ref{fig:restedit}).
+		
+		\newpage
+
+\begin{figure}[h!]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{screenshots/Restaurantviews/MenuSetup.jpg}
+  \caption{L'IHM du menu}
+  \label{fig:restconfig}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{screenshots/Restaurantviews/ModifyDish.png}
+  \caption{L'IHM de la page de modification d'un plat}
+  \label{fig:restedit}
+\end{subfigure}
+\caption{Le IHMs de configuration de menu}
+\label{fig:restmnu}
+\end{figure}
+		
+
+		
+		
 	\newpage
 	\section{Cas d'utilisateur livreur} Le livreur dispose de trois pages dans le menu de l'application:
 		\begin{itemize}
@@ -307,7 +356,7 @@ Le système vérifiera si l'utilisateur n'existe pas déjà et validera ensuite 
 			\label{fig:delihp}
 		\end{figure}
 		La page d'accueil du livreur (fig \ref{fig:delihp}) est constituée des commandes proches prêtes à être livrées ; la liste des commandes contient les informations essentielles de chaque commande qui permettent à l'utilisateur de la choisir ou de l'ignorer.
-		
+		\newpage
 		\begin{figure}[h!]
 			\center
 			\includegraphics[width=5cm]{screenshots/DeliveryViews/ClientPositionMap.jpg}
