@@ -1,3 +1,4 @@
+\babel@toc {french}{}
 \contentsline {chapter}{Liste des Abréviations}{4}%
 \contentsline {chapter}{Introduction}{5}%
 \contentsline {chapter}{\numberline {1}Receuil des besoins}{6}%
@@ -16,8 +17,8 @@
 \contentsline {subsection}{\numberline {2.2.3}Vues}{13}%
 \contentsline {subsection}{\numberline {2.2.4}Widgets}{14}%
 \contentsline {chapter}{\numberline {3}Réalisation de l'application}{18}%
-\contentsline {section}{\numberline {3.1}Startup}{18}%
-\contentsline {section}{\numberline {3.2}Client case}{18}%
-\contentsline {section}{\numberline {3.3}Restaurant case}{18}%
-\contentsline {section}{\numberline {3.4}Deliverer case}{18}%
+\contentsline {section}{\numberline {3.1}Lancement d'application}{18}%
+\contentsline {section}{\numberline {3.2}Cas d'utilisateur client}{18}%
+\contentsline {section}{\numberline {3.3}Cas d'utilisateur server}{18}%
+\contentsline {section}{\numberline {3.4}Cas d'utilisateur livreur}{18}%
 \contentsline {chapter}{Conclusion}{19}%
