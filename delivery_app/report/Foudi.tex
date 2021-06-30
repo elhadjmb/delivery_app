@@ -171,7 +171,7 @@ Cela permet de séparer les représentations internes de l'information de la man
 		\newpage
 		\subsubsection{Diagrammes de cas d’utilisation} Dans cette section, nous présentons les diagrammes de cas d'utilisation. Nous avons réalisé un diagramme pour les principales utilisations qui se déroulent dans l'application. 
 		
-		\newpage	
+		%\newpage	
 			
 			\begin{figure}[!h]
   				\center
@@ -206,37 +206,40 @@ Chaque livreur a la possibilité d'informer le client de l'état de livraison de
 			
 			
 			\newpage
-		\subsubsection{Diagrammes de séquences}
+		\subsubsection{Diagrammes de séquences} Dans cette section, nous allons illustrer les séquences d'interactions entre les utilisateurs et le système à l'aide des diagrammes de séquence d'UML.
 			\begin{figure}[!h]
   				\center
   				\includegraphics[width=10cm]{seqlogin.png}
   				\caption{Diagramme de séquences du authentification}
   				\label{fig:seqlogin}
-			\end{figure}
+			\end{figure} La figure ci-dessus décrit la séquence de connexion au système par tout utilisateur. L'utilisateur saisit ses informations d'identification, le système vérifie si l'utilisateur existe. S'il existe, le système authentifie sa connexion avec succès, sinon il donne à l'utilisateur la possibilité de s'inscrire ou de saisir à nouveau ses informations d'identification. L'ensemble du processus se répète jusqu'à ce que l'utilisateur se connecte avec succès.
 			
 			\newpage	
 			\begin{figure}[!h]
   				\center
-  				\includegraphics[width=10cm]{seqmenu.png}
+  				\includegraphics[width=12cm]{seqmenu.png}
   				\caption{Diagramme de séquences du configuration du menu}
   				\label{fig:seqmenu}
-			\end{figure}
+			\end{figure} La figure ci-dessus décrit la séquence de configuration de menu du restaurant. Après que l'employé du restaurant se soit connecté avec succès, il peut choisir d'accéder à la page de gestion du menu dans laquelle il peut sélectionner un plat dans une liste de plats s'ils existent déjà dans le menu pour les supprimer ou les modifier. S'il choisit de les modifier, le système lui montrera tous les détails du plat à modifier, puis après la modification, il pourra valider ses changements. Si le menu est vide, le système fournira un formulaire pour remplir toutes les informations sur le plat avec ses ingrédients.
 			
 			\newpage	
 			\begin{figure}[!h]
   				\center
-  				\includegraphics[width=10cm]{seqorder.png}
+  				\includegraphics[width=15cm]{seqorder.png}
   				\caption{Diagramme de séquences du passation d'une commande}
   				\label{fig:seqorder}
-			\end{figure}
+			\end{figure} La figure ci-dessus décrit la séquence du passation d'une commande par le client. Une fois que le client a réussi à se connecter, le système lui montre la page principale. Le client peut rechercher un plat spécifique ou sélectionner un restaurant, puis sélectionner le plat, le système affichera le plat dans lequel le client peut sélectionner les ingrédients souhaités, puis ajouter le plat au panier.\\Il peut répéter ce processus jusqu'à ce que tous les plats qu'il souhaite soient ajoutés au panier (il a également la possibilité de retirer un plat du panier).\\\\
+Le client peut ensuite procéder au marquage de l'adresse de livraison sur la carte, le système obtiendra les détails de l'emplacement à partir de l'API Google Maps.\\
+Le système demandera une option de paiement, et après validation, le système mettra à jour l'état de la commande en la mettant en "attente" jusqu'à ce que l'employé du restaurant commence à la préparer.
 			
 			\newpage	
 			\begin{figure}[!h]
   				\center
-  				\includegraphics[width=10cm]{seqrest.png}
+  				\includegraphics[width=12cm]{seqrest.png}
   				\caption{Diagramme de séquences du recepetion d'une commande}
   				\label{fig:seqrest}
-			\end{figure}
+			\end{figure} La figure ci-dessus décrit la séquence du recepetion d'une commande par l'employé du restaurant (serveur). Lorsqu'une commande est passée, l'employé du restaurant est notifié par le système. Le serveur valide la commande et commence à la préparer. Le système notifie alors au client le changement de statut de la commande, qui passe de "en attente" à "en préparation".
+Une fois la commande prête, le serveur met à jour le statut de la commande en "prêt à livrer".
 			
 			\newpage	
 			\begin{figure}[!h]
@@ -244,7 +247,12 @@ Chaque livreur a la possibilité d'informer le client de l'état de livraison de
   				\includegraphics[width=10cm]{seqdeliver.png}
   				\caption{Diagramme de séquences du livraison d'une commande}
   				\label{fig:seqdeliver}
-			\end{figure}
+			\end{figure} La figure ci-dessus décrit la séquence du livraison d'une commande. Si le statut d'une commande est défini comme "prêt à être livré", le livreur en est informé par le système.
+Lorsqu'il décide d'accepter la livraison, le système lui envoie toutes les informations nécessaires sur les lieux de départ et d'arrivée.
+Le livreur peut changer le statut de la commande en "livraison" une fois qu'il l'a récupérée au restaurant.
+Après la livraison, il peut changer son statut de "occupé" à "libre".
+
+
 	
 	\newpage		
 	\section{La structure du code}
