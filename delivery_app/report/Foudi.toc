@@ -8,9 +8,9 @@
 \contentsline {section}{\numberline {1.3}Architecture du code}{7}%
 \contentsline {chapter}{\numberline {2}Conception de l'application}{9}%
 \contentsline {section}{\numberline {2.1}Modélisation}{9}%
-\contentsline {subsubsection}{Diagramme de classes}{10}%
-\contentsline {subsubsection}{Diagrammes de cas d’utilisation}{12}%
-\contentsline {subsubsection}{Diagrammes de séquences}{15}%
+\contentsline {subsubsection}{\numberline {2.1.0.1}Diagramme de classes}{10}%
+\contentsline {subsubsection}{\numberline {2.1.0.2}Diagrammes de cas d’utilisation}{12}%
+\contentsline {subsubsection}{\numberline {2.1.0.3}Diagrammes de séquences}{15}%
 \contentsline {section}{\numberline {2.2}La structure du code}{23}%
 \contentsline {subsection}{\numberline {2.2.1}Modéles}{23}%
 \contentsline {subsection}{\numberline {2.2.2}Contrôleurs}{23}%
@@ -18,7 +18,7 @@
 \contentsline {subsection}{\numberline {2.2.4}Widgets}{23}%
 \contentsline {chapter}{\numberline {3}Réalisation de l'application}{24}%
 \contentsline {section}{\numberline {3.1}Lancement d'application}{24}%
-\contentsline {section}{\numberline {3.2}Cas d'utilisateur client}{24}%
-\contentsline {section}{\numberline {3.3}Cas d'utilisateur server}{24}%
-\contentsline {section}{\numberline {3.4}Cas d'utilisateur livreur}{24}%
-\contentsline {chapter}{Conclusion}{25}%
+\contentsline {section}{\numberline {3.2}Cas d'utilisateur client}{25}%
+\contentsline {section}{\numberline {3.3}Cas d'utilisateur server}{26}%
+\contentsline {section}{\numberline {3.4}Cas d'utilisateur livreur}{27}%
+\contentsline {chapter}{Conclusion}{28}%

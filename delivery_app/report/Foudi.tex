@@ -5,14 +5,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 
-\usepackage{titling}
-\newcommand{\subtitle}[1]{
-  \posttitle{
-    \par\end{center}
-    \begin{center}\large#1\end{center}
-    \vskip0.5em}
-}
-
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
 
 
 \begin{document}
@@ -266,9 +260,19 @@ Après la livraison, il peut changer son statut de "occupé" à "libre".
 		
 \newpage
 \chapter{Réalisation de l'application} Dans ce chapitre nous allons présenter les differentes IHMs de flux de cette application.
-	\section{Lancement d'application} *flux* sign in et sign up
+	\section{Lancement d'application} 
+		\begin{figure}[!h]
+  			\center
+  			\includegraphics[width=5cm]{screenshots/signin.jpg}
+  			\caption{signin}
+  			\label{fig:signin}
+		\end{figure}
+		
+	\newpage
 	\section{Cas d'utilisateur client} *flux*
+	\newpage
 	\section{Cas d'utilisateur server} *flux*
+	\newpage
 	\section{Cas d'utilisateur livreur} *flux*
 
 \newpage
