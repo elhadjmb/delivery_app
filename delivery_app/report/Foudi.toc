@@ -1,4 +1,6 @@
 \babel@toc {french}{}
+\contentsline {chapter}{Table des figures}{3}%
+\contentsline {chapter}{Liste des tableaux}{4}%
 \contentsline {chapter}{Liste des Abréviations}{5}%
 \contentsline {chapter}{Introduction}{6}%
 \contentsline {chapter}{\numberline {1}Receuil des besoins}{7}%
