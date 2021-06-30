@@ -33,74 +33,87 @@ class _OrdersListState extends State<OrdersList> {
       body: ListView.builder(
         itemCount: orders.length,
         itemBuilder: (BuildContext context, int index) {
-          return InkWell(
-            //TODO: bellow goes the function that takes to order detaails (dishes)
-            //just to try i call dishes List !!
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DishList(),
-                ),
-              );
-            },
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              height: 150.0,
-              decoration: BoxDecoration(
-                border: Border.all(color: Colour.purple),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Text(
-                          "Order Number : " + index.toString(),
-                          style: TextStyle(
-                            color: Colour.black,
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                        Text(
-                          "dishes Amount : " + orders.length.toString(),
-                          style: TextStyle(
-                            color: Colour.black,
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                      ],
+          return Stack(
+            alignment: Alignment.topRight,
+            children: <Widget>[
+              InkWell(
+                //TODO: bellow goes the function that takes to order detaails (dishes)
+                //just to try i call dishes List !!
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => DishList(),
                     ),
-                    Text("Date : " + orders[index].date),
-                    Row(
+                  );
+                },
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 150.0,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colour.purple),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
-                        Column(
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                            Text("description : "),
-                            //TODO: goes the description data
-                            Text(" here goes description"),
+                            Text(
+                              "Order Number : " + index.toString(),
+                              style: TextStyle(
+                                color: Colour.black,
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                            Text(
+                              "dishes Amount : " + orders.length.toString(),
+                              style: TextStyle(
+                                color: Colour.black,
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
                           ],
                         ),
-                        Column(
+                        Text("Date : " + orders[index].date),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: <Widget>[
-                            Text("Adress : "),
-                            //TODO: goes the adress data
-                            Text("372  Brown Street (example)")
+                            Column(
+                              children: <Widget>[
+                                Text("description : "),
+                                //TODO: goes the description data
+                                Text(" here goes description"),
+                              ],
+                            ),
+                            Column(
+                              children: <Widget>[
+                                Text("Adress : "),
+                                //TODO: goes the adress data
+                                Text("372  Brown Street (example)")
+                              ],
+                            ),
                           ],
                         ),
                       ],
                     ),
-                  ],
+                  ),
                 ),
               ),
-            ),
+              InkWell(
+                //TODO: bellow goes delete function to delete order
+                onTap: () {},
+                child: Icon(
+                  Icons.cancel_presentation_rounded,
+                  color: Colour.red,
+                ),
+              ),
+            ],
           );
         },
       ),
