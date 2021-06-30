@@ -1,32 +1,32 @@
 \babel@toc {french}{}
-\contentsline {chapter}{Table des figures}{3}%
-\contentsline {chapter}{Liste des tableaux}{4}%
-\contentsline {chapter}{Liste des Abréviations}{5}%
-\contentsline {chapter}{Introduction}{6}%
-\contentsline {chapter}{\numberline {1}Receuil des besoins}{7}%
-\contentsline {section}{\numberline {1.1}Développement Android}{7}%
-\contentsline {subsection}{\numberline {1.1.1}Les technologies utilisées}{7}%
-\contentsline {section}{\numberline {1.2}Méthode de travail collaborative}{8}%
-\contentsline {section}{\numberline {1.3}Architecture du code}{8}%
-\contentsline {chapter}{\numberline {2}Conception de l'application}{10}%
-\contentsline {section}{\numberline {2.1}Modélisation}{10}%
-\contentsline {subsubsection}{\numberline {2.1.0.1}Diagramme de classes}{11}%
-\contentsline {subsubsection}{\numberline {2.1.0.2}Diagrammes de cas d’utilisation}{13}%
-\contentsline {subsubsection}{\numberline {2.1.0.3}Diagrammes de séquences}{16}%
-\contentsline {section}{\numberline {2.2}La structure du code}{24}%
-\contentsline {subsection}{\numberline {2.2.1}Modéles}{24}%
-\contentsline {subsection}{\numberline {2.2.2}Contrôleurs}{24}%
-\contentsline {subsection}{\numberline {2.2.3}Vues}{24}%
-\contentsline {subsection}{\numberline {2.2.4}Widgets}{24}%
-\contentsline {chapter}{\numberline {3}Réalisation de l'application}{25}%
-\contentsline {section}{\numberline {3.1}Lancement d'application}{25}%
-\contentsline {subsubsection}{\numberline {3.1.0.1}L'inscription}{25}%
-\contentsline {subsubsection}{\numberline {3.1.0.2}La connexion (Login)}{25}%
-\contentsline {section}{\numberline {3.2}Cas d'utilisateur client}{26}%
-\contentsline {section}{\numberline {3.3}Cas d'utilisateur server}{27}%
-\contentsline {subsection}{\numberline {3.3.1}La page des commandes}{27}%
-\contentsline {subsection}{\numberline {3.3.2}La page de configuration du menu}{28}%
-\contentsline {subsection}{\numberline {3.3.3}Page de profile}{29}%
-\contentsline {section}{\numberline {3.4}Cas d'utilisateur livreur}{30}%
-\contentsline {subsection}{\numberline {3.4.1}La page d'accueil}{30}%
-\contentsline {chapter}{Conclusion}{33}%
+\contentsline {chapter}{Table des figures}{5}%
+\contentsline {chapter}{Liste des tableaux}{6}%
+\contentsline {chapter}{Liste des Abréviations}{7}%
+\contentsline {chapter}{Introduction}{8}%
+\contentsline {chapter}{\numberline {1}Receuil des besoins}{9}%
+\contentsline {section}{\numberline {1.1}Développement Android}{9}%
+\contentsline {subsection}{\numberline {1.1.1}Les technologies utilisées}{9}%
+\contentsline {section}{\numberline {1.2}Méthode de travail collaborative}{10}%
+\contentsline {section}{\numberline {1.3}Architecture du code}{10}%
+\contentsline {chapter}{\numberline {2}Conception de l'application}{12}%
+\contentsline {section}{\numberline {2.1}Modélisation}{12}%
+\contentsline {subsubsection}{\numberline {2.1.0.1}Diagramme de classes}{13}%
+\contentsline {subsubsection}{\numberline {2.1.0.2}Diagrammes de cas d’utilisation}{15}%
+\contentsline {subsubsection}{\numberline {2.1.0.3}Diagrammes de séquences}{18}%
+\contentsline {section}{\numberline {2.2}La structure du code}{26}%
+\contentsline {subsection}{\numberline {2.2.1}Modéles}{26}%
+\contentsline {subsection}{\numberline {2.2.2}Contrôleurs}{26}%
+\contentsline {subsection}{\numberline {2.2.3}Vues}{26}%
+\contentsline {subsection}{\numberline {2.2.4}Widgets}{26}%
+\contentsline {chapter}{\numberline {3}Réalisation de l'application}{27}%
+\contentsline {section}{\numberline {3.1}Lancement d'application}{27}%
+\contentsline {subsubsection}{\numberline {3.1.0.1}L'inscription}{27}%
+\contentsline {subsubsection}{\numberline {3.1.0.2}La connexion (Login)}{27}%
+\contentsline {section}{\numberline {3.2}Cas d'utilisateur client}{28}%
+\contentsline {section}{\numberline {3.3}Cas d'utilisateur server}{29}%
+\contentsline {subsection}{\numberline {3.3.1}La page des commandes}{29}%
+\contentsline {subsection}{\numberline {3.3.2}La page de configuration du menu}{30}%
+\contentsline {subsection}{\numberline {3.3.3}Page de profile}{31}%
+\contentsline {section}{\numberline {3.4}Cas d'utilisateur livreur}{32}%
+\contentsline {subsection}{\numberline {3.4.1}La page d'accueil}{32}%
+\contentsline {chapter}{Conclusion}{35}%
