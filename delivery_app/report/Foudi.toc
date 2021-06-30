@@ -23,4 +23,5 @@
 \contentsline {section}{\numberline {3.2}Cas d'utilisateur client}{25}%
 \contentsline {section}{\numberline {3.3}Cas d'utilisateur server}{26}%
 \contentsline {section}{\numberline {3.4}Cas d'utilisateur livreur}{27}%
-\contentsline {chapter}{Conclusion}{28}%
+\contentsline {subsection}{\numberline {3.4.1}La page d'accueil}{27}%
+\contentsline {chapter}{Conclusion}{29}%

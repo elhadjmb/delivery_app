@@ -292,7 +292,31 @@ Le système vérifiera si l'utilisateur n'existe pas déjà et validera ensuite 
 	\newpage
 	\section{Cas d'utilisateur server} *flux*
 	\newpage
-	\section{Cas d'utilisateur livreur} *flux*
+	\section{Cas d'utilisateur livreur} Le livreur dispose de trois pages dans le menu de l'application:
+		\begin{itemize}
+			\item \textbf{Page d'accueil}: Affiche les livraisons à proximité
+			\item \textbf{Page des statistiques}: Montre quelques chiffres sur toutes ses livraisons et la progression des livraisons dans le temps,
+			\item \textbf{Page de profile}: Pour voir son rating, et changer les détails de son compte.
+		\end{itemize}
+	
+		\subsection{La page d'accueil} 
+		\begin{figure}[h!]
+			\center
+			\includegraphics[width=5cm]{screenshots/DeliveryViews/Homepage(list of orders).jpg}
+			\caption{L'IHM de la page d'accueil du livreur}
+			\label{fig:delihp}
+		\end{figure}
+		La page d'accueil du livreur (fig \ref{fig:delihp}) est constituée des commandes proches prêtes à être livrées ; la liste des commandes contient les informations essentielles de chaque commande qui permettent à l'utilisateur de la choisir ou de l'ignorer.
+		
+		\begin{figure}[h!]
+			\center
+			\includegraphics[width=5cm]{screenshots/DeliveryViews/ClientPositionMap.jpg}
+			\caption{L'IHM de la carte de livreur}
+			\label{fig:delimp}
+		\end{figure}
+		
+		Lorsqu'il sélectionne une commande à livrer, l'application affiche la carte avec les emplacements du restaurant et du client (fig \ref{fig:delimp}).
+Une fois qu'il a livré la commande, il peut appuyer sur le bouton "livré" indiqué sur la carte.
 
 \newpage
 \chapter*{Conclusion}
