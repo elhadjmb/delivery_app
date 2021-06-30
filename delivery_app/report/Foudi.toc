@@ -24,6 +24,7 @@
 \contentsline {section}{\numberline {3.3}Cas d'utilisateur server}{27}%
 \contentsline {subsection}{\numberline {3.3.1}La page des commandes}{27}%
 \contentsline {subsection}{\numberline {3.3.2}La page de configuration du menu}{28}%
+\contentsline {subsection}{\numberline {3.3.3}Page de profile}{29}%
 \contentsline {section}{\numberline {3.4}Cas d'utilisateur livreur}{30}%
 \contentsline {subsection}{\numberline {3.4.1}La page d'accueil}{30}%
-\contentsline {chapter}{Conclusion}{32}%
+\contentsline {chapter}{Conclusion}{33}%
