@@ -340,10 +340,31 @@ Le système vérifiera si l'utilisateur n'existe pas déjà et validera ensuite 
 
 \newpage
 
-Si le paiement est validé par le système, une page d'état apparaîtra (fig), pour indiquer l'état actuel de la commande. Les statuts sont les suivants
+Si le paiement est validé par le système, une page de statut apparaîtra (fig), pour indiquer le statut actuel de la commande. Les statuts sont les suivants :
+
+
 \begin{itemize}
-	\item en attente (fig)
+	\item Acceptée (fig \ref{fig:orderconfirm}) : le restaurateur accepte la commande.
+	\item En cours de préparation (fig \ref{fig:orderprep}) : la nourriture est en cours de préparation
+	\item Prêt (fig \ref{fig:orderready}) : la commande est prête à être livrée.
 \end{itemize}
+
+
+
+\begin{figure}[h!]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{screenshots/ClientViews/orderconfirm.jpg}
+  \caption{L'IHM de la page du status "accepté"}\label{fig:orderconfirm}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{screenshots/ClientViews/orderprep.jpg}
+  \caption{L'IHM de la page du status "en cours de préparation"}\label{fig:orderprep}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{screenshots/ClientViews/orderready.jpg}
+  \caption{L'IHM de la page du status "prêt"}\label{fig:orderready}
+\endminipage
+\end{figure}
 
 
 
