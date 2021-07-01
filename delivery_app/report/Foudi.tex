@@ -284,6 +284,69 @@ Le système vérifiera si l'utilisateur n'existe pas déjà et validera ensuite 
 			\item \textbf{Page de profile}: Pour voir ses données personnelles.
 		\end{itemize}
 		\section{Lancement d'un commande}
+			Lorsque le client souhaite passer une commande, il peut se rendre sur la page d'accueil (fig. \ref{fig:clihp}) où il peut voir les deux listes de restaurants et de plats disponibles suggérés par l'application (les suggestions sont basées sur la proximité et les commandes précédentes, le cas échéant).
+			
+			\begin{figure}[h!]
+			\center
+			\includegraphics[width=5cm]{screenshots/ClientViews/Homepage.jpg}
+			\caption{L'IHM de la page d'accueil du client}
+			\label{fig:clihp}
+		\end{figure}
+
+\newpage
+S'il appuie sur la page d'un restaurant, celle-ci affichera les informations nécessaires (nom, adresse, avis et coordonnées) ainsi que le menu du restaurant (fig. \ref{fig:clires}).
+
+			\begin{figure}[h!]
+			\center
+			\includegraphics[width=5cm]{screenshots/ClientViews/Restaurantmenu.jpg}
+			\caption{L'IHM de la page du restaurant}
+			\label{fig:clires}
+		\end{figure}
+
+\newpage
+En sélectionnant le plat souhaité, une page apparaît avec tous les détails du plat (fig. \ref{fig:clidd}), où le client peut sélectionner les ingrédients. Il a également la possibilité de sélectionner la quantité du plat souhaité. Et quand il a terminé de specifier ses preferences, il va l'ajouter au panier.
+
+			\begin{figure}[h!]
+			\center
+			\includegraphics[width=5cm]{screenshots/ClientViews/Dishdetails.jpg}
+			\caption{L'IHM de la page du plat}
+			\label{fig:clidd}
+		\end{figure}
+		
+		\begin{figure}[h!]
+			\center
+			\includegraphics[width=5cm]{screenshots/ClientViews/theCART.jpg}
+			\caption{L'IHM de la page du panier}
+			\label{fig:clicrt}
+		\end{figure}
+
+\newpage
+Il peut passer à la page du panier lorsqu'il a terminé le processus de commande pour vérifier sa commande et son prix (fig. \ref{fig:clicrt}).
+En appuyant sur "Commander", l'application le redirige vers la carte (fig. \ref{fig:climap}) où il peut sélectionner l'adresse de livraison en faisant glisser le marqueur sur la carte.
+		\begin{figure}[h!]
+			\center
+			\includegraphics[width=5cm]{screenshots/ClientViews/Deliverymap(fonctional).jpg}
+			\caption{L'IHM de la page du carte}
+			\label{fig:climap}
+		\end{figure}
+
+\newpage
+Une fois que le client a confirmé l'adresse de livraison, il est redirigé vers la page de paiement où il peut choisir une option de paiement (fig. \ref{fig:clipay}).
+		\begin{figure}[h!]
+			\center
+			\includegraphics[width=5cm]{screenshots/ClientViews/Payment.jpg}
+			\caption{L'IHM de la page du paiement}
+			\label{fig:clipay}
+		\end{figure}
+
+\newpage
+Si le paiement est validé par le système, une page d'état apparaîtra (fig), pour indiquer l'état actuel de la commande. Les statuts sont les suivants
+\begin{itemize}
+	\item en attente (fig)
+\end{itemize}
+
+
+
 	\newpage
 	\section{Cas d'utilisateur server} Le server (employé du restaurant) dispose de trois pages dans le menu de l'application:
 		\begin{itemize}
