@@ -278,10 +278,12 @@ Le système vérifiera si l'utilisateur n'existe pas déjà et validera ensuite 
 	\newpage
 	\section{Cas d'utilisateur client} Le client dispose de trois pages dans le menu de l'application:
 		\begin{itemize}
-			\item \textbf{Page des commandes (page d'accueil)}: Une liste de toutes les commandes passées
-			\item \textbf{Page de configuration du menu}: Pour modifier le menu du restaurant
-			\item \textbf{Page de profile}: Pour voir les avis des client vis à vis de son restaurant.
+			\item \textbf{Page d'accueil}: Il consiste de deux listes du suggestions: des restaurant et des plats.
+			\item \textbf{Page de chariot}: Pour voir les plats commandés.
+			\item \textbf{Page de cart}: Pour parcourir les restaurants à partir de la carte. Ou voir l'emplacement actuel de lui-même.
+			\item \textbf{Page de profile}: Pour voir ses données personnelles.
 		\end{itemize}
+		\section{Lancement d'un commande}
 	\newpage
 	\section{Cas d'utilisateur server} Le server (employé du restaurant) dispose de trois pages dans le menu de l'application:
 		\begin{itemize}
@@ -290,7 +292,7 @@ Le système vérifiera si l'utilisateur n'existe pas déjà et validera ensuite 
 			\item \textbf{Page de profile}: Pour voir les avis des client vis à vis de son restaurant.
 		\end{itemize}
 		
-		\subsection{La page des commandes}
+		\subsection{Réception des commandes}
 		
 		\begin{figure}[h!]
 			\center
@@ -308,7 +310,7 @@ Le système vérifiera si l'utilisateur n'existe pas déjà et validera ensuite 
 		\end{figure}
 		Lorsque la commande commence à être préparée, le serveur met l'état de la commande en préparation pour en informer le client. Après avoir terminé, il met l'état de la commande sur prêt à livrer pour que le livreur soit notifié.
 		
-		\subsection{La page de configuration du menu} L'employé du restaurant a la possibilité d'ajouter et de supprimer des plats du menu du restaurant (fig \ref{fig:restconfig}), ainsi que la possibilité de modifier les ingrédients en les activant ou en les désactivant simplement en cliquant sur un simple bouton à bascule (fig \ref{fig:restedit}).
+		\subsection{La configuration du menu} L'employé du restaurant a la possibilité d'ajouter et de supprimer des plats du menu du restaurant (fig \ref{fig:restconfig}), ainsi que la possibilité de modifier les ingrédients en les activant ou en les désactivant simplement en cliquant sur un simple bouton à bascule (fig \ref{fig:restedit}).
 		
 		\newpage
 
@@ -348,7 +350,7 @@ Le système vérifiera si l'utilisateur n'existe pas déjà et validera ensuite 
 			\item \textbf{Page de profile}: Pour voir son rating, et changer les détails de son compte.
 		\end{itemize}
 	
-		\subsection{La page d'accueil} 
+		\subsection{Les livraisons} 
 		\begin{figure}[h!]
 			\center
 			\includegraphics[width=5cm]{screenshots/DeliveryViews/Homepage(list of orders).jpg}

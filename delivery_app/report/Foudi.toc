@@ -23,10 +23,11 @@
 \contentsline {subsubsection}{\numberline {3.1.0.1}L'inscription}{28}%
 \contentsline {subsubsection}{\numberline {3.1.0.2}La connexion (Login)}{28}%
 \contentsline {section}{\numberline {3.2}Cas d'utilisateur client}{29}%
-\contentsline {section}{\numberline {3.3}Cas d'utilisateur server}{30}%
-\contentsline {subsection}{\numberline {3.3.1}La page des commandes}{30}%
-\contentsline {subsection}{\numberline {3.3.2}La page de configuration du menu}{31}%
-\contentsline {subsection}{\numberline {3.3.3}Page de profile}{32}%
-\contentsline {section}{\numberline {3.4}Cas d'utilisateur livreur}{33}%
-\contentsline {subsection}{\numberline {3.4.1}La page d'accueil}{33}%
-\contentsline {chapter}{Conclusion}{36}%
+\contentsline {section}{\numberline {3.3}Lancement d'un commande}{30}%
+\contentsline {section}{\numberline {3.4}Cas d'utilisateur server}{31}%
+\contentsline {subsection}{\numberline {3.4.1}Réception des commandes}{31}%
+\contentsline {subsection}{\numberline {3.4.2}La configuration du menu}{32}%
+\contentsline {subsection}{\numberline {3.4.3}Page de profile}{33}%
+\contentsline {section}{\numberline {3.5}Cas d'utilisateur livreur}{34}%
+\contentsline {subsection}{\numberline {3.5.1}Les livraisons}{34}%
+\contentsline {chapter}{Conclusion}{37}%
