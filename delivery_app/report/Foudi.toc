@@ -18,16 +18,16 @@
 \contentsline {subsection}{\numberline {2.2.2}Contrôleurs}{26}%
 \contentsline {subsection}{\numberline {2.2.3}Vues}{26}%
 \contentsline {subsection}{\numberline {2.2.4}Widgets}{26}%
-\contentsline {chapter}{\numberline {3}Réalisation de l'application}{28}%
-\contentsline {section}{\numberline {3.1}Lancement d'application}{28}%
-\contentsline {subsubsection}{\numberline {3.1.0.1}L'inscription}{28}%
-\contentsline {subsubsection}{\numberline {3.1.0.2}La connexion (Login)}{28}%
-\contentsline {section}{\numberline {3.2}Cas d'utilisateur client}{29}%
-\contentsline {subsection}{\numberline {3.2.1}Lancement d'un commande}{30}%
-\contentsline {section}{\numberline {3.3}Cas d'utilisateur server}{37}%
-\contentsline {subsection}{\numberline {3.3.1}Réception des commandes}{37}%
-\contentsline {subsection}{\numberline {3.3.2}La configuration du menu}{38}%
-\contentsline {subsection}{\numberline {3.3.3}Page de profile}{39}%
-\contentsline {section}{\numberline {3.4}Cas d'utilisateur livreur}{40}%
-\contentsline {subsection}{\numberline {3.4.1}Les livraisons}{40}%
-\contentsline {chapter}{Conclusion}{43}%
+\contentsline {chapter}{\numberline {3}Réalisation de l'application}{27}%
+\contentsline {section}{\numberline {3.1}Lancement d'application}{27}%
+\contentsline {subsubsection}{\numberline {3.1.0.1}L'inscription}{27}%
+\contentsline {subsubsection}{\numberline {3.1.0.2}La connexion (Login)}{27}%
+\contentsline {section}{\numberline {3.2}Cas d'utilisateur client}{28}%
+\contentsline {subsection}{\numberline {3.2.1}Lancement d'un commande}{29}%
+\contentsline {section}{\numberline {3.3}Cas d'utilisateur server}{36}%
+\contentsline {subsection}{\numberline {3.3.1}Réception des commandes}{36}%
+\contentsline {subsection}{\numberline {3.3.2}La configuration du menu}{37}%
+\contentsline {subsection}{\numberline {3.3.3}Page de profile}{38}%
+\contentsline {section}{\numberline {3.4}Cas d'utilisateur livreur}{39}%
+\contentsline {subsection}{\numberline {3.4.1}Les livraisons}{39}%
+\contentsline {chapter}{Conclusion}{42}%
