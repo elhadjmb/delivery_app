@@ -18,15 +18,15 @@
 \contentsline {subsection}{\numberline {2.2.2}Contrôleurs}{26}%
 \contentsline {subsection}{\numberline {2.2.3}Vues}{26}%
 \contentsline {subsection}{\numberline {2.2.4}Widgets}{26}%
-\contentsline {chapter}{\numberline {3}Réalisation de l'application}{27}%
-\contentsline {section}{\numberline {3.1}Lancement d'application}{27}%
-\contentsline {subsubsection}{\numberline {3.1.0.1}L'inscription}{27}%
-\contentsline {subsubsection}{\numberline {3.1.0.2}La connexion (Login)}{27}%
-\contentsline {section}{\numberline {3.2}Cas d'utilisateur client}{28}%
-\contentsline {section}{\numberline {3.3}Cas d'utilisateur server}{29}%
-\contentsline {subsection}{\numberline {3.3.1}La page des commandes}{29}%
-\contentsline {subsection}{\numberline {3.3.2}La page de configuration du menu}{30}%
-\contentsline {subsection}{\numberline {3.3.3}Page de profile}{31}%
-\contentsline {section}{\numberline {3.4}Cas d'utilisateur livreur}{32}%
-\contentsline {subsection}{\numberline {3.4.1}La page d'accueil}{32}%
-\contentsline {chapter}{Conclusion}{35}%
+\contentsline {chapter}{\numberline {3}Réalisation de l'application}{28}%
+\contentsline {section}{\numberline {3.1}Lancement d'application}{28}%
+\contentsline {subsubsection}{\numberline {3.1.0.1}L'inscription}{28}%
+\contentsline {subsubsection}{\numberline {3.1.0.2}La connexion (Login)}{28}%
+\contentsline {section}{\numberline {3.2}Cas d'utilisateur client}{29}%
+\contentsline {section}{\numberline {3.3}Cas d'utilisateur server}{30}%
+\contentsline {subsection}{\numberline {3.3.1}La page des commandes}{30}%
+\contentsline {subsection}{\numberline {3.3.2}La page de configuration du menu}{31}%
+\contentsline {subsection}{\numberline {3.3.3}Page de profile}{32}%
+\contentsline {section}{\numberline {3.4}Cas d'utilisateur livreur}{33}%
+\contentsline {subsection}{\numberline {3.4.1}La page d'accueil}{33}%
+\contentsline {chapter}{Conclusion}{36}%

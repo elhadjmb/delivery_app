@@ -122,45 +122,33 @@ Cela permet de séparer les représentations internes de l'information de la man
 			Le tableau (tab \ref{tab:classdiag}) explique le schéma de figure \ref{fig:classdiag}, dans lequel les classes sont définies comme suit:
 			
 			\begin{table}[!h!]
-  				\begin{tabular}{lllp{6cm}}
+  				\begin{tabular}{lp{3cm}p{3cm}p{6cm}}
     					Classes & Attributs & Méthodes & Relations \\ 
 
 					\hline
-    					Delivery company & & & Elle a un ou plusieurs livreurs \\  
-    					
-    					\hline
-    					Restaurant & & & Il a un ou plusieurs serveurs et un menu \\   					
-    					
-    					\hline
-    					User & & & Le Client et le Serveur et le Livreur héritent de ses attributs et de ses méthodes \\
-    					
-					\hline
-    					Client & & & Il peut avoir des commandes et des recettes multiples\\  
-    					  					
-    					\hline
-    					Server & & & Il appartient à un restaurant et peut avoir plusieurs commandes \\
-    					
-    					\hline
-    					Deliverer & & & Il appartient à une société de livraison et peut avoir plusieurs livraisons \\
-    					    					
-    					\hline
-    					Menu & & & Il peut appartenir à plusieurs restaurants et avoir plus d'un plat\\
-    					
-    					\hline
-					Dish & & & Il appartient à un ou plusieurs menus et comporte plusieurs ingrédients \\
-
-						
-					\hline
-					Ingredient & & & Il appartient à un ou plusieurs plats \\
-						
-					\hline
-					Order & & & Il appartient à un serveur et à un client, et à un reçu \\
-						
-					\hline
-					Delivery & & & Elle appartient à un livreur et à un reçu \\
-						
-					\hline	
-					Receipt & & & Il appartient à un client \\
+Delivery company & id, nom, adresse & & Elle a un ou plusieurs livreurs \\
+\hline
+Restaurant & est ouvert, Heures d'ouverture, heures de fermeture & ouvert, Fermer,modifier les heures de travail, menu de mise à jour &  Il a un ou plusieurs serveurs et un menu \\
+\hline
+User & id, c'est actif, nom, email, téléphoner, adresse, temps Inscrit & vérifier Connexion, S'inscrire, mettre à jour le profil, connexion & Le Client et le Serveur et le Livreur héritent de ses attributs et de ses méthodes \\
+\hline
+Client & & créer une commande, Reçu de paiement, noter le plat & Il peut avoir des commandes et des recettes multiples \\
+\hline
+Server & est administrateur, statut de la commande & faire un administrateur, prendre commande & Il appartient à un restaurant et peut avoir plusieurs commandes \\
+\hline
+Deliverer & est administrateur, statut & accepter la livraison, refuser la commande, est près du restaurant & Il appartient à une société de livraison et peut avoir plusieurs livraisons \\
+\hline
+Menu & id, nom & créer un menu, ajouter un plat, supprimer le plat & Il peut appartenir à plusieurs restaurants et avoir plus d’un plat \\
+\hline
+Dish & id, nom, Catégorie, le prix, la description, temps de cuisson, Mots clés, notes, image & créer un plat, mettre à jour le plat, ajouter un ingrédient,supprimer l'ingrédient, est disponible & Il appartient à un ou plusieurs menus et comporte plusieurs ingrédients \\
+\hline
+Ingredient & id, nom, quantité, est requis & la quantité de mise à jour & Il appartient à un ou plusieurs plats \\
+\hline
+Order & id, temps de commande, la description, statut, notation & ajouter un plat, État mis à jour & Il appartient à un serveur et à un client, et à un reçu \\
+\hline
+Delivery & id, adresse de livraison & prix Destination, calculer le temps & Elle appartient à un livreur et à un reçu \\
+\hline
+Receipt & id, livraison, commenter, le prix & calculer le prix & Il appartient à un client \\
     					
   				\end{tabular}
   				\caption{Déconstruction du diagramme de classe}
@@ -288,7 +276,12 @@ Le système vérifiera si l'utilisateur n'existe pas déjà et validera ensuite 
 		\subsubsection{La connexion (Login)} Si l'utilisateur possède déjà un compte, il peut saisir son e-mail et son mot de passe (comme en fig. \ref{fig:signin}). Le système détectera automatiquement le type d'utilisateur et lui montrera sa page d'accueil qui lui correspond.
 		 
 	\newpage
-	\section{Cas d'utilisateur client} *flux*
+	\section{Cas d'utilisateur client} Le client dispose de trois pages dans le menu de l'application:
+		\begin{itemize}
+			\item \textbf{Page des commandes (page d'accueil)}: Une liste de toutes les commandes passées
+			\item \textbf{Page de configuration du menu}: Pour modifier le menu du restaurant
+			\item \textbf{Page de profile}: Pour voir les avis des client vis à vis de son restaurant.
+		\end{itemize}
 	\newpage
 	\section{Cas d'utilisateur server} Le server (employé du restaurant) dispose de trois pages dans le menu de l'application:
 		\begin{itemize}
