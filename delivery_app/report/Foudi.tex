@@ -77,19 +77,19 @@ Elle répond à tous les besoins des personnes qui veulent commander leurs plats
 \chapter{Receuil des besoins} Dans cette partie, nous proposons de regrouper les besoins techniques necessaires pour accomplir ce travail.
 	\section{Développement Android} Nous avons choisi de réaliser une application mobile dédiée aux utilisateurs d'Android. Il existe beaucoup de choix quant aux technologies que nous allons utiliser pour ce développement.
 		\subsection{Les technologies utilisées} Dans ce travail nous avons utilisé le framework Flutter pour les interfaces et la logique de l'application et Cloud Firestore de Firebase pour le stockage et la gestion de la base de données.
-			\subsubsection*{Flutter} C'est un SDK d'interface utilisateur open-source créé par Google. Il est utilisé pour développer des applications multiplateformes pour Android, iOS, Linux, Mac, Windows et le Web à partir d'une base de code unique.\\Nous avons utilisé Flutter en raison de sa structure qui favorise la vitesse de développement. Sa structure est simplement une cascade de widgets faciles à personnaliser.
+			\subsubsection*{Flutter} C'est un SDK d'interface utilisateur open-source créé par Google \cite{fltr}. Il est utilisé pour développer des applications multiplateformes pour Android, iOS, Linux, Mac, Windows et le Web à partir d'une base de code unique.\\Nous avons utilisé Flutter en raison de sa structure qui favorise la vitesse de développement. Sa structure est simplement une cascade de widgets faciles à personnaliser.
 
 Flutter utilise le langage de programmation Dart, également développé par Google. Il s'agit d'un langage orienté objet, basé sur des classes avec une syntaxe de type de la language C.
-			\subsubsection*{Firebase} C'est une plateforme accessible de n'importe quel endroit, qui aide à développer rapidement des applications de qualité. Elle dispose de nombreuses fonctionnalités, mais nous l'utilisons principalement pour son service de stockage au Cloud (Cloud Firestore).\\
-				\paragraph*{Cloud Firestore} est une base de données documentaire NoSQL (un ensemble de continuation en cascade collection-document) qui nous permet de stocker, de synchroniser et d'interroger facilement des données pour des applications mobiles et web à l'échelle mondiale.
+			\subsubsection*{Firebase} C'est une plateforme accessible de n'importe quel endroit, qui aide à développer rapidement des applications de qualité \cite{frbs}. Elle dispose de nombreuses fonctionnalités, mais nous l'utilisons principalement pour son service de stockage au Cloud (Cloud Firestore).\\
+				\paragraph*{Cloud Firestore} est une base de données documentaire NoSQL (un ensemble de continuation en cascade collection-document) qui nous permet de stocker, de synchroniser et d'interroger facilement des données pour des applications mobiles et web à l'échelle mondiale \cite{fstr}.
 	\section{Méthode de travail collaborative}
 		L'application conçue dans ce travail, a été développée à partir de zéro par trois développeurs. Nous avons travailler en parallèle sur le même projet, de ce fait nous, les trois développeurs, allons donc utiliser Git et Github.
 
-		\subsection*{Git} C'est un logiciel permettant de suivre les modifications apportées à un ensemble de fichiers. Il est généralement utilisé pour coordonner le travail des programmeurs qui collaborent à l'élaboration du code source lors du développement de logiciels. Ses objectifs sont la rapidité, l'intégrité des données et la prise en charge des flux de travail distribués et non linéaires.
+		\subsection*{Git} C'est un logiciel permettant de suivre les modifications apportées à un ensemble de fichiers \cite{git}. Il est généralement utilisé pour coordonner le travail des programmeurs qui collaborent à l'élaboration du code source lors du développement de logiciels. Ses objectifs sont la rapidité, l'intégrité des données et la prise en charge des flux de travail distribués et non linéaires.
 
-		\subsection*{Github} C'est un service d'hébergement de référentiel Git, mais il ajoute de nombreuses fonctionnalités qui lui sont propres. Il fournit une interface graphique basée sur le Web. Il fournit également un contrôle d'accès et plusieurs fonctions de collaboration.
+		\subsection*{Github} C'est un service d'hébergement de référentiel Git, mais il ajoute de nombreuses fonctionnalités qui lui sont propres \cite{gthb}. Il fournit une interface graphique basée sur le Web. Il fournit également un contrôle d'accès et plusieurs fonctions de collaboration.
 	\section{Architecture du code} %include the sequence chart of flutter in mvc
-		Nous avons utilisé l'architecture de projet MVC. Il s'agit d'un modèle de conception de logiciel couramment utilisé pour développer des interfaces utilisateur qui divisent la logique du programme en trois éléments interconnectés.
+		Nous avons utilisé l'architecture de projet MVC \cite{mvc}. Il s'agit d'un modèle de conception de logiciel couramment utilisé pour développer des interfaces utilisateur qui divisent la logique du programme en trois éléments interconnectés.
 
 Cela permet de séparer les représentations internes de l'information de la manière dont l'information est présentée à l'utilisateur et acceptée par celui-ci.
 \begin{figure}[!h]
@@ -119,39 +119,36 @@ Cela permet de séparer les représentations internes de l'information de la man
 			
 			La figure (fig \ref{fig:classdiag}) décrit les classes principales d'objets sur lesquelles repose la logique de l'application, ainsi que les relations qui existent entre elles.
 			\newpage
-			Le tableau (tab \ref{tab:classdiag}) explique le schéma de figure \ref{fig:classdiag}, dans lequel les classes sont définies comme suit:
+			Le tableau (tab \ref{tab:classdiag}) explique les relations entre les classes dans le schéma de figure \ref{fig:classdiag}.
 			
 			\begin{table}[!h!]
-  				\begin{tabular}{lp{3cm}p{3cm}p{6cm}}
-    					Classes & Attributs & Méthodes & Relations \\ 
-
-					\hline
-Delivery company & id, nom, adresse & & Elle a un ou plusieurs livreurs \\
-\hline
-Restaurant & est ouvert, Heures d'ouverture, heures de fermeture & ouvert, Fermer,modifier les heures de travail, menu de mise à jour &  Il a un ou plusieurs serveurs et un menu \\
-\hline
-User & id, c'est actif, nom, email, téléphoner, adresse, temps Inscrit & vérifier Connexion, S'inscrire, mettre à jour le profil, connexion & Le Client et le Serveur et le Livreur héritent de ses attributs et de ses méthodes \\
-\hline
-Client & & créer une commande, Reçu de paiement, noter le plat & Il peut avoir des commandes et des recettes multiples \\
-\hline
-Server & est administrateur, statut de la commande & faire un administrateur, prendre commande & Il appartient à un restaurant et peut avoir plusieurs commandes \\
-\hline
-Deliverer & est administrateur, statut & accepter la livraison, refuser la commande, est près du restaurant & Il appartient à une société de livraison et peut avoir plusieurs livraisons \\
-\hline
-Menu & id, nom & créer un menu, ajouter un plat, supprimer le plat & Il peut appartenir à plusieurs restaurants et avoir plus d’un plat \\
-\hline
-Dish & id, nom, Catégorie, le prix, la description, temps de cuisson, Mots clés, notes, image & créer un plat, mettre à jour le plat, ajouter un ingrédient,supprimer l'ingrédient, est disponible & Il appartient à un ou plusieurs menus et comporte plusieurs ingrédients \\
-\hline
-Ingredient & id, nom, quantité, est requis & la quantité de mise à jour & Il appartient à un ou plusieurs plats \\
-\hline
-Order & id, temps de commande, la description, statut, notation & ajouter un plat, État mis à jour & Il appartient à un serveur et à un client, et à un reçu \\
-\hline
-Delivery & id, adresse de livraison & prix Destination, calculer le temps & Elle appartient à un livreur et à un reçu \\
-\hline
-Receipt & id, livraison, commenter, le prix & calculer le prix & Il appartient à un client \\
-    					
+  				\begin{tabular}{lp{10cm}}
+    					Classes & Relations \\
+    					Delivery company & Elle a un ou plusieurs livreurs \\
+				\hline
+				Restaurant  &  Il a un ou plusieurs serveurs et un menu \\
+				\hline
+				User & Le Client et le Serveur et le Livreur héritent de ses attributs et de ses méthodes \\
+				\hline
+				Client & Il peut avoir des commandes et des recettes multiples \\
+				\hline
+				Server & Il appartient à un restaurant et peut avoir plusieurs commandes \\
+				\hline
+				Deliverer & Il appartient à une société de livraison et peut avoir plusieurs livraisons \\
+				\hline
+				Menu & Il peut appartenir à plusieurs restaurants et avoir plus d’un plat \\
+				\hline
+				Dish & Il appartient à un ou plusieurs menus et comporte plusieurs ingrédients \\
+				\hline
+				Ingredient & Il appartient à un ou plusieurs plats \\
+				\hline
+				Order & Il appartient à un serveur et à un client, et à un reçu \\
+				\hline
+				Delivery & Elle appartient à un livreur et à un reçu \\
+				\hline
+				Receipt & Il appartient à un client \\
   				\end{tabular}
-  				\caption{Déconstruction du diagramme de classe}
+  				\caption{Les relations des classes}
   				\label{tab:classdiag}
 			\end{table}
 
@@ -267,7 +264,7 @@ Lorsqu'un nouvel utilisateur souhaite accéder à l'application, il doit d'abord
   \caption{L'IHM de la page d'inscription}
   \label{fig:signup}
 \end{subfigure}
-\caption{A figure with two subfigures}
+\caption{Les IHM des premières pages au lancement}
 \label{fig:lanc}
 \end{figure}
 		
@@ -283,7 +280,7 @@ Le système vérifiera si l'utilisateur n'existe pas déjà et validera ensuite 
 			\item \textbf{Page de cart}: Pour parcourir les restaurants à partir de la carte. Ou voir l'emplacement actuel de lui-même.
 			\item \textbf{Page de profile}: Pour voir ses données personnelles.
 		\end{itemize}
-		\section{Lancement d'un commande}
+		\subsection{Lancement d'un commande}
 			Lorsque le client souhaite passer une commande, il peut se rendre sur la page d'accueil (fig. \ref{fig:clihp}) où il peut voir les deux listes de restaurants et de plats disponibles suggérés par l'application (les suggestions sont basées sur la proximité et les commandes précédentes, le cas échéant).
 			
 			\begin{figure}[h!]
@@ -327,7 +324,9 @@ Le système vérifiera si l'utilisateur n'existe pas déjà et validera ensuite 
 			\includegraphics[width=5cm]{screenshots/ClientViews/Deliverymap(fonctional).jpg}
 			\caption{L'IHM de la page du carte}
 			\label{fig:climap}
-		\end{figure} En appuyant sur "Commander" dans la page du panier (fig. \ref{fig:clicrt}), l'application le redirige vers la carte (fig. \ref{fig:climap}) où il peut sélectionner l'adresse de livraison en faisant glisser le marqueur sur la carte.
+		\end{figure} En appuyant sur "Commander" dans la page du panier (fig. \ref{fig:clicrt}), l'application le redirige vers la carte (fig. \ref{fig:climap}) où il peut sélectionner l'adresse de livraison en faisant glisser le marqueur sur la carte. Ou sélectionner sa position actuelle en appuyant sur l'icône du GPS dans le coin supérieur droit (l'API Google Maps donne au système les coordonnées GPS actuelles de l'appareil mobile).
+
+
 
 \newpage
 
@@ -464,12 +463,37 @@ Notre principal objectif en créant l'application n'était pas seulement d'appre
 Pour l'instant, l'application fonctionne à petite échelle, nous nous préparions à ajouter de nombreuses caractéristiques et fonctionnalités pratiques, mais en raison du peu de temps qui nous a été accordé, nous n'avons pas atteint le produit souhaité.\\
 
 
-Nous allons continuer à développer cette idée et la pousser à l'extrême car nous avons remarqué que nous offrons en général une solution moins chère et plus efficace.
+Nous allons continuer à développer cette idée et la pousser à l'extrême car nous avons remarqué que nous offrons en général une solution moins chère et plus efficace. 
 
 \addcontentsline{toc}{chapter}{Conclusion}
 
 \newpage
-\begin{thebibliography}{300}
+\begin{thebibliography}{9}
+
+\bibitem{fltr}
+  Flutter
+  \\\texttt{https://flutter.dev/}
+
+\bibitem{frbs}
+  Firebase
+  \\\texttt{https://firebase.google.com/}
+
+\bibitem{fstr}
+  Cloud Firestore
+  \\\texttt{https://firebase.google.com/docs/firestore}
+
+\bibitem{git}
+  Git
+  \\\texttt{https://en.wikipedia.org/wiki/Git}
+
+\bibitem{gthb}
+  Github
+  \\\texttt{https://techcrunch.com/2012/07/14/what-exactly-is-github-anyway/}
+
+\bibitem{mvc}
+  Architecture MVC
+  \\\texttt{https://fr.wikipedia.org/wiki/Modèle-vue-contrôleur}
+
 \end{thebibliography}
 
 \end{document}
