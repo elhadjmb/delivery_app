@@ -3,6 +3,7 @@ import 'package:delivery_app/constants/strings.dart';
 import 'package:delivery_app/testdata/data.dart';
 import 'package:delivery_app/testmodels/food.dart';
 import 'package:delivery_app/testmodels/restaurant.dart';
+import 'package:delivery_app/views/RestaurantViews/NewDishSettings.dart';
 import 'package:delivery_app/views/RestaurantViews/widgets/Buttons.dart';
 import 'package:delivery_app/views/RestaurantViews/widgets/IngredientsScreen.dart';
 import 'package:flutter/material.dart';
@@ -35,56 +36,45 @@ class _MenuState extends State<Menu> {
       backgroundColor: Colour.white,
       body: Column(
         children: <Widget>[
-          Center(
-              child: Padding(
-            padding: EdgeInsets.only(top: 13.0),
-            child: Text(
-              "New dish settings",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          )),
           Container(
             width: MediaQuery.of(context).size.width,
-            height: 120,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                MenuButton(
-                  //TODO: bellow goes a function that adds a picture
-                  onTapp: () {},
-                  label: "select photo",
-                  icon: Icon(
-                    Icons.add_a_photo_outlined,
+            height: 80,
+            child: Center(
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => NewDish(),
+                    ),
+                  );
+                },
+                child: Container(
+                  width: 200,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18.0),
+                    border: Border.all(
+                      color: Colour.purple,
+                      width: 3,
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Text(
+                        "Add a new dish ",
+                        style: TextStyle(
+                          color: Colour.purple,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Icon(Icons.add, color: Colour.purple),
+                    ],
                   ),
                 ),
-                MenuButton(
-                  //TODO: bellow goes a function that adds ingredients
-                  onTapp: () {},
-                  label: "ingredient",
-                  icon: Icon(Icons.check_box_outlined),
-                ),
-                MenuButton(
-                  //TODO: bellow goes a function that adds dish name
-                  onTapp: () {},
-                  label: "dish name",
-                  icon: Icon(Icons.food_bank),
-                ),
-                MenuButton(
-                  //TODO: bellow goes a function that adds the price
-                  onTapp: () {},
-                  label: "price",
-                  icon: Icon(Icons.attach_money),
-                ),
-                MenuButton(
-                  //TODO: bellow goes a function that adds the new dish
-                  onTapp: () {},
-                  label: "Add dish",
-                  icon: Icon(Icons.add),
-                ),
-              ],
+              ),
             ),
           ),
           SizedBox(child: Container(color: Colour.black), height: 1.0),
