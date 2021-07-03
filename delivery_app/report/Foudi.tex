@@ -61,13 +61,13 @@ Merci à tous.}}
 
 \newpage
 \chapter*{Introduction}
-    Au cours de la dernière décennie, nous avons assisté à une révolution dans les commerces en ligne. Les gens se sont habitués aux achats en ligne et aux réservations à distance comme la réservation de billets, l'achat d'articles et même la commande de nourriture, principalement parce que c'est plus rapide, sans effort et moins compliqué.\\\\
+    Au cours de la dernière décennie, nous avons assisté à une révolution dans les commerces en ligne. Les gens se sont habitués aux achats en ligne et aux réservations à distance comme la réservation de billets, l'achat d'articles et même la commande de nourriture, principalement parce que c'est plus rapide, sans effort et moins compliqué.\\
 
 Lorsque quelqu'un veut acheter des repas en ligne, il doit chercher un restaurant qui prépare les repas désirés. La commande doit lui être livrée soit par le livreur du restaurant, soit par un établissement de livraison séparé.\\\\
 
 Dans les pays étrangers, en Europe ou aux États-Unis, beaucoup de restaurants et de sociétés de livraison ont leur propre application mobile. Malheureusement, ce n'est pas le cas pour tous les établissements qui peuvent se permettre de créer leur propre application en raison des coûts élevés de développement d'une application mobile.\\\\
 
-Delà, nous avons pensé à contribuer à une solution. C'est une plateforme conçue comme une application mobile qui regroupe les clients, les restaurants et les établissements de livraison en un seul endroit. \\\\
+Delà, nous avons pensé à contribuer à une solution. C'est une plateforme conçue comme une application mobile qui regroupe les clients, les restaurants et les établissements de livraison en un seul endroit. Nous l'avons appelé \emph{Foudi}. \\\\
 
 Elle répond à tous les besoins des personnes qui veulent commander leurs plats à distance, elle permettra également aux propriétaires de restaurants et aux établissements de livraison d'augmenter leurs ventes et d'accélérer leur flux de travail avec les clients à distance.\\\\
 
@@ -75,7 +75,7 @@ Elle répond à tous les besoins des personnes qui veulent commander leurs plats
 Ce travail est organisé comme suit:
 \begin{itemize}
 	\item Le premier chapitre introduit les différents outils de travail nécessaires pour concevoir cette application.
-	\item Dans le deuxième chapitre, nous citons les différentes étapes suivies pour accomplir la conception de cette application on utilisant les diagrammes UML ainsi l'identification des acteurs prencipeaux qui joue des rôles dans notre application.
+	\item Dans le deuxième chapitre, nous citons les différentes étapes suivies pour accomplir la conception de cette application on utilisant les diagrammes UML ainsi l'identification des acteurs principaux qui jouent des rôles dans notre application.
 	\item Le troisième chapitre nous présentons les différentes IHMs de flux de l'application conçue.
 	\item En dernier, nous terminons ce travail par une conclusion générale suivie de quelques perspectives pour la continuité de ce projet.
 \end{itemize}
@@ -129,13 +129,13 @@ Cela permet de séparer les représentations internes de l'information de la man
 	
 	\subsection{Autre termes}
 	\begin{itemize}
-		\item Repas (Dish): Toute nourriture qui peuvent être préparés par un restaurant et livrés par une etablissement de livraison
+		\item Repas (Dish): Toute nourriture qui peut être préparé par un restaurant et livré par un établissement de livraison.
 		\item Livraison (Delivery): L'action de livrer les repas du restaurant au client.
 	\end{itemize}
 	
 	\section{Relations entre les acteurs prencipaux de l'application} Le flux abstrait générale de l'application est comme suit:
 	\begin{enumerate}
-		\item Le client passe une commande et la paye via l'application.
+		\item Le client passe une commande et la paye via l'application (ou cash à la livraison).
 	\item Le serveur est informé de la commande et commence à la préparer.
 	\item Une fois la commande prête, le client et le livreur en sont informés.
 	\item Le livreur va récupérer la commande au restaurant et en informe le client.
@@ -487,13 +487,25 @@ Si le paiement est validé par le système, une page de statut apparaîtra (fig)
 		La page d'accueil du livreur (fig \ref{fig:delihp}) est constituée des commandes proches prêtes à être livrées ; la liste des commandes contient les informations essentielles de chaque commande qui permettent à l'utilisateur de la choisir ou de l'ignorer.
 		\newpage
 		\begin{figure}[h!]
-			\center
-			\includegraphics[width=5cm]{screenshots/DeliveryViews/ClientPositionMap.jpg}
+
+			\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{screenshots/DeliveryViews/ClientPositionMap.jpg}
+  \caption{La position du client}
+  \label{fig:delcli}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{screenshots/DeliveryViews/DeliveryInformation.jpg}
+  \caption{Les informations du livraison}
+  \label{fig:delinf}
+\end{subfigure}
+			
 			\caption{L'IHM de la carte de livreur}
 			\label{fig:delimp}
 		\end{figure}
 		
-		Lorsqu'il sélectionne une commande à livrer, l'application affiche la carte avec les emplacements du restaurant et du client (fig \ref{fig:delimp}).
+		Lorsqu'il sélectionne une commande à livrer, l'application affiche la carte avec les emplacements du restaurant et du client (fig \ref{fig:delcli}). Le livreur peut voir des informations supplémentaires sur la livraison en appuyant sur le bouton "Informations sur la commande" (fig \ref{fig:delinf}).
 Une fois qu'il a livré la commande, il peut appuyer sur le bouton "livré" indiqué sur la carte.
 
 \newpage
