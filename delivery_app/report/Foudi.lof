@@ -1,30 +1,30 @@
 \babel@toc {french}{}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Le flux MVC\relax }}{11}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Le flux MVC\relax }}{12}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagramme de classes\relax }}{13}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Diagramme de cas d'ustilisation du configuration du menu\relax }}{15}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Diagramme de cas d'ustilisation de passation d'une commande\relax }}{16}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Diagramme de cas d'ustilisation du livraison d'une commande\relax }}{17}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Diagramme de séquences du authentification\relax }}{18}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Diagramme de séquences du configuration du menu\relax }}{20}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Diagramme de séquences de passation d'une commande\relax }}{22}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Diagramme de séquences du recepetion d'une commande\relax }}{24}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Diagramme de séquences du livraison d'une commande\relax }}{25}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagramme de classes\relax }}{15}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Diagramme de cas d'ustilisation du configuration du menu\relax }}{17}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Diagramme de cas d'ustilisation de passation d'une commande\relax }}{18}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Diagramme de cas d'ustilisation du livraison d'une commande\relax }}{19}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Diagramme de séquences du authentification\relax }}{20}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Diagramme de séquences du configuration du menu\relax }}{22}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Diagramme de séquences de passation d'une commande\relax }}{24}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Diagramme de séquences du recepetion d'une commande\relax }}{26}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Diagramme de séquences du livraison d'une commande\relax }}{27}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Les IHM des premières pages au lancement\relax }}{28}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces L'IHM de la page d'accueil du client\relax }}{29}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces L'IHM de la page du restaurant\relax }}{30}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces L'IHM de la page du plat\relax }}{31}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces L'IHM de la page du panier\relax }}{32}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces L'IHM de la page du carte\relax }}{33}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces L'IHM de la page du paiement\relax }}{34}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces L'IHM de la page du status "accepté"\relax }}{35}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces L'IHM de la page du status "en cours de préparation"\relax }}{35}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces L'IHM de la page du status "prêt"\relax }}{35}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces L'IHM de la page des commandes\relax }}{36}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces L'IHM de la page plats dans un commande\relax }}{37}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Le IHMs de configuration de menu\relax }}{38}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces L'IHM de la page de profile de restaurant\relax }}{39}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces L'IHM de la page d'accueil du livreur\relax }}{40}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces L'IHM de la carte de livreur\relax }}{41}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Les IHM des premières pages au lancement\relax }}{30}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces L'IHM de la page d'accueil du client\relax }}{31}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces L'IHM de la page du restaurant\relax }}{32}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces L'IHM de la page du plat\relax }}{33}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces L'IHM de la page du panier\relax }}{34}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces L'IHM de la page du carte\relax }}{35}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces L'IHM de la page du paiement\relax }}{36}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces L'IHM de la page du status "accepté"\relax }}{37}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces L'IHM de la page du status "en cours de préparation"\relax }}{37}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces L'IHM de la page du status "prêt"\relax }}{37}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces L'IHM de la page des commandes\relax }}{38}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces L'IHM de la page plats dans un commande\relax }}{39}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Le IHMs de configuration de menu\relax }}{40}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces L'IHM de la page de profile de restaurant\relax }}{41}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces L'IHM de la page d'accueil du livreur\relax }}{42}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces L'IHM de la carte de livreur\relax }}{43}%

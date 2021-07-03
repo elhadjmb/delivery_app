@@ -67,14 +67,23 @@ Lorsque quelqu'un veut acheter des repas en ligne, il doit chercher un restauran
 
 Dans les pays étrangers, en Europe ou aux États-Unis, beaucoup de restaurants et de sociétés de livraison ont leur propre application mobile. Malheureusement, ce n'est pas le cas pour tous les établissements qui peuvent se permettre de créer leur propre application en raison des coûts élevés de développement d'une application mobile.\\\\
 
-Delàs, nous avons pensé à contribuer à une solution. C'est une plateforme conçue comme une application mobile qui regroupe les clients, les restaurants et les établissements de livraison en un seul endroit. \\\\
+Delà, nous avons pensé à contribuer à une solution. C'est une plateforme conçue comme une application mobile qui regroupe les clients, les restaurants et les établissements de livraison en un seul endroit. \\\\
 
-Elle répond à tous les besoins des personnes qui veulent commander leurs plats à distance, elle permettra également aux propriétaires de restaurants et aux établissements de livraison d'augmenter leurs ventes et d'accélérer leur flux de travail avec les clients à distance.
+Elle répond à tous les besoins des personnes qui veulent commander leurs plats à distance, elle permettra également aux propriétaires de restaurants et aux établissements de livraison d'augmenter leurs ventes et d'accélérer leur flux de travail avec les clients à distance.\\\\
+
+\newpage
+Ce travail est organisé comme suit:
+\begin{itemize}
+	\item Le premier chapitre introduit les différents outils de travail nécessaires pour concevoir cette application.
+	\item Dans le deuxième chapitre, nous citons les différentes étapes suivies pour accomplir la conception de cette application on utilisant les diagrammes UML ainsi l'identification des acteurs prencipeaux qui joue des rôles dans notre application.
+	\item Le troisième chapitre nous présentons les différentes IHMs de flux de l'application conçue.
+	\item En dernier, nous terminons ce travail par une conclusion générale suivie de quelques perspectives pour la continuité de ce projet.
+\end{itemize}
 
 \addcontentsline{toc}{chapter}{Introduction}
 
 \newpage
-\chapter{Receuil des besoins} Dans cette partie, nous proposons de regrouper les besoins techniques necessaires pour accomplir ce travail.
+\chapter{Receuil des besoins} Dans ce chapitre, nous proposons de regrouper les besoins techniques necessaires pour accomplir ce travail.
 	\section{Développement Android} Nous avons choisi de réaliser une application mobile dédiée aux utilisateurs d'Android. Il existe beaucoup de choix quant aux technologies que nous allons utiliser pour ce développement.
 		\subsection{Les technologies utilisées} Dans ce travail nous avons utilisé le framework Flutter pour les interfaces et la logique de l'application et Cloud Firestore de Firebase pour le stockage et la gestion de la base de données.
 			\subsubsection*{Flutter} C'est un SDK d'interface utilisateur open-source créé par Google \cite{fltr}. Il est utilisé pour développer des applications multiplateformes pour Android, iOS, Linux, Mac, Windows et le Web à partir d'une base de code unique.\\Nous avons utilisé Flutter en raison de sa structure qui favorise la vitesse de développement. Sa structure est simplement une cascade de widgets faciles à personnaliser.
@@ -99,8 +108,41 @@ Cela permet de séparer les représentations internes de l'information de la man
   \label{fig:fluxmvc}
 \end{figure}
 
+\section*{Conclusion}En conclusion, dans ce chapitre nous avons résumé les besoins techniques que nous avons choisis et utilisés pour lancer ce travail. Suivant les choix faits, on va structuré la conception de l'application ceci dans le chapitre suivant.
+
 \newpage
 \chapter{Conception de l'application} Dans ce chapitre nous présentons les differentes étapes de la conception de l'application de gestion de commande et livraison de la restauration.
+	\section{Définitions} Nous allons citer les définitions nécessaires pour comprendre les tremes de l'application.
+	\subsection{Termes principaux}	
+	Les deux établissements nécessaires dans la réalisation d'application sont:
+	\begin{itemize}
+		\item Restaurant: Toute entité qui prépare des repas.
+		\item Etablissements de livraison (Delivery company): Toute entité qui livre des repas.
+	\end{itemize}
+		
+	Il y a trois acteurs (utilisateurs) principaux qui font tous les actions humaines dans l'application:
+	\begin{itemize}
+		\item Client: Toute personne qui veut commander de la nourriture à distance.
+		\item Serveur ou employé de restaurant (Server): Tout travailleur qui représente le restaurant.
+		\item Livreur (Deliverer): Tout travailleur dans un établissements de livraison qui livre les repas.
+	\end{itemize}
+	
+	\subsection{Autre termes}
+	\begin{itemize}
+		\item Repas (Dish): Toute nourriture qui peuvent être préparés par un restaurant et livrés par une etablissement de livraison
+		\item Livraison (Delivery): L'action de livrer les repas du restaurant au client.
+	\end{itemize}
+	
+	\section{Relations entre les acteurs prencipaux de l'application} Le flux abstrait générale de l'application est comme suit:
+	\begin{enumerate}
+		\item Le client passe une commande et la paye via l'application.
+	\item Le serveur est informé de la commande et commence à la préparer.
+	\item Une fois la commande prête, le client et le livreur en sont informés.
+	\item Le livreur va récupérer la commande au restaurant et en informe le client.
+	\item Le client reçoit sa commande et la marque comme complète dans l'application.
+	\end{enumerate}
+	
+	
 	\section{Modélisation} On a choisi trois diagrammes d’UML pour modéliser l'application:
 		\begin{itemize}
 			\item Diagramme de classes
@@ -245,6 +287,8 @@ Après la livraison, il peut changer son statut de "occupé" à "libre".
 		\subsection{Vues} Chaque écran qui apparaît à l'utilisateur est considéré comme une vue. Les vues contiennent plusieurs widgets en cascade.
 		\subsection{Widgets} Nous avons dû créer des widgets personnalisés pour répondre à nos besoins, comme des boutons, des vues de liste, des vues de texte, etc.
 		
+	 \section*{Conclusion}
+	 Dans ce chapitre nous avons présenté la structure du code en général et les diagrammes du langage UML, ainsi que les définitions des termes essentiels de l'application. Le deuxième chapitre nous a permis d'organiser le corps de l'application pour faciliter le processus de mise on oeuvre décrit dans le chapitre suivant. 
 \newpage
 \chapter{Réalisation de l'application} Dans ce chapitre nous allons présenter les differentes IHMs de flux de cette application.
 	\section{Lancement d'application} Lorsque l'application est lancée pour la première fois, elle affiche la page de connexion (fig. \ref{fig:signin}).
@@ -463,7 +507,7 @@ Notre principal objectif en créant l'application n'était pas seulement d'appre
 Pour l'instant, l'application fonctionne à petite échelle, nous nous préparions à ajouter de nombreuses caractéristiques et fonctionnalités pratiques, mais en raison du peu de temps qui nous a été accordé, nous n'avons pas atteint le produit souhaité.\\
 
 
-Nous allons continuer à développer cette idée et la pousser à l'extrême car nous avons remarqué que nous offrons en général une solution moins chère et plus efficace. 
+Nous allons continuer à développer cette idée et la pousser à l'extrême car nous avons remarqué que nous offrons en général une solution moins chère et plus efficace.
 
 \addcontentsline{toc}{chapter}{Conclusion}
 

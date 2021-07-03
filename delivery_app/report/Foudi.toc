@@ -2,32 +2,36 @@
 \contentsline {chapter}{Table des figures}{5}%
 \contentsline {chapter}{Liste des tableaux}{6}%
 \contentsline {chapter}{Liste des Abréviations}{7}%
-\contentsline {chapter}{Introduction}{8}%
-\contentsline {chapter}{\numberline {1}Receuil des besoins}{9}%
-\contentsline {section}{\numberline {1.1}Développement Android}{9}%
-\contentsline {subsection}{\numberline {1.1.1}Les technologies utilisées}{9}%
-\contentsline {section}{\numberline {1.2}Méthode de travail collaborative}{10}%
-\contentsline {section}{\numberline {1.3}Architecture du code}{10}%
-\contentsline {chapter}{\numberline {2}Conception de l'application}{12}%
-\contentsline {section}{\numberline {2.1}Modélisation}{12}%
-\contentsline {subsubsection}{\numberline {2.1.0.1}Diagramme de classes}{13}%
-\contentsline {subsubsection}{\numberline {2.1.0.2}Diagrammes de cas d’utilisation}{15}%
-\contentsline {subsubsection}{\numberline {2.1.0.3}Diagrammes de séquences}{18}%
-\contentsline {section}{\numberline {2.2}La structure du code}{26}%
-\contentsline {subsection}{\numberline {2.2.1}Modéles}{26}%
-\contentsline {subsection}{\numberline {2.2.2}Contrôleurs}{26}%
-\contentsline {subsection}{\numberline {2.2.3}Vues}{26}%
-\contentsline {subsection}{\numberline {2.2.4}Widgets}{26}%
-\contentsline {chapter}{\numberline {3}Réalisation de l'application}{27}%
-\contentsline {section}{\numberline {3.1}Lancement d'application}{27}%
-\contentsline {subsubsection}{\numberline {3.1.0.1}L'inscription}{27}%
-\contentsline {subsubsection}{\numberline {3.1.0.2}La connexion (Login)}{27}%
-\contentsline {section}{\numberline {3.2}Cas d'utilisateur client}{28}%
-\contentsline {subsection}{\numberline {3.2.1}Lancement d'un commande}{29}%
-\contentsline {section}{\numberline {3.3}Cas d'utilisateur server}{36}%
-\contentsline {subsection}{\numberline {3.3.1}Réception des commandes}{36}%
-\contentsline {subsection}{\numberline {3.3.2}La configuration du menu}{37}%
-\contentsline {subsection}{\numberline {3.3.3}Page de profile}{38}%
-\contentsline {section}{\numberline {3.4}Cas d'utilisateur livreur}{39}%
-\contentsline {subsection}{\numberline {3.4.1}Les livraisons}{39}%
-\contentsline {chapter}{Conclusion}{42}%
+\contentsline {chapter}{Introduction}{9}%
+\contentsline {chapter}{\numberline {1}Receuil des besoins}{10}%
+\contentsline {section}{\numberline {1.1}Développement Android}{10}%
+\contentsline {subsection}{\numberline {1.1.1}Les technologies utilisées}{10}%
+\contentsline {section}{\numberline {1.2}Méthode de travail collaborative}{11}%
+\contentsline {section}{\numberline {1.3}Architecture du code}{11}%
+\contentsline {chapter}{\numberline {2}Conception de l'application}{13}%
+\contentsline {section}{\numberline {2.1}Définitions}{13}%
+\contentsline {subsection}{\numberline {2.1.1}Termes principaux}{13}%
+\contentsline {subsection}{\numberline {2.1.2}Autre termes}{13}%
+\contentsline {section}{\numberline {2.2}Relations entre les acteurs prencipaux de l'application}{14}%
+\contentsline {section}{\numberline {2.3}Modélisation}{14}%
+\contentsline {subsubsection}{\numberline {2.3.0.1}Diagramme de classes}{15}%
+\contentsline {subsubsection}{\numberline {2.3.0.2}Diagrammes de cas d’utilisation}{17}%
+\contentsline {subsubsection}{\numberline {2.3.0.3}Diagrammes de séquences}{20}%
+\contentsline {section}{\numberline {2.4}La structure du code}{28}%
+\contentsline {subsection}{\numberline {2.4.1}Modéles}{28}%
+\contentsline {subsection}{\numberline {2.4.2}Contrôleurs}{28}%
+\contentsline {subsection}{\numberline {2.4.3}Vues}{28}%
+\contentsline {subsection}{\numberline {2.4.4}Widgets}{28}%
+\contentsline {chapter}{\numberline {3}Réalisation de l'application}{29}%
+\contentsline {section}{\numberline {3.1}Lancement d'application}{29}%
+\contentsline {subsubsection}{\numberline {3.1.0.1}L'inscription}{29}%
+\contentsline {subsubsection}{\numberline {3.1.0.2}La connexion (Login)}{29}%
+\contentsline {section}{\numberline {3.2}Cas d'utilisateur client}{30}%
+\contentsline {subsection}{\numberline {3.2.1}Lancement d'un commande}{31}%
+\contentsline {section}{\numberline {3.3}Cas d'utilisateur server}{38}%
+\contentsline {subsection}{\numberline {3.3.1}Réception des commandes}{38}%
+\contentsline {subsection}{\numberline {3.3.2}La configuration du menu}{39}%
+\contentsline {subsection}{\numberline {3.3.3}Page de profile}{40}%
+\contentsline {section}{\numberline {3.4}Cas d'utilisateur livreur}{41}%
+\contentsline {subsection}{\numberline {3.4.1}Les livraisons}{41}%
+\contentsline {chapter}{Conclusion}{44}%
