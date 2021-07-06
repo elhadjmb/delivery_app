@@ -44,18 +44,18 @@ class _ProfilePageState extends State<ProfilePage> {
           Column(
             children: [
               Flexible(
-                flex: 5,
+                flex: 2,
                 child: Center(
                   child: Container(
                     decoration: new BoxDecoration(
                       shape: BoxShape.circle,
                       border: new Border.all(
                         color: Colors.white,
-                        width: 4.0,
+                        width: 2.0,
                       ),
                     ),
                     child: CircleAvatar(
-                      radius: 65.0,
+                      radius: 75.0,
                       backgroundImage: AssetImage(Images.userPicture),
                     ),
                   ),

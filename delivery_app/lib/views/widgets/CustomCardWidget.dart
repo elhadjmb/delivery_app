@@ -14,28 +14,31 @@ class CustomCardWidget extends StatelessWidget {
       color: Colour.white,
       child: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Row(
-          children: [
-            Center(
-              child: Text(
-                this.label,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colour.black,
-                  fontSize: 16,
+        child: Center(
+          child: Row(
+            children: [
+              Center(
+                child: Text(
+                  this.label,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colour.black,
+                    fontSize: 16,
+                  ),
                 ),
               ),
-            ),
-            Center(
-              child: Text(
-                this.text,
-                style: TextStyle(
-                  color: Colour.black,
-                  fontSize: 16,
+              Spacer(flex: 1,),
+              Center(
+                child: Text(
+                  this.text,
+                  style: TextStyle(
+                    color: Colour.black,
+                    fontSize: 16,
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         )
       ),
     );
