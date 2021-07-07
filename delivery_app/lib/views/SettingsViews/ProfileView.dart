@@ -2,7 +2,7 @@ import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/images.dart';
 import 'package:delivery_app/constants/strings.dart';
 import 'package:delivery_app/models/User.dart';
-import 'package:delivery_app/views/widgets/NotificationCardWidget.dart';
+import 'package:delivery_app/views/widgets/CustomCardWidget.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -12,6 +12,7 @@ class ProfilePage extends StatefulWidget {
 
 class _ProfilePageState extends State<ProfilePage> {
   var counter = 0;
+
   //TODO: find user object and assign its attributes to each _userVariable
 
   String _userName = "Burger Man"; //user.name;
@@ -42,73 +43,33 @@ class _ProfilePageState extends State<ProfilePage> {
         children: [
           Column(
             children: [
-              Expanded(
-                flex: 4,
-                child: Container(
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [Colour.orange, Colour.paleOrange],
-                    ),
-                  ),
-                  child: Flexible(
-                    child: Center(
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            height: 70.0,
-                          ),
-                          Container(
-                            decoration: new BoxDecoration(
-                              shape: BoxShape.circle,
-                              border: new Border.all(
-                                color: Colors.white,
-                                width: 4.0,
-                              ),
-                            ),
-                            child: CircleAvatar(
-                              radius: 65.0,
-                              backgroundImage: AssetImage(Images.burger),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                          Text(
-                            _userName,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                          Text(
-                            _userType,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15.0,
-                            ),
-                          ),
-                        ],
+              Flexible(
+                flex: 2,
+                child: Center(
+                  child: Container(
+                    decoration: new BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: new Border.all(
+                        color: Colors.white,
+                        width: 2.0,
                       ),
+                    ),
+                    child: CircleAvatar(
+                      radius: 75.0,
+                      backgroundImage: AssetImage(Images.userPicture),
                     ),
                   ),
                 ),
               ),
-              Expanded(
-                flex: 6,
+              Flexible(
+                flex: 3,
                 child: Center(
-                  //TODO: Make a listview builder with NotificationCardWidgets from user orders
-                  child: ListView(
-                    children: [
-                      NotificationCardWidget(text: 'Notification1/Order'),
-                      NotificationCardWidget(text: 'Notification2/Order'),
-                      NotificationCardWidget(text: 'Notification3/Order'),
-                    ],
-                  ),
+                  child: Column(children: [
+                    CustomCardWidget(label: "Type", text: _userType,),
+                    CustomCardWidget(label: "Name", text: _userName,),
+                    CustomCardWidget(label: "Phone", text: _userPhone,),
+                    CustomCardWidget(label: "Address", text: _userAddress,),
+                  ],)
                 ),
               ),
             ],
