@@ -27,28 +27,32 @@ class Ingredient {
 class Dish {
   String id;
   String name;
-  DishCategory category;
+  //DishCategory category;
   double price;
-  String description;
-  List<Ingredient> ingredients;
-  bool isActive = true;
-  DateTime cookTime;
-  List<String> tags;
-  double score;
+  String restaurantname;
+ // String description;
+  //List<Ingredient> ingredients;
+ // bool isActive = true;
+  //DateTime cookTime;
+  //List<String> tags;
+  //double score;
   String image;
+  String quantity;
 
   Dish({
     required this.id,
     required this.name,
-    required this.category,
+   // required this.category,
     required this.price,
-    required this.description,
-    required this.ingredients,
-    required this.isActive,
-    required this.cookTime,
-    required this.tags,
-    required this.score,
+    required this.restaurantname,
+    //required this.description,
+   // required this.ingredients,
+    //required this.isActive,
+  //  required this.cookTime,
+  //  required this.tags,
+  //  required this.score,
     required this.image,
+    required this.quantity,
   });
 
   factory Dish.fromJson(Map<String, dynamic> json) => _$DishFromJson(json);

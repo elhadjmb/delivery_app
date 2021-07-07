@@ -2,11 +2,13 @@
 
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/strings.dart';
-import 'package:delivery_app/views/ClientViews/HomePage.dart';
-import 'package:delivery_app/views/widgets/View.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:delivery_app/views/ClientViews/ShoppingCartPage.dart';
+import 'package:delivery_app/views/ClientViews/Widgets/Checkoutscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:geolocator/geolocator.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:location/location.dart';
 
@@ -15,12 +17,12 @@ import 'package:geoflutterfire/geoflutterfire.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:cloud_firestore/cloud_firestore.dart';
 // ignore: unused_import
-import 'package:rxdart/rxdart.dart';
 import 'dart:async';
 
 
 class FireMap extends StatefulWidget {
-  const FireMap();
+  String ide;
+  FireMap({required this.ide});
   @override
   FireMapState createState() => FireMapState();
 }
@@ -40,8 +42,13 @@ class FireMapState extends State<FireMap> {
   MarkerId? selectedMarker;
   int _markerIdCounter = 1;
 
-  void _onMapCreated(GoogleMapController controller) {
+  Future<void> _onMapCreated(GoogleMapController controller) async {
     this.controller = controller;
+    var pos = await location.getLocation();
+         return FirebaseFirestore.instance.collection("order").doc(widget.ide).update({ 
+          'latitude': pos.latitude,
+          'longitude': pos.longitude,
+          });
   }
 
   @override
@@ -73,6 +80,10 @@ class FireMapState extends State<FireMap> {
   void _onMarkerDragEnd(MarkerId markerId, LatLng newPosition) async {
     final Marker? tappedMarker = markers[markerId];
     if (tappedMarker != null) {
+       FirebaseFirestore.instance.collection("order").doc(widget.ide).update({ 
+          'latitude': newPosition.latitude,
+          'longitude': newPosition.longitude,
+          });
       await showDialog<void>(
           context: context,
           builder: (BuildContext context) {
@@ -96,7 +107,7 @@ class FireMapState extends State<FireMap> {
     }
   }
 
-  void _add() {
+  Future<void> _add() async {
     final int markerCount = markers.length;
 
     if (markerCount == 1) {
@@ -117,14 +128,22 @@ class FireMapState extends State<FireMap> {
       onTap: () {
         _onMarkerTapped(markerId);
       },
-      onDragEnd: (LatLng position) {
+      onDragEnd: (LatLng position) async {
         _onMarkerDragEnd(markerId, position);
+         
       },
     );
 
     setState(() {
       markers[markerId] = marker;
     });
+    var pos = await location.getLocation();
+         print(pos);
+         return FirebaseFirestore.instance.collection("order").doc(widget.ide).update({ 
+          'latitude': pos.latitude,
+          'longitude': pos.longitude,
+          
+          });
   }
 
   void _remove(MarkerId markerId) {
@@ -142,6 +161,7 @@ class FireMapState extends State<FireMap> {
         draggableParam: !marker.draggable,
       );
     });
+    
   }
   
   Future<void> _toggleVisible(MarkerId markerId) async {
@@ -165,20 +185,29 @@ class FireMapState extends State<FireMap> {
      }
     
     //function to save users location in the databae
-     Future<DocumentReference> _addGeoPoint() async {
+     Future<void> _addGeoPoint() async {
          var pos = await location.getLocation();
-         GeoFirePoint point = geo.point(latitude: pos.latitude, longitude: pos.longitude);
-         print(point);
-         return FirebaseFirestore.instance.collection("locations").add({ 
-         'position': point.data,
-          'name': 'Yay I can be queried!' 
+         print(pos);
+         return FirebaseFirestore.instance.collection("order").doc(widget.ide).update({ 
+          'latitude': pos.latitude,
+          'longitude': pos.longitude,
           });
       }
-
+      Future<void> _getuserlocation() async {
+      Position location = await Geolocator.getCurrentPosition();
+      print(location);
+       return FirebaseFirestore.instance.collection("order").doc(widget.ide).update({ 
+          'latitude': location.latitude,
+          'longitude': location.longitude,
+          });
+      }
+      void getLocation() async { Position position = await Geolocator .getCurrentPosition(); print(position); }
+     
 
   Widget build(BuildContext context) {
     final MarkerId? selectedId = selectedMarker;
     return Scaffold( 
+      //add the non return to the previous widget function 
      appBar: AppBar(
           leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -186,7 +215,7 @@ class FireMapState extends State<FireMap> {
           onPressed: () {
             Navigator.push(
             context,
-            MaterialPageRoute(builder:(context) =>View(),
+            MaterialPageRoute(builder:(context) =>ShoppingCartPage(),
             ),
           );
         },
@@ -214,7 +243,7 @@ class FireMapState extends State<FireMap> {
            markers: Set<Marker>.of(markers.values),
         ),
         Positioned(
-          bottom: 50,
+          bottom: 110,
           right: 10,
           child: 
           // ignore: deprecated_member_use
@@ -225,7 +254,7 @@ class FireMapState extends State<FireMap> {
           )
         ),
         Positioned(
-          bottom: 130,
+          bottom: 190,
           right: 10,
           child: 
           // ignore: deprecated_member_use
@@ -238,7 +267,7 @@ class FireMapState extends State<FireMap> {
             ),
         ),
         Positioned(
-          bottom: 90,
+          bottom: 150,
           right: 10,
           child: 
           // ignore: deprecated_member_use
@@ -249,6 +278,54 @@ class FireMapState extends State<FireMap> {
                ? null
              : () => _remove(selectedId),
             ),
+        ),
+        Positioned(
+          bottom: 230,
+          right: 10,
+          child: 
+          // ignore: deprecated_member_use
+          FlatButton(
+            child: Icon(Icons.add),
+            color: Colour.orange, 
+            onPressed:/*_addGeoPoint*/_getuserlocation,
+          )
+        ),
+         Positioned(
+          bottom: 60,
+          left: 120,
+          child: 
+          // ignore: deprecated_member_use
+          OutlinedButton(
+            style: TextButton.styleFrom(
+              backgroundColor: Colour.orange ,
+            )  ,
+            child: 
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [              
+                Icon(        
+                  Icons.payment,
+                  color: Colour.white,
+                  ),
+                SizedBox(width: 15),
+                Text(
+                  'CHECKOUT',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 2.0,
+                  ),
+                ),
+              ],
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,MaterialPageRoute(
+                builder: (_) => Checkme())
+                );
+            },
+          ),
         )
        /* Positioned(
           bottom: 50,

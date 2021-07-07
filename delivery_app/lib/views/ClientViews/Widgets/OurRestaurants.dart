@@ -1,18 +1,25 @@
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/testdata/data.dart';
 import 'package:delivery_app/testmodels/restaurant.dart';
-import 'package:delivery_app/views/ClientViews/Widgets/RestaurantScreen.dart';
+import 'package:delivery_app/views/ClientViews/CartPage.dart';
 //import 'package:delivery_app/models/Restaurant.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
-class RestaurantsList extends StatelessWidget {
-  _buildRestaurantList(BuildContext context, Restaurant restaurant){
+class RestaurantsList extends StatefulWidget {
+  String idclient;
+  RestaurantsList({ required this.idclient});
+
+  @override
+  _RestaurantsListState createState() => _RestaurantsListState();
+}
+
+class _RestaurantsListState extends State<RestaurantsList> {
+  _buildRestaurantList(BuildContext context, Restaurant restaurant,String idclient){
         return GestureDetector(
               onTap: ()=>Navigator.push(
                 context,MaterialPageRoute(
-                builder: (_) => RestaurantScreen(restaurant: restaurant))
+                builder: (_) => Cartpage(restaurant: restaurant,idclient: idclient,))
                 ),
               child: Container(
               margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
@@ -104,7 +111,7 @@ class RestaurantsList extends StatelessWidget {
             itemCount: restaurants.length,
             itemBuilder: (context, index) {
               Restaurant restaurant = restaurants[index];
-              return  _buildRestaurantList(context, restaurant);
+              return  _buildRestaurantList(context, restaurant,widget.idclient);
              // return _buildRestaurantList(context, restaurant[index]);
             },
           ),

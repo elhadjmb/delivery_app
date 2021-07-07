@@ -21,7 +21,7 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
-
+  syncfusion_flutter_sliders: ^19.1.56-beta
   crypto: ^3.0.1 #for hash functions
   json_annotation:
   flutter:
@@ -33,13 +33,13 @@ dependencies:
   geoflutterfire:
   google_maps_flutter: ^2.0.3
   location:
-  rxdart:
+  geolocator:
   firebase_core: ^0.7.0
   cupertino_icons: ^1.0.2
   firebase_auth: ^0.20.1
   cloud_firestore: ^0.16.0+1
   email_validator: '^1.0.6'
-  provider:
+  provider: ^5.0.0
   flutter_spinkit: "^4.1.2"
 dev_dependencies:
   flutter_launcher_icons: ^0.9.0

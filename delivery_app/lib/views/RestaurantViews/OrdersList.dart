@@ -34,11 +34,27 @@ class _OrdersListState extends State<OrdersList> {
         itemCount: orders.length,
         itemBuilder: (BuildContext context, int index) {
           return Stack(
+            alignment: Alignment.topRight,
             children: <Widget>[
-              Positioned(child: orderCard(orders[index], _selections, context)),
-              Positioned(
-                top: 10.0,
-                child: orderImage(orders[index].food.imageUrl),
+              Stack(
+                children: <Widget>[
+                  Positioned(
+                      child: orderCard(orders[index], _selections, context)),
+                  Positioned(
+                    top: 10.0,
+                    child: orderImage(orders[index].food.imageUrl),
+                  ),
+                ],
+              ),
+              InkWell(
+                //TODO: bellow goes the methis that delete an order
+                onTap: () {},
+                child: Container(
+                  child: Icon(
+                    Icons.cancel,
+                    color: Colour.purple,
+                  ),
+                ),
               ),
             ],
           );

@@ -2,6 +2,8 @@
 
 import 'package:delivery_app/constants/types.dart';
 import 'package:delivery_app/services/Auth.dart';
+import 'package:delivery_app/views/RestaurantViews/widgets/RestaurantBottomNavBar.dart';
+import 'package:delivery_app/views/ServerViews/MainView.dart';
 import 'package:delivery_app/views/widgets/View.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +27,7 @@ class SignupViewController {
         Navigator.push(
             cont,
              MaterialPageRoute(
-              builder: (context) => View(),
+              builder: (context) => View(ide: result.uid),
             ),
           );
         } 
@@ -44,7 +46,7 @@ class SignupViewController {
         Navigator.push(
             cont,
              MaterialPageRoute(
-              builder: (context) => View(),
+              builder: (context) => Footer(),
             ),
           );
         } 
@@ -64,7 +66,7 @@ class SignupViewController {
         Navigator.push(
             cont,
              MaterialPageRoute(
-              builder: (context) => View(),
+              builder: (context) => DelivView(),
             ),
           );
         } 

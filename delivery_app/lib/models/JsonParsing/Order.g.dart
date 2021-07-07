@@ -9,25 +9,27 @@ part of '../Order.dart';
 Order _$OrderFromJson(Map<String, dynamic> json) {
   return Order(
     id: json['id'] as String,
-    orderTime: DateTime.parse(json['orderTime'] as String),
+   orderTime: DateTime.parse(json['orderTime'] as String),
+   restaurantname:json['restaurantname'] as String,
     description: json['description'] as String,
-    status: _$enumDecode(_$OrderStatusEnumMap, json['status']),
-    client: TUser.fromJson(json['client'] as Map<String, dynamic>),
+ //   status: _$enumDecode(_$OrderStatusEnumMap, json['status']),
+//    client: TUser.fromJson(json['client'] as Map<String, dynamic>),
     deliveryAddress: json['deliveryAddress'] as String,
     dishes: (json['dishes'] as List<dynamic>)
-        .map((e) => Dish.fromJson(e as Map<String, dynamic>))
-        .toList(),
+       .map((e) => Dish.fromJson(e as Map<String, dynamic>))
+       .toList(),
   );
 }
 
 Map<String, dynamic> _$OrderToJson(Order instance) => <String, dynamic>{
       'id': instance.id,
-      'orderTime': instance.orderTime.toIso8601String(),
+     'orderTime': instance.orderTime.toIso8601String(),
+     'restaurantname':instance.restaurantname,
       'description': instance.description,
-      'status': _$OrderStatusEnumMap[instance.status],
-      'client': instance.client.toJson(),
+   //   'status': _$OrderStatusEnumMap[instance.status],
+  //    'client': instance.client.toJson(),
       'deliveryAddress': instance.deliveryAddress,
-      'dishes': instance.dishes.map((e) => e.toJson()).toList(),
+    'dishes': instance.dishes!.map((e) => e.toJson()).toList(),
     };
 
 K _$enumDecode<K, V>(

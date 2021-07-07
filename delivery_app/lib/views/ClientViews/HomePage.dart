@@ -7,6 +7,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
+  String idclient;
+  HomePage({required this.idclient});
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -78,7 +80,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SuggestedDishes(),
-            RestaurantsList(),
+            RestaurantsList(idclient: widget.idclient,),
           ],
         ),
       ),

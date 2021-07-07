@@ -35,10 +35,7 @@ class _StatusWidgState extends State<StatusWidg> {
             size: 40,
           ),
           onPressed: () {
-              Navigator.push(
-                context,MaterialPageRoute(
-                builder: (_) => ShoppingCartPage())
-                );
+            
             },
         ),
         actions: <Widget>[

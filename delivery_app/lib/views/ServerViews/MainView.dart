@@ -1,36 +1,34 @@
 import 'package:delivery_app/constants/colours.dart';
-import 'package:delivery_app/views/ClientViews/CartPage.dart';
-import 'package:delivery_app/views/ClientViews/HomePage.dart';
 import 'package:delivery_app/views/ClientViews/MapPage.dart';
 import 'package:delivery_app/views/ClientViews/ShoppingCartPage.dart';
-import 'package:delivery_app/views/SettingsViews/ProfileView.dart';
+import 'package:delivery_app/views/ClientViews/Widgets/DeliveryMap.dart';
+import 'package:delivery_app/views/ServerViews/HomePageServer.dart';
 import 'package:flutter/material.dart';
 
-class View extends StatefulWidget {
-  String ide;
-  View({required this.ide});
+import 'StatsView.dart';
+
+class DelivView extends StatefulWidget {
+  const DelivView({ Key? key }) : super(key: key);
+
   @override
-  _View createState() => _View();
+  _DelivViewState createState() => _DelivViewState();
 }
 
-class _View extends State<View> {
-  int _currentIndex = 0;
- 
-
+class _DelivViewState extends State<DelivView> {
+   int _currentIndex = 0;
+  final List<Widget> _pages = [
+    ServHome(),
+    Stats() ,//icon name is chart
+   // Pagemap(),
+  ];
   @override
   Widget build(BuildContext context) {
-     final List<Widget> _pages = [
-    HomePage(idclient:widget.ide),
-    ShoppingCartPage(idclient:widget.ide),
-    Pagemap(ide:widget.ide ,),
-    ProfilePage(),
-  ];
     return SafeArea(
       child: Scaffold(
         body: _pages[_currentIndex],
         bottomNavigationBar: BottomNavigationBar(
            type: BottomNavigationBarType.fixed,
-          selectedItemColor: Colour.orange,
+          selectedItemColor: Colour.blue,
           currentIndex: _currentIndex,
           onTap: (index) {
             setState(() {
@@ -43,12 +41,8 @@ class _View extends State<View> {
               label: "Home",
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart),
-              label: "Cart",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.map),
-              label: "Map",
+              icon: Icon(Icons.insert_chart),
+              label: "Stats",
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person),

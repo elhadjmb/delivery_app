@@ -5,9 +5,8 @@ import 'package:delivery_app/constants/images.dart';
 import 'package:delivery_app/constants/strings.dart';
 import 'package:delivery_app/controllers/LoginViewController.dart';
 import 'package:delivery_app/views/AuthentificationViews/SignupView.dart';
-import 'package:delivery_app/views/ClientViews/HomePage.dart';
-import 'package:delivery_app/views/ClientViews/Widgets/Checkoutscreen.dart';
 import 'package:delivery_app/views/RestaurantViews/widgets/RestaurantBottomNavBar.dart';
+import 'package:delivery_app/views/ServerViews/MainView.dart';
 import 'package:delivery_app/views/widgets/View.dart';
 import 'package:flutter/material.dart';
 
@@ -130,13 +129,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       //Bellow is the login button :
                       InkWell(
                         onTap: () {
-                          // sven.signIn(email_TEC.text.trim(), password_TEC.text, context);
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => View(),
-                            ),
-                          );
+                          sven.signIn(email_TEC.text.trim(), password_TEC.text, context);
                         },
                         child: Container(
                           width: MediaQuery.of(context).size.width / 1.4,

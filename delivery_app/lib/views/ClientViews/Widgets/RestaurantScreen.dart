@@ -7,15 +7,15 @@ import 'package:flutter/material.dart';
 
 class RestaurantScreen extends StatefulWidget {
   final Restaurant restaurant;
-
-  RestaurantScreen({required this.restaurant});
+  String ide;
+  RestaurantScreen({required this.restaurant,required this.ide});
 
   @override
   _RestaurantScreenState createState() => _RestaurantScreenState();
 }
 
 class _RestaurantScreenState extends State<RestaurantScreen> {
-     _buildMenuItem(Food menuItem) {
+     _buildMenuItem(Food menuItem,String restname) {
     return Center(
       child: Stack(
         alignment: Alignment.center,
@@ -89,7 +89,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                 onPressed: () {
                   Navigator.push(
                 context,MaterialPageRoute(
-                builder: (_) => DishIng(food: menuItem,))
+                builder: (_) => DishIng(food: menuItem,ide: widget.ide,restname: restname,))
                 );
                 },
               ),
@@ -102,128 +102,156 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children:<Widget> [
-          Stack(
-            children: <Widget>[
-                 Hero(
-                    tag: widget.restaurant.imageUrl,
-                    child: Image(
-                    height: 220.0,
-                    width: MediaQuery.of(context).size.width,
-                    image: AssetImage(widget.restaurant.imageUrl),
-                    fit: BoxFit.cover,
-                ),
-                 ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 50.0),
-                  child: Row(
-                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      IconButton(
-                        icon: Icon(Icons.arrow_back_ios),
-                        color: Colors.white,
-                        iconSize: 30.0,
-                        onPressed: () => Navigator.pop(context),
-                      ),
-                      IconButton(
-                        icon: Icon(Icons.favorite),
-                        color:  Colour.orange,
-                        iconSize: 35.0,
-                        //the favorites function will be put here
-                        onPressed: () {},
-                      ),
-                    ],
+    /*WillPopScope(
+           onWillPop: () async => false,
+          child: Scaffold(*/
+    return WillPopScope(
+           onWillPop: () async => false,
+          child: Scaffold(
+        body: Column(
+          children:<Widget> [
+            Stack(
+              children: <Widget>[
+                   Hero(
+                      tag: widget.restaurant.imageUrl,
+                      child: Image(
+                      height: 220.0,
+                      width: MediaQuery.of(context).size.width,
+                      image: AssetImage(widget.restaurant.imageUrl),
+                      fit: BoxFit.cover,
                   ),
-                ),
-            ],
-          ),
-                Padding(
-                  padding: EdgeInsets.all(20.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Row(
-                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children:<Widget> [
-                          Text(
-                            widget.restaurant.name,
-                            style: TextStyle(
-                              fontSize: 22.0,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ],
-                      ),
-                    Text(
-                   widget.restaurant.address,
-                   style: TextStyle(fontSize: 18.0),
-                 ),
+                   ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 50.0),
+                    child: Row(
+                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        IconButton(
+                          icon: Icon(Icons.arrow_back_ios),
+                          color: Colors.white,
+                          iconSize: 30.0,
+                          onPressed: () => Navigator.pop(context),//showDialogerr(context);
+                        ),
+                        IconButton(
+                          icon: Icon(Icons.favorite),
+                          color:  Colour.white,
+                          iconSize: 35.0,
+                          //the favorites function will be put here
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                  ),
               ],
             ),
-          ),
-          Row(
-             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children:<Widget> [
-              FlatButton(
-                padding: EdgeInsets.symmetric(horizontal: 30.0),
-                color:  Colour.orange,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                child: Text(
-                    'Reviews',
-                     style: TextStyle(
-                     color: Colors.white,
-                     fontSize: 20.0,
-                  ),
-                ),
-                //The reviews function will be put here
-                onPressed: () {},
+                  Padding(
+                    padding: EdgeInsets.all(20.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Row(
+                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children:<Widget> [
+                            Text(
+                              widget.restaurant.name,
+                              style: TextStyle(
+                                fontSize: 22.0,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        ),
+                      Text(
+                     widget.restaurant.address,
+                     style: TextStyle(fontSize: 18.0),
+                   ),
+                ],
               ),
-              FlatButton(
-                padding: EdgeInsets.symmetric(horizontal: 30.0),
-                color: Colour.orange,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                child: Text(
-                  'Contact',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20.0,
-                  ),
-                ),
-                //Contact the restaurant function here
-                onPressed: () {},
-              ),
-            ],
-          ),
-          SizedBox(height: 10.0),
-          Center(   
-            child: Text(
-              'Menu',
-              style: TextStyle(
-                fontSize: 22.0,
-                fontWeight: FontWeight.w600,
-                letterSpacing: 1.2,
-              ),
-            ),       
-          ),
-          SizedBox(height: 10.0),
-          Expanded(
-            child: GridView.count(
-              padding: EdgeInsets.all(10.0),
-              crossAxisCount: 2,
-              children: List.generate(widget.restaurant.menu.length, (index) {
-                Food food = widget.restaurant.menu[index];
-                return _buildMenuItem(food);
-              }),
             ),
-          )
-        ],
+            Row(
+               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children:<Widget> [
+                FlatButton(
+                  padding: EdgeInsets.symmetric(horizontal: 30.0),
+                  color:  Colour.orange,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: Text(
+                      'Reviews',
+                       style: TextStyle(
+                       color: Colors.white,
+                       fontSize: 20.0,
+                    ),
+                  ),
+                  //The reviews function will be put here
+                  onPressed: () {},
+                ),
+                FlatButton(
+                  padding: EdgeInsets.symmetric(horizontal: 30.0),
+                  color: Colour.orange,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: Text(
+                    'Contact',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20.0,
+                    ),
+                  ),
+                  //Contact the restaurant function here
+                  onPressed: () {},
+                ),
+              ],
+            ),
+            SizedBox(height: 10.0),
+            Center(   
+              child: Text(
+                'Menu',
+                style: TextStyle(
+                  fontSize: 22.0,
+                  fontWeight: FontWeight.w600,
+                  letterSpacing: 1.2,
+                ),
+              ),       
+            ),
+            SizedBox(height: 10.0),
+            Expanded(
+              child: GridView.count(
+                padding: EdgeInsets.all(10.0),
+                crossAxisCount: 2,
+                children: List.generate(widget.restaurant.menu.length, (index) {
+                  Food food = widget.restaurant.menu[index];
+                  return _buildMenuItem(food,widget.restaurant.name);
+                }),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
 }
+void showDialogerr(BuildContext context) {
+    // flutter defined function
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return AlertDialog(
+          title: new Text("Error"),
+          content: new Text("You cant return after creating your order"),
+          actions: <Widget>[
+            // usually buttons at the bottom of the dialog
+            new FlatButton(
+              child: new Text("Ok"),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }

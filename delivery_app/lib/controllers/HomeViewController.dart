@@ -6,10 +6,10 @@ class HomePageCon{
   final AuthService _auth= AuthService();
 Future signOutbutton(BuildContext context) async {
    await _auth.signOut();
-     Navigator.push(
+   /*  Navigator.push(
             context,
             MaterialPageRoute(builder:(context) => View(),
             ),
-          );
+          );*/
   }
 }

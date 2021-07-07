@@ -13,13 +13,14 @@ class IngredientsScreen extends StatefulWidget {
 }
 
 class _IngredientsScreenState extends State<IngredientsScreen> {
+  List<bool> _selections = List.generate(2, (_) => false);
   List<CheckBoxListTileModel> checkBoxListTileModel =
       CheckBoxListTileModel.getUsers();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: ListView(
         children: <Widget>[
           Stack(
             children: <Widget>[
@@ -119,28 +120,35 @@ class _IngredientsScreenState extends State<IngredientsScreen> {
           ],
         ),
         child: Center(
-          child: TextButton(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.event_available,
-                  color: Colour.white,
-                ),
-                SizedBox(width: 15),
-                Text(
-                  'Activate / desactivate',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 2.0,
-                  ),
-                ),
-              ],
+          child: ToggleButtons(
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Text("Activate"),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Text("Desactivate"),
+              ),
+            ],
+            isSelected: _selections,
+            onPressed: (int index) {
+              setState(() {
+                for (var i = 0; i < 2; i++) {
+                  _selections[i] = false;
+                }
+                _selections[index] = !_selections[index];
+              });
+            },
+            textStyle: TextStyle(
+              fontSize: 26,
+              fontWeight: FontWeight.w400,
             ),
-            //TODO: bellow goes the function tha t activate or desactivate dish
-            onPressed: () {},
+            color: Colour.black,
+            selectedBorderColor: Colour.purple,
+            borderRadius: BorderRadius.circular(14.0),
+            selectedColor: Colour.purple,
+            borderColor: Colour.gray,
           ),
         ),
       ),

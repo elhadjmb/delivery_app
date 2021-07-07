@@ -1,18 +1,24 @@
+import 'dart:math';
+
 import 'package:delivery_app/constants/colours.dart';
+import 'package:delivery_app/controllers/ClientViewController.dart';
 import 'package:delivery_app/testmodels/food.dart';
 import 'package:delivery_app/testmodels/ingredient.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:delivery_app/views/ClientViews/ShoppingCartPage.dart';
 import 'package:flutter/material.dart';
 
 class DishIng extends StatefulWidget {
   final Food food;
-
-  DishIng({required this.food});
+  String ide;
+  String restname;
+  DishIng({required this.ide,required this.food,required this.restname});
   @override
   _DishIngState createState() => _DishIngState();
 }
 
 class _DishIngState extends State<DishIng> {
+   final myController = TextEditingController();
  _buildingredientList(BuildContext context, Ingredient ingredient , int index){
    return Card(
      child: Container(
@@ -43,8 +49,13 @@ class _DishIngState extends State<DishIng> {
 }
 List<CheckBoxListTileModel> checkBoxListTileModel =
       CheckBoxListTileModel.getUsers();
+      CartController cart=CartController();
+      
   @override
   Widget build(BuildContext context) {
+      Random random1 = new Random();
+int randomNumber2 = random1.nextInt(100);
+ String ids='dish'+randomNumber2.toString();
     return Scaffold(
       body: Column(
         children:<Widget> [
@@ -136,7 +147,23 @@ List<CheckBoxListTileModel> checkBoxListTileModel =
                    style: TextStyle(fontSize: 22.0,
                    fontWeight: FontWeight.w800,),
                        ),
-                    )
+                    ),
+                    SizedBox(height: 20.0),
+                    Center(
+                 child:   
+                 TextFormField(
+                   controller: myController,
+                   cursorColor: Colour.orange,
+                     decoration: InputDecoration(
+                       labelStyle: TextStyle(color: Colour.orange,),
+                     border: UnderlineInputBorder(),
+                     labelText: 'Enter the quantity',
+                     fillColor: Colour.orange,
+                     focusColor: Colour.orange,
+                     hoverColor: Colour.orange,
+                      ),
+                     )
+                    ),
               ],
             ),
           ),     
@@ -162,7 +189,7 @@ List<CheckBoxListTileModel> checkBoxListTileModel =
           ),
          // SizedBox(height: 10.0),
           Container(
-            height: 340,
+            height: 260,
             child: ListView.builder(
             physics: BouncingScrollPhysics(),
             padding: EdgeInsets.only(left: 2.0),
@@ -217,9 +244,10 @@ List<CheckBoxListTileModel> checkBoxListTileModel =
             ),
             //adding a dish with its ingredients to the cart
             onPressed: () {
+              cart.adddishtocart(ids, widget.food.name, widget.food.price,  widget.food.imageUrl,widget.ide,ids,myController.text,widget.restname);
               Navigator.push(
                 context,MaterialPageRoute(
-                builder: (_) =>ShoppingCartPage())
+                builder: (_) =>ShoppingCartPage(ide: widget.ide,))
                 );
             },
           ),

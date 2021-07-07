@@ -27,32 +27,36 @@ Dish _$DishFromJson(Map<String, dynamic> json) {
   return Dish(
     id: json['id'] as String,
     name: json['name'] as String,
-    category: _$enumDecode(_$DishCategoryEnumMap, json['category']),
-    price: (json['price'] as num).toDouble(),
-    description: json['description'] as String,
-    ingredients: (json['ingredients'] as List<dynamic>)
-        .map((e) => Ingredient.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    isActive: json['isActive'] as bool,
-    cookTime: DateTime.parse(json['cookTime'] as String),
-    tags: (json['tags'] as List<dynamic>).map((e) => e as String).toList(),
-    score: (json['score'] as num).toDouble(),
+   // category: _$enumDecode(_$DishCategoryEnumMap, json['category']),
+    price: json['price'] as double,
+    restaurantname:json['restaurantname'] as String ,
+  //  description: json['description'] as String,
+  //  ingredients: (json['ingredients'] as List<dynamic>)
+      //  .map((e) => Ingredient.fromJson(e as Map<String, dynamic>))
+     //   .toList(),
+  //  isActive: json['isActive'] as bool,
+  //  cookTime: DateTime.parse(json['cookTime'] as String),
+   // tags: (json['tags'] as List<dynamic>).map((e) => e as String).toList(),
+   // score: (json['score'] as num).toDouble(),
     image: json['image'] as String,
+     quantity: json['quantity'] as String,
   );
 }
 
 Map<String, dynamic> _$DishToJson(Dish instance) => <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
-      'category': _$DishCategoryEnumMap[instance.category],
+     // 'category': _$DishCategoryEnumMap[instance.category],
       'price': instance.price,
-      'description': instance.description,
-      'ingredients': instance.ingredients.map((e) => e.toJson()).toList(),
-      'isActive': instance.isActive,
-      'cookTime': instance.cookTime.toIso8601String(),
-      'tags': instance.tags,
-      'score': instance.score,
+      'restaurantname':instance.restaurantname,
+    //  'description': instance.description,
+    //  'ingredients': instance.ingredients.map((e) => e.toJson()).toList(),
+     // 'isActive': instance.isActive,
+     // 'cookTime': instance.cookTime.toIso8601String(),
+    //  'tags': instance.tags,
+    //  'score': instance.score,
       'image': instance.image,
+      'quantity': instance.quantity,
     };
 
 K _$enumDecode<K, V>(

@@ -9,4 +9,5 @@ class Colour {
   static const orange = Color(0xFFF77F00);
   static const paleOrange = Color(0xFFf09803);
   static const gray = Color(0xFF8F8F8F);
+  static const blue = Color(0xFF111D4A);
 }

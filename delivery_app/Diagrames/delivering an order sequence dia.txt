@@ -1,28 +1,22 @@
 
 title seq dia for delivering an order
 
-participant client
+participant Deliverer
 participant System
 participant Google api
 
+ref over Deliverer,System:Login In
 
 
 
-
-
-client->System:Log in()\n
-System->System:verification
-client<--System:Display the main page(charts)
-
-
-client<--System:sends a notification about an order
-client->System:choses to take that order
+Deliverer<--System:displays the list of orders
+Deliverer->System:chooses to take an order
 System->Google api:demanding the delivery address location
 System<--Google api:gives the location
-client<--System: display the location on map
+Deliverer<--System: displays the location on map
 note right of System:changes his status to occupied
-client->System:changes his status 
-client->System:changes his stauts again to free
-
+Deliverer->System:Finshes the delivery
+Deliverer<--System:changes his stauts again to free
+Deliverer<--System:Delete the order
 
 

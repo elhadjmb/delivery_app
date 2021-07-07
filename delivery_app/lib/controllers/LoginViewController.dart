@@ -2,6 +2,8 @@
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:delivery_app/services/Auth.dart';
+import 'package:delivery_app/views/RestaurantViews/widgets/RestaurantBottomNavBar.dart';
+import 'package:delivery_app/views/ServerViews/MainView.dart';
 import 'package:delivery_app/views/widgets/View.dart';
 import 'package:flutter/material.dart';
 import 'package:email_validator/email_validator.dart';
@@ -15,8 +17,9 @@ class LoginViewController{
        //TODO: CHECK ALL THE EXCEPTIONS CONCERNING THE FIREBASE EMAIL AND PASSWORD RULES AND CREATE A WIDGET FOREM
        else{
        dynamic result = await  _auth.signInWithEmailAndPassword(email,pass); 
+       print(result);
        DocumentSnapshot ds = await 
-        FirebaseFirestore.instance.collection('users').doc(result.uid).get();
+        FirebaseFirestore.instance.collection('users').doc(result.id).get();
         var name = ds.data()['type'];
         
          if(result == null){
@@ -28,21 +31,21 @@ class LoginViewController{
             print("client");
           Navigator.push(
             context,
-            MaterialPageRoute(builder:(context) => View(),
+            MaterialPageRoute(builder:(context) => View(ide: result.id),
             ),
           );
         } else if (name== "SERVER") {
           print("server");
           Navigator.push(
             context,
-            MaterialPageRoute(builder:(context) => View(),
+            MaterialPageRoute(builder:(context) => Footer(),
             ),
           );
         } else if (name == "DELIVERER") {
           print("delivery");
           Navigator.push(
             context,
-            MaterialPageRoute(builder:(context) => View(),
+            MaterialPageRoute(builder:(context) => DelivView(),
             ),
           );
       }
