@@ -1,4 +1,5 @@
 import 'package:delivery_app/constants/colours.dart';
+import 'package:delivery_app/testdata/data.dart';
 import 'package:delivery_app/testmodels/food.dart';
 import 'package:delivery_app/testmodels/ingredient.dart';
 import 'package:delivery_app/views/ClientViews/Widgets/DishScreen.dart';
@@ -8,6 +9,7 @@ class IngredientsScreen extends StatefulWidget {
   final Food food;
 
   const IngredientsScreen({required this.food});
+
   @override
   _IngredientsScreenState createState() => _IngredientsScreenState();
 }
@@ -120,35 +122,66 @@ class _IngredientsScreenState extends State<IngredientsScreen> {
           ],
         ),
         child: Center(
-          child: ToggleButtons(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Text("Activate"),
+          child: Row(
+            children: [
+              ToggleButtons(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Text("Activate"),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Text("Desactivate"),
+                  ),
+                ],
+                isSelected: _selections,
+                onPressed: (int index) {
+                  setState(() {
+                    for (var i = 0; i < 2; i++) {
+                      _selections[i] = false;
+                    }
+                    _selections[index] = !_selections[index];
+                  });
+                },
+                textStyle: TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.w400,
+                ),
+                color: Colour.black,
+                selectedBorderColor: Colour.purple,
+                borderRadius: BorderRadius.circular(14.0),
+                selectedColor: Colour.purple,
+                borderColor: Colour.gray,
               ),
-              Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Text("Desactivate"),
+              InkWell(
+                onTap: () {
+                  restaurants[0].menu.remove(widget.food);
+                  setState(() {});
+                  Navigator.pop(context);
+                  setState(() {});
+                },
+                child: Container(
+                  width: 100,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18.0),
+                    border: Border.all(
+                      color: Colour.purple,
+                      width: 3,
+                    ),
+                  ),
+                  child: Text(
+                    "Remove dish",
+                    style: TextStyle(
+                      color: Colour.purple,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
               ),
             ],
-            isSelected: _selections,
-            onPressed: (int index) {
-              setState(() {
-                for (var i = 0; i < 2; i++) {
-                  _selections[i] = false;
-                }
-                _selections[index] = !_selections[index];
-              });
-            },
-            textStyle: TextStyle(
-              fontSize: 26,
-              fontWeight: FontWeight.w400,
-            ),
-            color: Colour.black,
-            selectedBorderColor: Colour.purple,
-            borderRadius: BorderRadius.circular(14.0),
-            selectedColor: Colour.purple,
-            borderColor: Colour.gray,
           ),
         ),
       ),
