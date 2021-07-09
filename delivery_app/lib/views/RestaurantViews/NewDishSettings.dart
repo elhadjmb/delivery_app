@@ -1,5 +1,8 @@
 import 'package:delivery_app/constants/colours.dart';
 import 'package:delivery_app/constants/strings.dart';
+import 'package:delivery_app/testdata/data.dart';
+import 'package:delivery_app/testmodels/food.dart';
+import 'package:delivery_app/testmodels/ingredient.dart';
 import 'package:flutter/material.dart';
 
 class NewDish extends StatefulWidget {
@@ -12,13 +15,20 @@ class _NewDishState extends State<NewDish> {
   int ingredientAmount = 1;
   TextEditingController dishName = TextEditingController();
   TextEditingController dishPrice = TextEditingController();
+  List<TextEditingController> _ingredients = [TextEditingController(), TextEditingController(), TextEditingController(), TextEditingController(), TextEditingController(), TextEditingController(), TextEditingController()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: InkWell(
         //TODO: bellow goes the function that add a new dish
-        onTap: () {},
+        onTap: () {
+          Food food = Food(imageUrl: "assets/testimages/pizza.jpg", name: dishName.text, price: double.parse(dishPrice.text), ingredient: getAllIngs(_ingredients), );
+          restaurants[0].menu.add(food);
+          setState(() {});
+          Navigator.pop(context);
+          setState(() {});
+        },
         child: Container(
           width: 120,
           height: 50,
@@ -194,6 +204,7 @@ class _NewDishState extends State<NewDish> {
                 return Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: TextField(
+                    controller: _ingredients[index],
                     decoration: InputDecoration(
                       fillColor: Colour.purple,
                       icon: Icon(
@@ -213,5 +224,13 @@ class _NewDishState extends State<NewDish> {
         ),
       ),
     );
+  }
+
+  List<Ingredient> getAllIngs(List<TextEditingController> ingredients) {
+    List<Ingredient> res = [];
+    for (int i=0; i<ingredients.length; i++) {
+      if (ingredients[i].text != "") res.add(Ingredient(name: ingredients[i].text, isCheck: true));
+    }
+    return res;
   }
 }
